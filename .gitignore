@@ -1,5 +1,4 @@
 pyproject.toml
 .venv/
 poetry.lock
-static/bootstrap-5.0.2-dist/
 *.Identifier
