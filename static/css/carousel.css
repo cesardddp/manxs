@@ -46,11 +46,13 @@ body {
 }
 .marketing h2 {
   font-weight: 400;
+  color: black;
 }
 /* rtl:begin:ignore */
 .marketing .col-lg-4 p {
   margin-right: .75rem;
   margin-left: .75rem;
+  color: black;
 }
 /* rtl:end:ignore */
 

@@ -2,3 +2,4 @@ pyproject.toml
 .venv/
 poetry.lock
 *.Identifier
+__pycache__/
