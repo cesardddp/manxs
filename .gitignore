@@ -1,5 +1,1 @@
-pyproject.toml
-.venv/
-poetry.lock
-*.Identifier
-__pycache__/
+static/imgs/uncompressed/
