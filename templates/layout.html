@@ -4,14 +4,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Manx's - Grupo de Arte Drag Queen (BRASIL)">
+    <meta name="description" content="Manxs - Grupo de Arte Drag Queen (BRASIL)">
     <meta name="author" content="cesardddp@hotmail.com">
 
     <meta name="og:title" content="GrupoManxs.com">
     <meta name="og:image" content="https://www.grupomanxs.com/static/imgs/Logo%20Manxs.png">
     <meta name="og:url" content="https://www.grupomanxs.com">
 
-    <title>Manx's</title>
+    <title>Manxs</title>
 
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;900&display=swap" rel="stylesheet">
     <!-- Bootstrap core CSS -->
 
-    <link href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
     <style>
         .bd-placeholder-img {
             font-size: 1.125rem;
@@ -40,7 +40,7 @@
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
     <!-- Custom styles for this template -->
     <link href="{{ url_for('static', filename='css/carousel.css') }}" rel="stylesheet">
-    <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.bundle.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.js')}}"></script>
 
 </head>
 
@@ -49,7 +49,7 @@
         <div class="container-fluid bg-manxs">
             <a class="navbar-brand" href="#">
                 <img src="/static/imgs/Logo Manxs.png" alt="" width="60" class="d-inline-block align-text-center">
-                <b>Manx's</b>
+                <b>Manxs</b>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,7 +58,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ">
                     <li class="nav-item">
-                        <a class="nav-link" href="/">O GRUPO</a>
+                        <a class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('servicos') }}">SERVIÇOS</a>

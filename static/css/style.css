@@ -1,6 +1,6 @@
 :root {
-    --rosa-manxs: #e100a6;
-    --roxo-manxs:#520086;
+    --rosa-manxs: #bd008a;
+    --roxo-manxs:#6e008a;
     --rosa-tr-manxs: #e100a5ad;
     --roxo-tr-manxs:#530086ad;
     --primary2: #ad007f;
@@ -31,10 +31,11 @@ body {
   
 }
 .bg-manxs{
-    background-image: linear-gradient(to top right, var(--rosa-tr-manxs), var(--roxo-tr-manxs));
-    border: transparent;
+    background-image: linear-gradient(to top right, var(--roxo-manxs), var(--rosa-tr-manxs));
 }
 .navbar {
+    /* border: ; */
+    border-bottom: #0d6efd;
     /* position: relative;
     display: flex;
     flex-wrap: wrap;
