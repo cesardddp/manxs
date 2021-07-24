@@ -1,14 +1,6 @@
 /* GLOBAL STYLES
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
-
-body {
-  /* padding-top: 3rem; */
-  padding-bottom: 3rem;
-  color: #5a5a5a;
-}
-
-
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
@@ -25,24 +17,28 @@ body {
 /* Declare heights because of positioning of img element */
 .carousel-item {
   height: 32rem;
+  width: 100%;
+  
+  /* float: none;
+  display: contents; */
 }
 .carousel-item > img {
   position: relative;
   top: 0;
   left: 0;
   /* min-width: 100%; */
-  /* max-width: ; */
   height: 100%;
+  margin: 0 auto;
 }
+
 .carousel-item > iframe {
   position: relative;
   top: 0;
   left: 0;
   min-width: 100%;
-  /* max-width: ; */
   height: 100%;
-}
-
+  margin: 0 auto;
+ }
 
 /* MARKETING CONTENT
 -------------------------------------------------- */
