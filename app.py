@@ -1,4 +1,5 @@
 from flask import Flask,render_template,url_for
+from historia import historia
 
 app = Flask(__name__)
 
@@ -13,6 +14,7 @@ def index():
         iframe_do_carrosel=iframe_do_carrosel,
         banner2=banner2,
         banner1=banner1,
+        historia=historia
     )
 @app.route("/servicos/")
 def servicos():
