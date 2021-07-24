@@ -1,6 +1,6 @@
 {% extends 'layout.html' %}
 {% block main %}
-<div id="carrosseldastres" class="container carousel slide" data-bs-ride="carousel">
+<div id="carrosseldastres" class="carousel slide" data-bs-ride="carousel" data-bs-interval="0">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carrosseldastres" data-bs-slide-to="0" class="active" aria-current="true"
         aria-label="Slide 1"></button>
@@ -9,37 +9,12 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <!-- <img src="{{ url_for('static', filename='imgs/banner3.jpg')}}" class="mx-auto d-block" alt="..."> -->
-        <iframe width="560" height="315" src="{{iframe_do_carrosel}}"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <div class="container">                                            
-          <div class="carousel-caption text-start bg-dark-transparent">
-            <h1>{{descricao_3}}</h1>
-            <p>texto de enrolação porque não sei se vão gostar assim</p>
-            <!-- <p><a class="btn btn-lg btn-primary" href="https://www.instagram.com/eusou_extravaganzza/">Instagram</a></p> -->
-          </div>
-        </div>
+          <iframe width="910" height="512" src="{{iframe_do_carrosel}}"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="carousel-item">
-        <img src="{{ url_for('static', filename='imgs/banner.jpg')}}" class="d-block w-100" alt="...">
-
-        <div class="container">
-          <div class="carousel-caption bg-dark-transparent">
-            <h1>{{descricao_1}}</h1>
-            <p>texto de enrolação porque não sei se vão gostar assim</p>
-            <!-- <p><a class="btn btn-lg btn-primary" href="https://www.instagram.com/oluisaff/">Instagram</a></p> -->
-          </div>
-        </div>
-      </div>
+        <img src="{{banner1}}" class="d-block center-cropped" alt="..."></div>
       <div class="carousel-item">
-        <img src="{{ url_for('static', filename='imgs/banner2.jpg')}}" class="d-block w-100" alt="...">
-
-        <div class="container">
-          <div class="carousel-caption text-end bg-dark-transparent">
-            <h1>{{descricao_2}}</h1>
-            <p>texto de enrolação porque não sei se vão gostar assim</p>
-            <!-- <p><a class="btn btn-lg btn-primary" href="https://www.instagram.com/vikky_a_princesinha/">Instagram</a></p> -->
-          </div>
-        </div>
+        <img src="{{banner2}}" class="d-block center-cropped" alt="...">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carrosseldastres" data-bs-slide="prev">

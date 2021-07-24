@@ -1,20 +1,18 @@
-from flask import Flask,render_template
+from flask import Flask,render_template,url_for
 
 app = Flask(__name__)
 
 @app.route("/")
 def index():
     iframe_do_carrosel = 'https://www.youtube.com/embed/AJ0bepmCeFo'
-    descricao_1 = "Descrição 1"
-    descricao_2 = "Descrição 2"
-    descricao_3 = "Descrição 3"
+    banner2 = url_for('static',filename='imgs/banner2.jpg')
+    banner1 = url_for('static',filename='imgs/banner1.jpg')
+    # import pdb;pdb.set_trace()
     return render_template(
         "index.html",
         iframe_do_carrosel=iframe_do_carrosel,
-        descricao_1 = descricao_1,
-        descricao_2 = descricao_2,
-        descricao_3 = descricao_3,
-
+        banner2=banner2,
+        banner1=banner1,
     )
 @app.route("/servicos/")
 def servicos():
@@ -26,6 +24,3 @@ def cover():
     return render_template(
         "cover.html"
     )
-@app.route("/teste/<nome>/")
-def teste(nome):
-    return f'<h1>{nome}</h1>'

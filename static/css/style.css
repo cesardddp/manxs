@@ -30,23 +30,6 @@ body {
     border-color: var(--primary-dark);
   
 }
-.bg-manxs{
-    background-image: linear-gradient(to top right, var(--roxo-manxs), var(--rosa-tr-manxs));
-}
-.navbar {
-    /* border: ; */
-    border-bottom: #0d6efd;
-    /* position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;*/
-    padding-top: 0; 
-    /* padding-bottom: .5rem; */
-}
-.navbar-light .navbar-nav .nav-link {
-    color: white;
-}
 .card-insta {
     background-image: linear-gradient(to top right, #ff00bb3f, #53008646);
     margin: -2px;
@@ -57,3 +40,9 @@ body {
 .bg-dark-transparent {
     background-color: rgba(0, 0, 0, 0.714);
 }
+.center-cropped {
+    object-fit: cover; /* Do not scale the image */
+    object-position: center; /* Center the image within the element */
+    height: 100px;
+    width: 100px;
+  }
