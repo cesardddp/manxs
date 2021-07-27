@@ -22,12 +22,51 @@ historia = {
                 "subtitulo": "",
                 "conteudo": "Fazer da música e da dança, um o ponto de partida e ferramenta para visibilidade e empoderamento da comunidade LGBT.",
                 "img":{
-                    "src":"static/imgs/historia3.jpg",#imagem de 500x500
+                       "src":"static/imgs/historia3.jpg",#imagem de 500x500
                     "alt":""}
             }
 }
 
 # SERVIÇOS
+
+oficinas = [
+    {
+        "src_imagem": "oficina-danca.jpg",
+        "alt_descricao": "descricao alt",
+        "title": "tilte",
+        "text": "text"
+    },
+    {
+        "src_imagem": "oficina-canto.jpg",
+        "alt_descricao": "descricao alt",
+        "title": "tilte",
+        "text": "text"
+    },
+    {
+        "src_imagem": "link imagem",
+        "alt_descricao": "descricao alt",
+        "title": "tilte",
+        "text": "text"
+    },
+    {
+        "src_imagem": "link imagem",
+        "alt_descricao": "descricao alt",
+        "title": "tilte",
+        "text": "text"
+    },
+    {
+        "src_imagem": "link imagem",
+        "alt_descricao": "descricao alt",
+        "title": "tilte",
+        "text": "text"
+    },
+    {
+        "src_imagem": "link imagem",
+        "alt_descricao": "descricao alt",
+        "title": "tilte",
+        "text": "text"
+    },
+]
 
 cursos = [
         {
