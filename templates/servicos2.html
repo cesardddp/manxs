@@ -20,18 +20,36 @@
 <!-- <h3 class="">AULAS</h3> -->
 <div class="container px-4 py-5" id="featured-3">
     <h2 class="pb-2 border-bottom">OFICINAS</h2>
-    <br>
-    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-        {% for aula in aulas %}
-        <div class="feature bg-azul-branco">
-            <img class="bd-placeholder-img rounded-circle" src="{{url_for('static',filename='imgs/'+aula['imagem']['src'])}}">
-            <h2>{{aula['titulo']}}</h2>
-            <p>{{aula['conteudo']}}</p>
-            <a href="{{aula['link']}}" class="icon-link">
-                Entrar em contato
-            </a>
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+      <div class="carousel-inner">
+        {% for cardslide in cardslides %}
+        <div class="carousel-item active">
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            {% for card in cards %}
+            <div class="col">
+              <div class="card h-100">
+                <img src="{{ card.src_imagem }}" class="card-img-top" alt="{{card.alt_descricao}}">
+                <div class="card-body">
+                  <h5 class="card-title">{{card.title}}</h5>
+                  <p class="card-text">{{card.text}}</p>
+                </div>
+                <a href="#" class="btn btn-primary">Acesse</a>
+              </div>
+            </div>
+            {%end for%}
+          </div>
         </div>
-        {% endfor %}
+        {%end for%}
+    
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
 </div>
 
