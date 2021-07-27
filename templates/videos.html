@@ -1,0 +1,52 @@
+{% extends 'layout.html' %}
+{% block style %}
+.pb-video-container {
+}
+
+.pb-video {
+    border: 1px solid #e6e6e6;
+    padding: 5px;
+}
+
+    .pb-video:hover {
+        background: #2c3e50;
+    }
+
+.pb-video-frame {
+    transition: width 2s, height 2s;
+}
+
+    .pb-video-frame:hover {
+        height: 300px;
+    }
+
+.pb-row {
+    margin-bottom: 10px;
+}    
+{% endblock style %}
+{% block main %}
+    
+<div class="container">
+    <div class="col-md-12 col-md-offset-1">
+        <!-- <h3 class="text-center"></h3> -->
+        <div class="row pb-row">
+            {% for video in videos[:4] %}
+            
+            <div class="col-md-3 pb-video">
+                <iframe class="pb-video-frame" width="100%" height="230" src="https://www.youtube.com/embed/{{video['src']}}" frameborder="0" allowfullscreen></iframe>
+                <label class="form-control label-primary text-center">{{video['titulo']}}</label>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="row pb-row">
+            {% for video in videos[4:] %}
+            <div class="col-md-3 pb-video">
+                <iframe class="pb-video-frame" width="100%" height="230" src="https://www.youtube.com/embed/{{video['src']}}" frameborder="0" allowfullscreen></iframe>
+                <label class="form-control label-primary text-center">{{video['titulo']}}</label>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock main %}
