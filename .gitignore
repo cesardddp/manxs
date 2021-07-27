@@ -3,3 +3,7 @@ pyproject.toml
 poetry.lock
 *.Identifier
 __pycache__/
+static/bootstrap/
+static/bootstrap/
+build/
+static/imgs/uncompressed/

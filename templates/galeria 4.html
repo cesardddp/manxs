@@ -1,0 +1,49 @@
+{% extends 'layout.html' %}
+{% block style %}
+.bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+}
+.bg-azul-branco {
+    background-image: linear-gradient(to bottom right, #3d2ee194, #ecc8e4);
+    
+}
+.feature{
+    text-align: center;
+}
+{% endblock style %}
+{% block main %}
+
+<!-- Gallery -->
+<div class="lightbox">
+    {% for foto in fotos %}
+        <div class="row ">
+          <div class="col-lg-4">
+            <img
+              src="{{ url_for('static', filename='imgs/galeria/'+foto[0]) }}"
+              data-mdb-img="https://mdbootstrap.com/img/Photos/Slides/1.jpg"
+              alt=""
+                    class="w-100 shadow-1-strong rounded mb-4"
+            />
+          </div>
+          <div class="col-lg-4">
+            <img
+              src="{{ url_for('static', filename='imgs/galeria/'+foto[1]) }}"
+              data-mdb-img="https://mdbootstrap.com/img/Photos/Slides/1.jpg"
+              alt=""
+                class="w-100 shadow-1-strong rounded mb-4"
+            />
+          </div>
+          <div class="col-lg-4">
+            <img
+              src="{{ url_for('static', filename='imgs/galeria/'+foto[2]) }}"
+              data-mdb-img="https://mdbootstrap.com/img/Photos/Slides/1.jpg"
+              alt=""
+                    class="w-100 shadow-1-strong rounded mb-4"
+            />
+          </div>
+    
+{% endfor %}
+{% endblock main %}
+
+  <!-- Gallery -->
