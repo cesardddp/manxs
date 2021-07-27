@@ -1,7 +1,8 @@
 from flask import Flask, render_template, url_for
 from conteudo import (
     historia,
-    aulas
+    aulas,
+    videos_lista
 )
 
 app = Flask(__name__)
@@ -35,6 +36,17 @@ def galeria():
     lista_fotos = list(itertools.zip_longest(*[iter(lista_fotos)]*4,fillvalue=""))
 
     return render_template("galeria.html",fotos=lista_fotos)
+
+
+@app.route("/form_curso_example/")
+def form_curso_example():
+    return render_template("forms/curso.html")
+
+
+@app.route("/videos/")
+def videos():
+    return render_template("videos.html",videos=videos_lista)
+
 
 @app.route("/contato/")
 def contato():

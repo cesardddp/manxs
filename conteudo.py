@@ -82,3 +82,43 @@ aulas = [
             },
         },
     ]
+
+videos_lista = [
+    {
+        "titulo":"#15 | Manxs - A Caminhada | Edital Municipal",
+        "src":"HVa7HzxF74Y"
+        },
+    {
+        "titulo":"#14 | Manxs - Quem eu sou | Edital Municipal",
+        "src":"1rAAS0Pcn2Y"
+        },
+    {
+        "titulo":"#13 | Manxs - Indestrutível | Edital Municipal",
+        "src":"AJ0bepmCeFo"
+        },
+    {
+        "titulo": "#12 | Manxs - O tempo é sua morada | Edital Municipal",
+        "src":"Jugw0bT0SXs"
+    },
+    {
+        "titulo":"#11 | Manxs - Cálice | Edital Municipal",
+        "src":"C_AYJ4zY-qY"
+        },
+    {
+        "titulo": "#07 | Manxs - Androginismo | Edital Municipal",
+        "src":"xO1A34r837M"
+    },
+    {
+        "titulo":" #06 | Manxs - Alguém segure esse Homem | Edital Municipal",
+        "src":"HJVXWqa0iyQ"
+    },
+    {
+        "titulo":" #05 | Manxs - Homem com H (Alguém segure esse Homem) | Edital Municipal",
+        "src":"P6Mi55-fCw4"
+    }
+]
+
+
+
+
+
