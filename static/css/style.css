@@ -59,3 +59,7 @@ body {
     /* modern browsers */
     opacity: 0;
   }
+  .bg-azul-branco {
+    background-image: linear-gradient(to bottom right, #3d2ee194, #ecc8e4);
+
+}
