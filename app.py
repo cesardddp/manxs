@@ -1,7 +1,9 @@
 from flask import Flask, render_template, url_for
+import itertools
 from conteudo import (
     historia,
     aulas,
+    oficinas,
     videos_lista
 )
 
@@ -25,13 +27,14 @@ def index():
 
 @app.route("/servicos/")
 def servicos():
-    return render_template("servicos2.html",aulas=aulas)
+    cards = list(itertools.zip_longest(*[iter(oficinas)]*3,fillvalue="")) 
+    # cards é uma lista de listas [ [card1,card2,card3],[card4,card5,card6],... ]
+    return render_template("servicos2.html",aulas=aulas,cards=cards)
 
 @app.route("/galeria/")
 def galeria():
 
     import os
-    import itertools
     lista_fotos = os.listdir('static/imgs/galeria')
     lista_fotos = list(itertools.zip_longest(*[iter(lista_fotos)]*4,fillvalue=""))
 
