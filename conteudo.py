@@ -45,18 +45,11 @@ oficinas = [
         "link": "https://youtu.be/nn52evPc1BU"
     },
     {
-        "src_imagem": "oficina-maquiagem.jpg",
+        "src_imagem": "oficina-danca.jpg",
         "alt_descricao": "Banner ilustrativo da oficina de dança com a drag LuisAfF",
         "title": "Oficina de Dança",
-        "text": "Descrição da oficina de dança",
+        "text": "Descrição da oficina de dança (Módulo: Iniciante)",
         "link": "https://youtu.be/jm-DCv0R6U4"
-    },
-    {
-        "src_imagem": "oficina-maquiagem.jpg",
-        "alt_descricao": "Banner ilustrativo da oficina de maquiagem com a drag Vikky",
-        "title": "Oficina de Maquiagem",
-        "text": "Descrição da oficina de maquiagem (Módulo: Iniciante)",
-        "link": "https://youtu.be/g0W3CoyRVro"
     },
     {
         "src_imagem": "oficina-canto.jpg",
@@ -66,11 +59,18 @@ oficinas = [
         "link": "https://youtu.be/nn52evPc1BU"
     },
     {
-        "src_imagem": "",
-        "alt_descricao": "a ausência dessa foto foi proposital",
+        "src_imagem": "oficina-danca.jpg",
+        "alt_descricao": "Banner ilustrativo da oficina de dança com a drag LuisAfF",
         "title": "Oficina de Dança",
-        "text": "Descrição da oficina de dança",
+        "text": "Descrição da oficina de dança (Módulo: Iniciante)",
         "link": "https://youtu.be/jm-DCv0R6U4"
+    },
+    {
+        "src_imagem": "oficina-maquiagem.jpg",
+        "alt_descricao": "Banner ilustrativo da oficina de maquiagem com a drag Vikky",
+        "title": "Oficina de Maquiagem",
+        "text": "Descrição da oficina de maquiagem (Módulo: Iniciante)",
+        "link": "https://youtu.be/g0W3CoyRVro"
     },
 ]
 
