@@ -31,40 +31,46 @@ historia = {
 
 oficinas = [
     {
-        "src_imagem": "oficina-danca.jpg",
-        "alt_descricao": "descricao alt",
-        "title": "tilte",
-        "text": "text"
+        "src_imagem": "oficina-maquiagem.jpg",
+        "alt_descricao": "Banner ilustrativo da oficina de maquiagem com a drag Vikky",
+        "title": "Oficina de Maquiagem",
+        "text": "Descrição da oficina de maquiagem (Módulo: Iniciante)",
+        "link": "https://youtu.be/g0W3CoyRVro"
     },
     {
         "src_imagem": "oficina-canto.jpg",
-        "alt_descricao": "descricao alt",
-        "title": "tilte",
-        "text": "text"
+        "alt_descricao": "Banner ilustrativo da oficina de canto com a drag Ashilleyy",
+        "title": "Oficina de Canto",
+        "text": "Preparo vocal (Módulo: Iniciante)",
+        "link": "https://youtu.be/nn52evPc1BU"
     },
     {
-        "src_imagem": "link imagem",
-        "alt_descricao": "descricao alt",
-        "title": "tilte",
-        "text": "text"
+        "src_imagem": "oficina-maquiagem.jpg",
+        "alt_descricao": "Banner ilustrativo da oficina de dança com a drag LuisAfF",
+        "title": "Oficina de Dança",
+        "text": "Descrição da oficina de dança",
+        "link": "https://youtu.be/jm-DCv0R6U4"
     },
     {
-        "src_imagem": "link imagem",
-        "alt_descricao": "descricao alt",
-        "title": "tilte",
-        "text": "text"
+        "src_imagem": "oficina-maquiagem.jpg",
+        "alt_descricao": "Banner ilustrativo da oficina de maquiagem com a drag Vikky",
+        "title": "Oficina de Maquiagem",
+        "text": "Descrição da oficina de maquiagem (Módulo: Iniciante)",
+        "link": "https://youtu.be/g0W3CoyRVro"
     },
     {
-        "src_imagem": "link imagem",
-        "alt_descricao": "descricao alt",
-        "title": "tilte",
-        "text": "text"
+        "src_imagem": "oficina-canto.jpg",
+        "alt_descricao": "Banner ilustrativo da oficina de canto com a drag Ashilleyy",
+        "title": "Oficina de Canto",
+        "text": "Preparo vocal (Módulo: Iniciante)",
+        "link": "https://youtu.be/nn52evPc1BU"
     },
     {
-        "src_imagem": "link imagem",
-        "alt_descricao": "descricao alt",
-        "title": "tilte",
-        "text": "text"
+        "src_imagem": "",
+        "alt_descricao": "a ausência dessa foto foi proposital",
+        "title": "Oficina de Dança",
+        "text": "Descrição da oficina de dança",
+        "link": "https://youtu.be/jm-DCv0R6U4"
     },
 ]
 

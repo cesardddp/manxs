@@ -17,15 +17,56 @@
 
 <div class="container">
 
+<!--TESTE GOOGLE AGENDA <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%239E69AF&amp;ctz=America%2FSao_Paulo&amp;src=YnRzcGFyYWJhcm15c0BnbWFpbC5jb20&amp;src=d2VmaWdodGNhbGVuZGFyaW9AZ21haWwuY29t&amp;color=%238E24AA&amp;color=%23E4C441&amp;mode=MONTH&amp;showTabs=0&amp;showTitle=0&amp;showNav=0&amp;showCalendars=0&amp;showTz=0&amp;showPrint=0&amp;showDate=0&amp;title=Agenda%20de%20Show%20das%20Manxs" style="border-width:0" width="800" height="600" frameborder="0" aria-placeholder="static" scrolling="no"></iframe>-->
+
 <!-- <h3 class="">AULAS</h3> -->
 <div class="container px-4 py-5" id="featured-3">
     <h2 class="pb-2 border-bottom">OFICINAS</h2>
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+      
       <div class="carousel-inner">
-        {% for 3card in cards %}
+        
         <div class="carousel-item active">
           <div class="row row-cols-1 row-cols-md-3 g-4">
-            {% for card in 3card %}
+            
+            <div class="col">
+              <div class="card h-100">
+                <img src="{{ url_for('static', filename='imgs/'+cards[0][0]['src_imagem']) }}" class="card-img-top" alt="{{cards[0][0]['alt_descricao']}}">
+                <div class="card-body">
+                  <h5 class="card-title">{{cards[0][0]['title']}}</h5>
+                  <p class="card-text">{{cards[0][0]['text']}}</p>
+                </div>
+                <a href="{{cards[0][0]['link']}}" target="_blank" class="btn btn-primary">Acesse</a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <img src="{{ url_for('static', filename='imgs/'+cards[0][1]['src_imagem']) }}" class="card-img-top" alt="{{cards[0][1]['alt_descricao']}}">
+                <div class="card-body">
+                  <h5 class="card-title">{{cards[0][1]['title']}}</h5>
+                  <p class="card-text">{{cards[0][1]['text']}}</p>
+                </div>
+                <a href="{{cards[0][1]['link']}}" target="_blank" class="btn btn-primary">Acesse</a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <img src="{{ url_for('static', filename='imgs/'+cards[0][2]['src_imagem']) }}" class="card-img-top" alt="{{cards[0][2]['alt_descricao']}}">
+                <div class="card-body">
+                  <h5 class="card-title">{{cards[0][2]['title']}}</h5>
+                  <p class="card-text">{{cards[0][2]['text']}}</p>
+                </div>
+                <a href="{{cards[0][2]['link']}}" target="_blank" class="btn btn-primary">Acesse</a>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        {% for conjunto in cards[1:] %}
+
+        <div class="carousel-item">
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            {% for card in conjunto %}
             <div class="col">
               <div class="card h-100">
                 <img src="{{ url_for('static', filename='imgs/'+card['src_imagem']) }}" class="card-img-top" alt="{{card['alt_descricao']}}">
@@ -33,20 +74,22 @@
                   <h5 class="card-title">{{card['title']}}</h5>
                   <p class="card-text">{{card['text']}}</p>
                 </div>
-                <a href="{{card" class="btn btn-primary">Acesse</a>
+                <a href="{{card['link']}}" target="_blank" class="btn btn-primary">Acesse</a>
               </div>
             </div>
-            {%endfor%}
+            {% endfor %}
           </div>
         </div>
-        {%endfor%}
+
+        {% endfor %}
+        
     
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      </div> 
+      <button class="carousel-control-prev" type="button" data-bs-target="#carrosseldastres" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <button class="carousel-control-next" type="button" data-bs-target="#carrosseldastres" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>

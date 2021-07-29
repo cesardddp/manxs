@@ -29,7 +29,11 @@ def index():
 def servicos():
     cards = list(itertools.zip_longest(*[iter(oficinas)]*3,fillvalue="")) 
     # cards é uma lista de listas [ [card1,card2,card3],[card4,card5,card6],... ]
+
+    # import pdb; pdb.set_trace()
+
     return render_template("servicos2.html",aulas=aulas,cards=cards)
+
 
 @app.route("/galeria/")
 def galeria():
