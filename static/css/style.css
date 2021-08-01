@@ -65,3 +65,28 @@ body {
     background-image: linear-gradient(to bottom right, #3d2ee194, #ecc8e4);
     border-radius: 10px;
 }
+
+.bloconoticia {
+    background: white;
+    align-content: center;
+}
+
+#carrosseldasduas{
+    /*background-image: linear-gradient(to bottom right, #3d2ee194, #ecc8e4);*/
+    border-radius: 10px;
+    
+}
+#carrosseldasduas > .carousel-inner > .carousel-item{
+    height: auto;
+
+}
+
+/*.carousel > .carousel-inner > .carousel-item{
+    margin-top: 2%;
+    margin-bottom: -18%;
+}
+*/
+.carousel-control-next-icon, .carousel-control-prev-icon{
+    background-color: #6e008a;
+
+}
