@@ -1,13 +1,15 @@
 :root {
     --rosa-manxs: #bd008a;
-    --roxo-manxs:#6e008a;
+    --roxo-manxs: #6e008a;
     --rosa-tr-manxs: #e100a5ad;
-    --roxo-tr-manxs:#530086ad;
+    --roxo-tr-manxs: #530086ad;
     --primary2: #ad007f;
 }
+
 html {
     font-family: 'Roboto', sans-serif;
 }
+
 body {
     font-family: 'Roboto', sans-serif;
     /* background-color: black; */
@@ -16,42 +18,50 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
+
 /* font Otomanopee One */
+
 .btn-primary {
     color: #fff;
     /* background-color: var(--primary); */
-    background-image:linear-gradient(to top right, var(--rosa-tr-manxs), var(--roxo-tr-manxs));
+    background-image: linear-gradient(to top right, var(--rosa-tr-manxs), var(--roxo-tr-manxs));
     border-color: var(--rosa-manxs);
 }
+
 .btn-primary:hover {
     color: #fff;
     background-color: #0d6efd;
     background-color: var(--primary-dark);
     border-color: var(--primary-dark);
-  
 }
+
 .card-insta {
     background-image: linear-gradient(to top right, #ff00bb3f, #53008646);
     margin: -2px;
     border-radius: 10px;
-    
 }
-.card-insta > img {
+
+.card-insta>img {
     margin: 10px;
 }
+
 .bg-dark-transparent {
     background-color: rgba(0, 0, 0, 0.714);
 }
+
 .center-cropped {
     width: 100px;
     height: 100px;
     background-position: center center;
     background-repeat: no-repeat;
     overflow: hidden;
-  }
-  
-  /* Set the image to fill its parent and make transparent */
-  .center-cropped img {
+}
+
+
+/* Set the image to fill its parent and make transparent */
+
+.center-cropped img {
     min-height: 100%;
     min-width: 100%;
     /* IE 8 */
@@ -60,8 +70,9 @@ body {
     filter: alpha(opacity=0);
     /* modern browsers */
     opacity: 0;
-  }
-  .bg-azul-branco {
+}
+
+.bg-azul-branco {
     background-image: linear-gradient(to bottom right, #3d2ee194, #ecc8e4);
     border-radius: 10px;
 }
@@ -71,22 +82,30 @@ body {
     align-content: center;
 }
 
-#carrosseldasduas{
+#carrosseldasduas {
     /*background-image: linear-gradient(to bottom right, #3d2ee194, #ecc8e4);*/
     border-radius: 10px;
-    
 }
-#carrosseldasduas > .carousel-inner > .carousel-item{
-    height: auto;
 
+#carrosseldasduas>.carousel-inner>.carousel-item {
+    height: auto;
 }
+
 
 /*.carousel > .carousel-inner > .carousel-item{
     margin-top: 2%;
     margin-bottom: -18%;
 }
 */
-.carousel-control-next-icon, .carousel-control-prev-icon{
-    background-color: #6e008a;
 
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    background-color: #6e008a;
+}
+
+
+/*personalização área de contato > e-mail*/
+
+.contato {
+    color: white;
 }

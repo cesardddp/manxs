@@ -19,10 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;900&display=swap" rel="stylesheet">
     <!-- Bootstrap core CSS -->
 
-    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
-    
-        
-    
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">  
     <style>
         .bd-placeholder-img {
             font-size: 1.125rem;
@@ -38,8 +35,13 @@
             }
         }
         
+        {
+            % block style %
+        }
         
-        
+        {
+            % endblock style %
+        }
     </style>
     <link rel="stylesheet" href="/static/css/style.css">
 
@@ -56,7 +58,7 @@
     <a href="/" class="navbar-brand d-flex align-items-center col-1 mb-1 mb-0 text-dark text-decoration-none">
         <!-- <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg> -->
         <img src="/static/imgs/Logo Manxs.png" alt="" width="60" class="d-inline-block align-text-center">
-        
+
     </a>
     <b class="fs-3 link-light">Manxs</b>
 
@@ -67,7 +69,7 @@
         <li><a href="/videos/ " class="nav-link px-2 link-light ">VIDEOS</a></li>
         <li><a href="                         " class="nav-link px-2 link-light disabled">SHOWS</a></li>
         <li><a href="                         " class="nav-link px-2 link-light disabled">MUSICAS</a></li>
-        <li><a href="                         " class="nav-link px-2 link-light disabled">CONTATO</a></li>
+        <li><a href="/contato/" class="nav-link px-2 link-light">CONTATO</a></li>
     </ul>
 
 
@@ -316,8 +318,7 @@
 <footer class="container bg-transparent">
     <p class="float-end"><a style="color: white;" href="#">Voltar lá em cima!</a></p>
     <p style="color: white;">
-        &copy;2021 Mantido por 
-        <a style="color: white;" href="https://github.com/cesardddp">cesardddp</a>
-        &middot; <a style="color: white;" href="#">Privacy</a> &middot;
+        &copy;2021 Mantido por
+        <a style="color: white;" href="https://github.com/cesardddp">cesardddp</a> &middot; <a style="color: white;" href="#">Privacy</a> &middot;
         <a style="color: white;" href="#">Terms</a></p>
 </footer>
