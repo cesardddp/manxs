@@ -8,6 +8,7 @@ ver se funciona deixar espaços nos cards de apresentação como foi feito na p�
 editar os quadrados pra ficar mais bonito
 FAZER OS CREDITOS DA FOTO SUMIREM
 
+
 # SHOW
 ver como vai ser a estrutura da agenda (calendário ou lista ou ambos)
 google agenda

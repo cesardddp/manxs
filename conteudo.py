@@ -32,44 +32,44 @@ historia = {
 oficinas = [
     {
         "src_imagem": "oficina-maquiagem.jpg",
-        "alt_descricao": "Banner ilustrativo da oficina de maquiagem com a drag Vikky",
+        "alt_descricao": "Banner ilustrativo da oficina de maquiagem com a foto da drag Vikky",
         "title": "Oficina de Maquiagem",
-        "text": "Descrição da oficina de maquiagem (Módulo: Iniciante)",
+        "text": "Módulo: Iniciante",
         "link": "https://youtu.be/g0W3CoyRVro"
     },
     {
         "src_imagem": "oficina-canto.jpg",
-        "alt_descricao": "Banner ilustrativo da oficina de canto com a drag Ashilleyy",
+        "alt_descricao": "Banner ilustrativo da oficina de canto com a foto da drag Ashilleyy",
         "title": "Oficina de Canto",
-        "text": "Preparo vocal (Módulo: Iniciante)",
+        "text": "Módulo: Iniciante",
         "link": "https://youtu.be/nn52evPc1BU"
     },
     {
         "src_imagem": "oficina-danca.jpg",
-        "alt_descricao": "Banner ilustrativo da oficina de dança com a drag LuisAfF",
+        "alt_descricao": "Banner ilustrativo da oficina de dança com a foto da drag LuisAfF",
         "title": "Oficina de Dança",
-        "text": "Descrição da oficina de dança (Módulo: Iniciante)",
+        "text": "Módulo: Iniciante",
         "link": "https://youtu.be/jm-DCv0R6U4"
     },
     {
         "src_imagem": "oficina-canto.jpg",
-        "alt_descricao": "Banner ilustrativo da oficina de canto com a drag Ashilleyy",
+        "alt_descricao": "Banner ilustrativo da oficina de canto com a foto da drag Ashilleyy",
         "title": "Oficina de Canto",
-        "text": "Preparo vocal (Módulo: Iniciante)",
+        "text": "Módulo: Iniciante",
         "link": "https://youtu.be/nn52evPc1BU"
     },
     {
         "src_imagem": "oficina-danca.jpg",
-        "alt_descricao": "Banner ilustrativo da oficina de dança com a drag LuisAfF",
+        "alt_descricao": "Banner ilustrativo da oficina de dança com a foto da drag LuisAfF",
         "title": "Oficina de Dança",
-        "text": "Descrição da oficina de dança (Módulo: Iniciante)",
+        "text": "Módulo: Iniciante",
         "link": "https://youtu.be/jm-DCv0R6U4"
     },
     {
         "src_imagem": "oficina-maquiagem.jpg",
-        "alt_descricao": "Banner ilustrativo da oficina de maquiagem com a drag Vikky",
+        "alt_descricao": "Banner ilustrativo da oficina de maquiagem com a foto da drag Vikky",
         "title": "Oficina de Maquiagem",
-        "text": "Descrição da oficina de maquiagem (Módulo: Iniciante)",
+        "text": "Módulo: Iniciante",
         "link": "https://youtu.be/g0W3CoyRVro"
     },
 ]
@@ -91,6 +91,39 @@ cursos = [
 ]
 
 aulas = [
+        {
+            "tema": "maquiagem",
+            "titulo": "cesar",
+            "subtitulo": "asdsdf",
+            "conteudo": "sem conteudo conteudo conteudo conteudo conteudo ",
+            "link": "https://www.instagram.com/sirius___72/",
+            "imagem": {
+                "src": "aula_exmp_cesar.jpg",
+                "alt": "alt descrição",
+            },
+        },
+        {
+            "tema": "maquiagem", 
+            "titulo": "deva",
+            "subtitulo": "subtitulo",
+            "conteudo": "conteudo conteudo conteudo conteudo conteudo conteudo ",
+            "link": "https://www.instagram.com/deva.gouveia/",
+            "imagem": {
+                "src": "aula_exmp_deva.jpg",
+                "alt": "alt descrição",
+            },
+        },
+        {
+            "tema": "maquiagem",
+            "titulo": "vini",
+            "subtitulo": "subtitulo",
+            "conteudo": "conteudo conteudo conteudo conteudo conteudo conteudo ",
+            "link": "https://www.instagram.com/vini.marqs_/",
+            "imagem": {
+                "src": "aula_exmp_vini.jpg",
+                "alt": "alt descrição",
+            },
+        },
         {
             "tema": "canto",
             "titulo": "pedre",

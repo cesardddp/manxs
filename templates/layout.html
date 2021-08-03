@@ -19,10 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;900&display=swap" rel="stylesheet">
     <!-- Bootstrap core CSS -->
 
-    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
-    {% block link_style %}
-        
-    {% endblock link_style %}
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet"> {% block link_style %} {% endblock link_style %}
     <style>
         .bd-placeholder-img {
             font-size: 1.125rem;
@@ -37,9 +34,14 @@
                 font-size: 3.5rem;
             }
         }
-        {% block style %}
-        {% endblock style %}
         
+        {
+            % block style %
+        }
+        
+        {
+            % endblock style %
+        }
     </style>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
@@ -56,7 +58,7 @@
     <a href="/" class="navbar-brand d-flex align-items-center col-1 mb-1 mb-0 text-dark text-decoration-none">
         <!-- <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg> -->
         <img src="/static/imgs/Logo Manxs.png" alt="" width="60" class="d-inline-block align-text-center">
-        
+
     </a>
     <b class="fs-3 link-light">Manxs</b>
 
@@ -65,9 +67,9 @@
         <li><a href="{{ url_for('servicos') }}" class="nav-link px-2 link-light">SERVIÇOS</a></li>
         <li><a href="{{ url_for('galeria') }} " class="nav-link px-2 link-light">GALERIA</a></li>
         <li><a href="{{ url_for('videos') }} " class="nav-link px-2 link-light ">VIDEOS</a></li>
-        <li><a href="                         " class="nav-link px-2 link-light disabled">SHOWS</a></li>
+        <li><a href="{{ url_for('shows') }}" class="nav-link px-2 link-light">SHOWS</a></li>
         <li><a href="                         " class="nav-link px-2 link-light disabled">MUSICAS</a></li>
-        <li><a href="                         " class="nav-link px-2 link-light disabled">CONTATO</a></li>
+        <li><a href="{{ url_for('contato') }}" class="nav-link px-2 link-light">CONTATO</a></li>
     </ul>
 
 
@@ -76,15 +78,13 @@
 
 
 <body>
-    {% block main %}
-    {% endblock main %}
+    {% block main %} {% endblock main %}
 </body>
 <!-- FOOTER -->
 <footer class="container bg-transparent">
     <p class="float-end"><a style="color: white;" href="#">Voltar lá em cima!</a></p>
     <p style="color: white;">
-        &copy;2021 Mantido por 
-        <a style="color: white;" href="https://github.com/cesardddp">cesardddp</a>
-        &middot; <a style="color: white;" href="#">Privacy</a> &middot;
+        &copy;2021 Mantido por
+        <a style="color: white;" href="https://github.com/cesardddp">cesardddp</a> &middot; <a style="color: white;" href="#">Privacy</a> &middot;
         <a style="color: white;" href="#">Terms</a></p>
 </footer>

@@ -24,6 +24,8 @@ def index():
         historia=historia,
     )
 
+    
+
 
 @app.route("/servicos/")
 def servicos():
@@ -57,4 +59,8 @@ def videos():
 
 @app.route("/contato/")
 def contato():
-    return render_template("contat.html")
+    return render_template("contato.html")
+
+@app.route("/shows/")
+def shows():
+    return render_template("shows.html")
