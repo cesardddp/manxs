@@ -1,4 +1,5 @@
 .bg-azul-branco {
     background-color: linear-gradient(to bottom right, #3d2ee194, #ecc8e4);
     border-radius: 50px;
+    align-items: inherit;
 }

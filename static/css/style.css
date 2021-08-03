@@ -103,9 +103,112 @@ body {
     background-color: #6e008a;
 }
 
+/* página serviços */
 
-/*personalização área de contato > e-mail*/
+.container_aulas{
+    text-align: center;
+}
+
+/* personalização títulos da página serviços */
+
+h2{
+    color: white;
+}
+
+/* personalização área de redes sociais e contato */
 
 .contato {
     color: white;
+}
+
+.contato h2 {
+    text-align: center;
+}
+
+.iconsredessociais{
+    color: white;
+    text-align: center;
+}
+
+.btn-youtube{
+    color: white;
+    border-color: white;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    font-size: 145%;
+    align-items: center;
+    display: inline-block;
+    transition-duration: 0.4s;
+}
+
+.btn-youtube:hover{
+    color: white;
+    background-color: red;
+    border-color: red;
+}
+
+.btn-face{
+    color: white;
+    border-color: white;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    font-size: 145%;
+    align-items: center;
+    display: inline-block;
+    transition-duration: 0.4s;
+}
+
+.btn-face:hover{
+    color: white;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.btn-insta{
+    color: white;
+    border-color: white;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    font-size: 145%;
+    display: inline-block;
+}
+
+.btn-insta:hover{
+    color: white;
+    background-image: linear-gradient(to right, #6e008a , #bd008a);
+    border-color: #6e008a;
+}
+
+/* personalização página shows -> google agenda */
+
+.calendar-container{
+    text-align: left;
+    border-width:10px;
+    width: 800px;
+    height: 600px;
+    background-color: #6e008a;
+}
+
+.calendar-container  .view-cap .view-container-border .mv-daynames-table{
+    overflow: hidden;
+    position: absolute;
+    top: 14px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: none;
+    border-top: 1px solid #6e008a;
+    border-bottom: 1px solid #ad007f;
+}
+
+.mv-event-container{
+    background: none;
+    border-top: 1px solid #6e008a;
+    border-bottom: 1px solid #ad007f;
 }
