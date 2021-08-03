@@ -8,6 +8,9 @@ ver se funciona deixar espaços nos cards de apresentação como foi feito na p�
 editar os quadrados pra ficar mais bonito
 FAZER OS CREDITOS DA FOTO SUMIREM
 
+# SERVIÇOS
+realocar os botões para não ficarem dependentes dos textos
+
 # CONTATO
 alinhar os ícones no centro do botão
 

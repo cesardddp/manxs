@@ -103,8 +103,19 @@ body {
     background-color: #6e008a;
 }
 
+/* página serviços */
 
-/*personalização área de contato > e-mail*/
+.container_aulas{
+    text-align: center;
+}
+
+/* personalização títulos da página serviços */
+
+h2{
+    color: white;
+}
+
+/* personalização área de redes sociais e contato */
 
 .contato {
     color: white;
@@ -172,4 +183,32 @@ body {
     color: white;
     background-image: linear-gradient(to right, #6e008a , #bd008a);
     border-color: #6e008a;
+}
+
+/* personalização página shows -> google agenda */
+
+.calendar-container{
+    text-align: left;
+    border-width:10px;
+    width: 800px;
+    height: 600px;
+    background-color: #6e008a;
+}
+
+.calendar-container  .view-cap .view-container-border .mv-daynames-table{
+    overflow: hidden;
+    position: absolute;
+    top: 14px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: none;
+    border-top: 1px solid #6e008a;
+    border-bottom: 1px solid #ad007f;
+}
+
+.mv-event-container{
+    background: none;
+    border-top: 1px solid #6e008a;
+    border-bottom: 1px solid #ad007f;
 }
