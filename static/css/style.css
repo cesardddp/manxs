@@ -6,9 +6,7 @@
     --primary2: #ad007f;
 }
 
-html {
-    font-family: 'Roboto', sans-serif;
-}
+
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -37,7 +35,7 @@ body {
 }
 
 .card-insta {
-    background-image: linear-gradient(to top right, #ff00bb3f, #53008646);
+    /*background-image: linear-gradient(to top right, #ff00bb3f, #53008646);*/
     margin: -2px;
     border-radius: 10px;
 }
@@ -82,6 +80,8 @@ body {
     align-content: center;
 }
 
+
+
 #carrosseldasduas {
     /*background-image: linear-gradient(to bottom right, #3d2ee194, #ecc8e4);*/
     border-radius: 10px;
@@ -107,13 +107,17 @@ body {
 
 .container_aulas{
     text-align: center;
+    color: white;
 }
 
 /* personalização títulos da página serviços */
 
-h2{
+.about{
     color: white;
+    text-shadow: 2px 2px black;
+    border-bottom: 1px solid white;
 }
+
 
 /* personalização área de redes sociais e contato */
 
@@ -185,9 +189,25 @@ h2{
     border-color: #6e008a;
 }
 
+#bottom-oficina{
+    padding-top:300px;
+}
+
+.style-aulas{
+    width: 250px;
+    height: 100px;
+    text-align: center;
+}
+
+.style-aulas > img{
+    border-radius: 50%!important;
+    vertical-align: middle;
+    width: 150px;
+    align-self: center;
+}
 /* personalização página shows -> google agenda */
 
-.calendar-container{
+/*.calendar-container{
     text-align: left;
     border-width:10px;
     width: 800px;
@@ -211,4 +231,5 @@ h2{
     background: none;
     border-top: 1px solid #6e008a;
     border-bottom: 1px solid #ad007f;
-}
+}*/
+

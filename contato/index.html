@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-br">
+<html class="h-100" lang="pt-br">
 
 <head>
     <meta charset="utf-8">
@@ -70,6 +70,10 @@
         <li><a href="/shows/" class="nav-link px-2 link-light">SHOWS</a></li>
         <li><a href="                         " class="nav-link px-2 link-light disabled">MUSICAS</a></li>
         <li><a href="/contato/" class="nav-link px-2 link-light">CONTATO</a></li>
+        <li><a href="/about/" class="nav-link px-2 link-light">SOBRE NÓS</a></li>
+
+        <!--REMOVER DEPOIS-->
+        <li><a href="/teste/" class="nav-link px-2 link-light">TESTE</a></li>
     </ul>
 
 
@@ -77,7 +81,7 @@
 
 
 
-<body>
+<body class="d-flex flex-column h-100">
     
 <div class="container bg-azul-branco flex iconsredessociais">
     </br>
@@ -111,44 +115,47 @@
     </div>
 </br></br>
 </div>
-</br>
-</br>
-<div class="container bg-azul-branco">
+
+<div class="container bg-azul-branco mt-5">
     <div class="contato">
-        <section class="email">
+        <form class="form " action="https://formspree.io/f/mayappor" method="POST">
             </br>
             <h2>FALE CONOSCO</h2>
             </br>
             <div class="row g-3">
                 <div class="col">
-                    <label for="Name" class="form-label">Nome</label>
-                    <input type="text" class="form-control" placeholder="Insira aqui seu nome" aria-label="Nome">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input name="nome" type="text" class="form-control" placeholder="Insira aqui seu nome" aria-label="Nome">
                 </div>
             </div>
             </br>
             <div class="col">
-                <label for="Email" class="form-label">E-mail</label>
-                <input type="email" class="form-control" placeholder="Insira aqui seu e-mail" aria-label="Email">
+                <label for="email" class="form-label">E-mail</label>
+                <input name="email" type="email" class="form-control" placeholder="Insira aqui seu e-mail" aria-label="Email">
             </div>
             </br>
             <div class="mb-3">
-                <label for="Textarea" class="form-label">Mensagem</label>
-                <textarea class="form-control" id="Textarea" rows="3" placeholder="Escreva sua mensagem"></textarea>
+                <label for="mensagem" class="form-label">Mensagem</label>
+                <textarea name="mensagem" class="form-control" id="Textarea" rows="3" placeholder="Escreva sua mensagem"></textarea>
             </div>
-            <div class="col-12">
-                <button type="submit" class="btn btn-primary">Enviar</button>
+            <div class="row flex justify-content-center">
+                <div class="col-sm-auto">
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </div>
             </div>
             </br>
-        </section>
+        </form>
     </div>
 </div>
 
-</body>
-<!-- FOOTER -->
-<footer class="container bg-transparent">
-    <p class="float-end"><a style="color: white;" href="#">Voltar lá em cima!</a></p>
-    <p style="color: white;">
-        &copy;2021 Mantido por
-        <a style="color: white;" href="https://github.com/cesardddp" target="_blank">cesardddp</a> &middot; <a style="color: white;" href="#">Privacy</a> &middot;
-        <a style="color: white;" href="#">Terms</a></p>
-</footer>
+    <!-- FOOTER -->
+    <footer class="footer mt-auto bg-transparent mt-auto py-3">
+        <p class="float-end"><a style="color: white;" href="#">Voltar lá em cima!</a></p>
+        <p style="color: white;">
+            &copy;2021 Mantido por
+            <a style="color: white;" href="https://github.com/cesardddp" target="_blank">cesardddp</a> &middot; 
+            <a style="color: white;" href="https://github.com/bzoliveira" target="_blank">bzoliveira</a> &middot; 
+            <a style="color: white;" href="#">Privacy</a> &middot;
+            <a style="color: white;" href="#">Terms</a></p>
+        </footer>
+    </body>
