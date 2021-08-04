@@ -20,3 +20,4 @@ google agenda
 
 # LAYOUT
 copyright/ano etc deixar fixado no fim da página -> fixar footer
+add hover nos botões da nav bar (sublinhar, ou alterar bg)
