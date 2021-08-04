@@ -1,4 +1,4 @@
-# INDEX
+# ABOUT
 
 historia = {
         "parte1": {
@@ -6,7 +6,7 @@ historia = {
             "subtitulo": "(Grupo de Arte Drag Queen)",
             "conteudo": "Atua com performances musicais (dança e canto) sobre a influência do estilo Rock, como ferramenta para o empoderamento e entretenimento da comunidade LGBT.",
             "img":{
-                "src":"static/imgs/historia1.jpg",#imagem de 500x500
+                "src":"historia1.jpg",#imagem de 500x500
                 "alt":""}
             },
         "parte2": {
@@ -14,7 +14,7 @@ historia = {
                 "subtitulo": "Fazer do fervo, um ato politico",
                 "conteudo": "",
                 "img":{
-                    "src":"static/imgs/historia2.jpg",#imagem de 500x500
+                    "src":"historia2.jpg",#imagem de 500x500
                     "alt":""}
             },
         "parte3": {
@@ -22,7 +22,7 @@ historia = {
                 "subtitulo": "",
                 "conteudo": "Fazer da música e da dança, um o ponto de partida e ferramenta para visibilidade e empoderamento da comunidade LGBT.",
                 "img":{
-                       "src":"static/imgs/historia3.jpg",#imagem de 500x500
+                       "src":"historia3.jpg",#imagem de 500x500
                     "alt":""}
             }
 }
@@ -124,10 +124,13 @@ aulas = [
                 "alt": "alt descrição",
             },
         },
+    ]
+aulas2 = [
+
         {
-            "tema": "canto",
+            # "tema": "canto",
             "titulo": "pedre",
-            "subtitulo": "subtitulo",
+            # "subtitulo": "subtitulo",
             "conteudo": "conteudo conteudo conteudo conteudo conteudo conteudo ",
             "link": "https://www.instagram.com/keima.kengaral/",
             "imagem": {
@@ -137,9 +140,9 @@ aulas = [
             },
         },
         {
-            "tema": "dança",
+            # "tema": "dança",
             "titulo": "luisaff",
-            "subtitulo": "subtitulo",
+            #"subtitulo": "subtitulo",
             "conteudo": "conteudo conteudo conteudo conteudo conteudo conteudo ",
             "link": "https://www.instagram.com/oluisaff/",
             "imagem": {
@@ -149,9 +152,9 @@ aulas = [
             },
         },
         {
-            "tema": "maquiagem",
+            #"tema": "maquiagem",
             "titulo": "viccky",
-            "subtitulo": "subtitulo",
+            #"subtitulo": "subtitulo",
             "conteudo": "conteudo conteudo conteudo conteudo conteudo conteudo ",
             "link": "https://www.instagram.com/poxaleo_eu/",
             "imagem": {
@@ -159,8 +162,7 @@ aulas = [
                 "alt": "alt descrição",
             },
         },
-    ]
-
+]
 videos_lista = [
     {
         "titulo":"#15 | Manxs - A Caminhada | Edital Municipal",

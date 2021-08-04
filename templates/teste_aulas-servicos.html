@@ -1,0 +1,74 @@
+{% extends 'layout.html' %} {% block style %} {% endblock style %} {% block     main %}
+
+
+<div class="container">
+<!--
+    <div class="card style-aulas bg-azul-branco h-100">
+        <img src="{{ url_for('static', filename='imgs/'+'aula_exmp_cesar.jpg') }}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">César</h5>
+            <p class="card-text">sei lá o que escrever aqui parça</p>
+            <a href="https://www.instagram.com/sirius___72/" class="btn btn-primary">Entre em contato</a>
+        </div>
+    </div>
+</div>    
+-->   
+<!-- COMO FAZER O ~FOR~
+
+<div class="container px-4 py-5" id="featured-3">
+        <h2 class="about">AULAS</h2>
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3 container_aulas">
+            {% for aula in aulas %}
+            <div class="feature col bg-azul-branco">
+                <div>
+                    <img class="bd-placeholder-img rounded-circle" src="{{url_for('static',filename='imgs/'+aula['imagem']['src'])}}">
+                    <h2>{{aula['titulo']}}</h2>
+                    <p>{{aula['conteudo']}}</p>
+                </div>
+                <div>
+                    <a href="{{aula['link']}}" target="_blank" class="btn btn-primary">
+                        Entrar em contato
+                    </a>
+                </div>
+            </div>
+            
+            {% endfor %}
+        </div>
+    </div>
+
+    ~~~~~~~~~~~~~~~~~~~~~~~~
+--> 
+    <div class="row row-cols-1 row-cols-md-3 g-6">
+        {% for aula in aulas %}
+        <div class="col">
+            <div class="card style-aulas bg-azul-branco h-100">
+            </br>
+            <img src="{{ url_for('static', filename='imgs/'+aula['imagem']['src']) }}" class="card-img-top" alt="['imagem']['alt']">
+                <div class="card-body">
+                    <h5 class="card-title">{{aula['titulo']}}</h5>
+                    <p class="card-text">{{aula['conteudo']}}</p>
+                    <a href="{{aula['link']}}" class="btn btn-primary">Entre em contato</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    </br>
+    
+    <div class="row row-cols-1 row-cols-md-3 g-6">
+        {% for aula in aulas2 %}
+        <div class="col">
+            <div class="card style-aulas bg-azul-branco h-100">
+            </br>
+            <img src="{{ url_for('static', filename='imgs/'+aula['imagem']['src']) }}" class="card-img-top" alt="['imagem']['alt']">
+                <div class="card-body">
+                    <h5 class="card-title">{{aula['titulo']}}</h5>
+                    <p class="card-text">{{aula['conteudo']}}</p>
+                    <a href="{{aula['link']}}" class="btn btn-primary">Entre em contato</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock main %}

@@ -3,6 +3,7 @@ import itertools
 from conteudo import (
     historia,
     aulas,
+    aulas2,
     oficinas,
     videos_lista
 )
@@ -21,7 +22,6 @@ def index():
         iframe_do_carrosel=iframe_do_carrosel,
         banner2=banner2,
         banner1=banner1,
-        historia=historia,
     )
 
     
@@ -64,3 +64,14 @@ def contato():
 @app.route("/shows/")
 def shows():
     return render_template("shows.html")
+
+@app.route("/about/")
+def about():      
+    return render_template(
+        "about.html",
+        historia=historia,
+    )
+
+@app.route("/teste/")
+def teste():
+    return render_template("teste_aulas-servicos.html", aulas=aulas, aulas2=aulas2)

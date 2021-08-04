@@ -8,7 +8,7 @@ main %}
 
     <!-- <h3 class="">AULAS</h3> -->
     <div class="container px-4 py-5" id="featured-3">
-        <h2 class="pb-2 border-bottom">OFICINAS</h2>
+        <h2 class="about">OFICINAS</h2>
         <div id="carrosseldastres" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
 
             <div class="carousel-inner">
@@ -72,19 +72,20 @@ main %}
 
 
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carrosseldastres" data-bs-slide="prev" style="width: 5%;">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carrosseldastres" data-bs-slide="next" style="width: 5%;">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+      
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carrosseldastres" data-bs-slide="prev" id="bottom-oficina">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carrosseldastres" data-bs-slide="next" id="bottom-oficina"">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
     </div>
 
     <div class="container px-4 py-5" id="featured-3">
-        <h2 class="pb-2 border-bottom">CURSOS</h2>
+        <h2 class="about">CURSOS</h2>
         <div class="row mb-2 ">
             <div class="col-md-6 ">
                 <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-azul-branco">
@@ -121,12 +122,12 @@ main %}
     </div>
 
     <div class="container px-4 py-5" id="featured-3">
-        <h2 class="pb-2 border-bottom">AULAS</h2>
+        <h2 class="about">AULAS</h2>
         <div class="row g-4 py-5 row-cols-1 row-cols-lg-3 container_aulas">
             {% for aula in aulas %}
             <div class="feature col bg-azul-branco">
                 <div>
-                    <img class="bd-placeholder-img rounded-circle" src="{{url_for('static',filename='imgs/'+aula['imagem']['src'])}}">
+                    <img class="bd-placeholder-img" src="{{url_for('static',filename='imgs/'+aula['imagem']['src'])}}">
                     <h2>{{aula['titulo']}}</h2>
                     <p>{{aula['conteudo']}}</p>
                 </div>
