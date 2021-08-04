@@ -1,0 +1,116 @@
+{% extends 'layout.html' %}
+{% block main %}
+<!-- Marketing messaging and featurettes
+  ================================================== -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
+
+<div class="container marketing">
+
+	<!-- /.row -->
+    <!-- START THE FEATURETTES -->
+	<h2 class="about">QUEM SOMOS NÓS?</h2>
+	</br>	
+	<div class="row">
+		<div class="col-lg-4 card-insta bg-azul-branco">
+			<!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></svg> -->
+
+			<img src="{{ url_for('static', filename='imgs/luisaff.jpg')}}" alt="" width="140" height="140">
+
+			<h2>LuisAfF</h2>
+			<p>OLHE NOS MEUS OLHOS E DIGA QUE SOU TREVOSA !</p>
+			<p><a class="btn btn-lg btn-primary" href="https://www.instagram.com/oluisaff/">Instagram &raquo;</a></p>
+			</p>
+		</div><!-- /.col-lg-4 -->
+		<div class="col-lg-4 card-insta bg-azul-branco">
+			<!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> -->
+			<img src="{{ url_for('static', filename='imgs/ashilleyy.jpg')}}" alt="" width="140" height="140">
+
+			<h2>Ashilleyy</h2>
+			<p>OLHE NOS MEUS OLHOS E DIGA QUE SOU ANDRÓGINA !</p>
+			<p><a class="btn btn-lg btn-primary" href="https://www.instagram.com/eusou_extravaganzza/">Instagram
+					&raquo;</a>
+		</div><!-- /.col-lg-4 -->
+		<div class="col-lg-4 card-insta bg-azul-branco">
+			<!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> -->
+			<img src="{{ url_for('static', filename='imgs/vikky.jpg')}}" alt="" width="140" height="140">
+
+			<h2>Vikky</h2>
+			<p>OLHE NOS MEUS OLHOS E DIGA QUE SOU BELÍSSIMA !</p>
+			<p><a class="btn btn-lg btn-primary" href="https://www.instagram.com/vikky_a_princesinha/">Instagram
+					&raquo;</a>
+			</p>
+		</div><!-- /.col-lg-4 -->
+	</div>
+
+	<hr class="featurette-divider">
+
+	<div class="row featurette bg-azul-branco">
+		<div class="col-md-7">
+			<h2 class="featurette-heading">{{historia['parte1']['titulo']}}
+				<span class="text-muted">{{historia['parte1']['subtitulo']}}</span></h2>
+			<p class="lead">{{historia['parte1']['conteudo']}}</p>
+		</div>
+		<div class="col-md-5">
+			<img src="{{url_for ('static', filename='imgs/'+historia['parte1']['img']['src'])}}" alt="{{historia['parte1']['img']['alt']}}" srcset=""
+			class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500">
+			<!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+				height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+				preserveAspectRatio="xMidYMid slice" focusable="false">
+				<title>Placeholder</title>
+				<rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa"
+					dy=".3em">500x500</text>
+			</svg> -->
+
+		</div>
+	</div>
+	
+	<hr class="featurette-divider">
+
+	<div class="row featurette bg-azul-branco">
+		<div class="col-md-7 order-md-2">
+			<h2 class="featurette-heading">{{historia['parte2']['titulo']}}
+				<span class="text-muted">{{historia['parte2']['subtitulo']}}</span>
+			</h2>
+			<p class="lead">{{historia['parte2']['conteudo']}}</p>
+		</div>
+		<div class="col-md-5 order-md-1">
+			<img src="{{url_for ('static', filename='imgs/'+historia['parte2']['img']['src'])}}" alt="{{historia['parte2']['img']['alt']}}" srcset=""
+			class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500">
+			<!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+				height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+				preserveAspectRatio="xMidYMid slice" focusable="false">
+				<title>Placeholder</title>
+				<rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa"
+					dy=".3em">500x500</text>
+			</svg> -->
+
+		</div>
+	</div>
+
+	<hr class="featurette-divider">
+
+	<div class="row featurette bg-azul-branco">
+		<div class="col-md-7">
+			<h2 class="featurette-heading">{{historia['parte3']['titulo']}}
+				<span class="text-muted">{{historia['parte3']['subtitulo']}}</span></h2>
+			<p class="lead">{{historia['parte3']['conteudo']}}</p>
+		</div>
+		<div class="col-md-5">
+			<img src="{{url_for ('static', filename='imgs/'+historia['parte3']['img']['src'])}}" alt="{{historia['parte3']['img']['alt']}}" srcset=""
+			class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500">
+			<!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+				height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+				preserveAspectRatio="xMidYMid slice" focusable="false">
+				<title>Placeholder</title>
+				<rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa"
+					dy=".3em">500x500</text>
+			</svg> -->
+
+		</div>
+	</div>
+	<hr class="featurette-divider">
+
+	<!-- /END THE FEATURETTES -->
+
+</div><!-- /.container -->
+{% endblock main %}
