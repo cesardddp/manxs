@@ -5,7 +5,8 @@ from conteudo import (
     aulas,
     aulas2,
     oficinas,
-    videos_lista
+    videos_lista,
+    cursos
 )
 
 app = Flask(__name__)
@@ -13,15 +14,19 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    iframe_do_carrosel = "https://www.youtube.com/embed/AJ0bepmCeFo"
+    iframe_do_carrosel = "https://www.youtube.com/embed/hlP-lESKS44"
     banner2 = url_for("static", filename="imgs/banner2.jpg")
     banner1 = url_for("static", filename="imgs/banner1.jpg")
+    banner3 = url_for("static", filename="imgs/banner3.jpg")
     # import pdb;pdb.set_trace()
     return render_template(
         "index.html",
         iframe_do_carrosel=iframe_do_carrosel,
         banner2=banner2,
         banner1=banner1,
+        banner3=banner3,
+        historia=historia,
+
     )
 
     
@@ -34,7 +39,7 @@ def servicos():
 
     # import pdb; pdb.set_trace()
 
-    return render_template("servicos2.html",aulas=aulas,cards=cards)
+    return render_template("servicos2.html",aulas=aulas,aulas2=aulas2,cards=cards,cursos=cursos)
 
 
 @app.route("/galeria/")
@@ -70,6 +75,8 @@ def about():
     return render_template(
         "about.html",
         historia=historia,
+        # banner=url_for("static", filename="imgs/WhatsApp Image 2021-08-04 at 09.37.51.jpeg")
+
     )
 
 @app.route("/teste/")

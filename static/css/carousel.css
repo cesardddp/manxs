@@ -97,8 +97,11 @@
 .featurette-heading {
     font-weight: 300;
     line-height: 1;
-    /* rtl:remove */
     letter-spacing: -.05rem;
+    
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 40px;
 }
 
 

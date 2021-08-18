@@ -1,24 +1,31 @@
 {% extends 'layout.html' %}
+{% block link_style %}
+<link href="{{ url_for('static', filename='css/carousel.css') }}" rel="stylesheet">
+{% endblock link_style %}
 {% block main %}
-<div id="carrosseldastres" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+<div id="carrosseldastres" class="carousel slide d-none d-lg-block" data-bs-ride="carousel" data-bs-interval="3000">
 	<div class="carousel-indicators">
 		<button type="button" data-bs-target="#carrosseldastres" data-bs-slide-to="0" class="active" aria-current="true"
 			aria-label="Slide 1"></button>
 		<button type="button" data-bs-target="#carrosseldastres" data-bs-slide-to="1" aria-label="Slide 2"></button>
 		<button type="button" data-bs-target="#carrosseldastres" data-bs-slide-to="2" aria-label="Slide 3"></button>
+		<button type="button" data-bs-target="#carrosseldastres" data-bs-slide-to="3" aria-label="Slide 4"></button>
 	</div>
 	<div class="carousel-inner ">
 		<div class="carousel-item center-cropped active" style="background-image: url('{{banner1}}');">
 			<img src="{{banner1}}" class="" alt="...">
 		</div>
 		<div class="carousel-item ">
-			<iframe width="910" height="512" src="{{iframe_do_carrosel}}" title="YouTube video player" frameborder="0"
+			<iframe width="560" height="315" src="{{iframe_do_carrosel}}" title="YouTube video player" frameborder="0"
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 				allowfullscreen></iframe>
 		</div>
 
 		<div class="carousel-item center-cropped" style="background-image: url('{{banner2}}');">
 			<img src="{{banner2}}" class="" alt="...">
+		</div>
+		<div class="carousel-item center-cropped" style="background-image: url('{{banner3}}');">
+			<img src="{{banner3}}" class="" alt="...">
 		</div>
 	</div>
 	<button class="carousel-control-prev" type="button" data-bs-target="#carrosseldastres" data-bs-slide="prev">
@@ -31,106 +38,206 @@
 	</button>
 </div>
 
+<div class="container-md marketing">
+	
+	<hr class="featurette-divider d-none d-lg-block">
+	<!-- /.row -->
+    <!-- START THE FEATURETTES -->
+	<h2 class="about">BIOGRAFIA</h2>
+
+	<div class="row featurette">
+		<!-- <div class="col-md-7">
+			<h2 class="featurette-heading">{{historia['parte1']['titulo']}}
+				<span class="text-muted">{{historia['parte1']['subtitulo']}}</span></h2>
+			<p class="lead">{{historia['parte1']['conteudo']}}</p>
+		</div> -->
+		<div class="col">
+			<img src="{{url_for('static', filename='imgs/WhatsApp Image 2021-08-04 at 09.37.51.jpeg')}}" alt="{{historia['parte1']['img']['alt']}}" srcset=""
+			class="my-5 bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="h-100" height="h-100">
+			{# <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+				height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+				preserveAspectRatio="xMidYMid slice" focusable="false">
+				<title>Placeholder</title>
+				<rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa"
+					dy=".3em">500x500</text>
+			</svg> --> #}
+
+		</div>
+	</div>
+	<div class="row featurette bg-azul-branco">
+		<div class="col order-md-2 text-white" style="text-align: justify;">
+			<!-- <h2 class="featurette-heading">{{historia['parte2']['titulo']}}
+				<span class="text-muted">{{historia['parte2']['subtitulo']}}</span>
+			</h2> -->
+			<p class="lead">Desde 2016 o grupo Manxs vem despertando alegria e reflexão em seu público através da arte Drag Queen, disseminando cultura, informação e arte com profissionalismo. O grupo é composto pelas drags Ashilleyy Extravaganzza, Vikky e LuisAfF que são conhecidas por seus shows, sempre performáticos, repletos de humor, dança, música e reflexões sociais. Iniciou seu trabalho cultural na cidade de Rio Claro (interior do Estado de São Paulo) e hoje galga fronteiras compartilhando seu discurso artístico.  Já realizou apresentações em programas e atividades da Secretaria Municipal de Cultura de Rio Claro, UNESP campus de Rio Claro, Sistema de Ensino COC e ETEC Armando Bayeux da Silva (Centro Paula Souza), tendo como suas realizações mais simbólicas a abertura do show da Lia Clark em Rio Claro no ano de 2018, apresentação na posse de Iris Nogueira, coordenadora da Secretaria da Juventude de São Paulo no ano de 2018 e o show principal de uma das noites do Festival Nacional INTERBio em 2019. Recentemente, o grupo Manxs vem investindo em seu trabalho autoral transpassando pelo gênero musical do Rock, lançando músicas e videoclipe nas principais plataformas online de streaming. Possui realizações notórias por meio de editais contemplados, sendo elas: </p>
+			<ul>
+				<li>
+			 <p  class="lead">
+				POIESIS (Programa de Qualificação em Arte - Dança) em 2019, que resultou no primeiro espetáculo de teatro musical LGBTQIA+ Drag Queen da cidade de Rio Claro intitulado “O FIM”; 
+
+			 </p>
+			</li>
+			
+			<li>
+		 <p  class="lead">
+			Edital Nº1/2019 “Apoio a Projetos de Circulação de Espetáculos e Realização de Eventos Culturais no Município de Rio Claro - SP” em 2019, que resultou na elaboração do primeiro documento de registro histórico cultural da comunidade LGBTQIA+ de Rio Claro; 
+
+		 </p>
+		 
+			</li>
+			<li>
+		 <p  class="lead">
+			Edital ProAC Nº14/2019 “Incentivo ao Desenvolvimento da Cultura Popular, Tradicional, Urbana, Negra, Indígena e Plural no Estado de São Paulo” em 2019, que resultou na circulação online e gratuito de oficinas de aprimoramento artístico de nível iniciante; 
+
+		 </p>
+		 
+			</li>
+			<li>
+		 <p  class="lead">
+			POIESIS (Programa de Qualificação em Arte - Dança) em 2020, que resultou no espetáculo em videodança intitulado “Bem vindo ao Bailim” apresentado em evento online transmitido pelo Oficinas Culturais de São Paulo; 
+
+		 </p>
+		 
+				
+			</li>
+			<li>
+		 <p  class="lead">
+			Lei Aldir Blanc em 2020, que possibilitou a apresentação parcial do repertório musical Monta(Ação) para a cidade de Rio Claro, compondo o cronograma de atividades da Secretaria Municipal de Cultura.
+
+		 </p>
+			</li>
+			</ul>
+			
+			<!-- <p class="lead">asfasdfasfas</p>
+			<p class="lead">asfasdfasfas</p>
+			<p class="lead">asfasdfasfas</p>
+			<p class="lead">asfasdfasfas</p> -->
+		</div>
+</div>
+	
+	<hr class="featurette-divider">
+	{# <hr class=""> #}
+
+	<div class="row bg-azul-branco">
+		<div class="col-md-7 order-md-2">
+			<h2 class="featurette-heading" >{{historia['parte2']['titulo']}}</h2>
+				<h2 class="featurette-heading" style="margin-top: 3rem;">
+					<!-- TODO ASPAS GIGANTES -->
+					<p style="text-align: center;"><span >"FAZER DO FERVO</span></p>
+					<p style="text-align: center;"><span >UM ATO POLÍTICO"</span></p>
+				</h2>
+			<p class="lead">{{historia['parte2']['conteudo']}}</p>
+		</div>
+		<div class="flex col-md-5 order-md-1">
+			<img src="{{url_for ('static', filename='imgs/'+historia['parte2']['img']['src'])}}" alt="{{historia['parte2']['img']['alt']}}" srcset=""
+			class="mt-5 bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500">
+			{# <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+				height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+				preserveAspectRatio="xMidYMid slice" focusable="false">
+				<title>Placeholder</title>
+				<rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa"
+					dy=".3em">500x500</text>
+			</svg> --> #}
+
+		</div>
+	</div>
+
+	<hr class="featurette-divider">
+
+	<div class="row featurette bg-azul-branco">
+		<div class="col-md-7">
+			<h2 class="featurette-heading" style="margin-top: 3rem;text-align: center;font-size: 37px;">OBJETIVO DO GRUPO</h2>				<span class="text-muted"></span></h2>
+			<p class="lead"></p>
+			<h2 class="featurette-heading" style="margin-top: 1rem;font-size: 46px;">
+				<!-- TODO ASPAS GIGANTES -->
+				<p style="text-align: center;"><span>"FAZER DA ARTE UMA FERRAMENTA PARA VISIBILIDADE E O EMPODERAMENTO DA COMUNIDADE LGBTQIA+"</span></p>
+			</h2>
+		</div>
+		<div class="col-md-5">
+			<img src="{{url_for ('static', filename='imgs/'+historia['parte3']['img']['src'])}}" alt="{{historia['parte3']['img']['alt']}}" srcset=""
+			class="mt-5 bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500">
+			{# <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+				height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+				preserveAspectRatio="xMidYMid slice" focusable="false">
+				<title>Placeholder</title>
+				<rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa"
+					dy=".3em">500x500</text>
+			</svg> --> #}
+
+		</div>
+	</div>
+	<hr class="featurette-divider">
+
+	<!-- <h2 class="about">QUEM SOMOS NÓS?</h2> -->
+	<div class="container bg-azul-branco flex iconsredessociais">
+    </br>
+    <div class="row"><h2>ACESSE NOSSAS REDES SOCIAIS</h2></div>
+    </br>
+    <div class="row">
+        <div class="col">
+            <a class="btn btn-face" href="https://www.facebook.com/grupomanxs/" target="_blank" role="button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"></path>
+                </svg>
+                /grupomanxs
+            </a>
+        </div>
+        <div class="col">
+            <a class="btn btn-insta" href="https://www.instagram.com/grupomanxs/" target="_blank" role="button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                </svg>
+                /grupomanxs
+            </a>
+        </div>
+        <div class="col">
+            <a class="btn btn-youtube" href="https://www.youtube.com/Manxs" target="_blank" role="button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                    <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"></path>
+                </svg>
+                /Manxs
+            </a>                 
+        </div>
+    </div>
+</br></br>
+</div>
+<div class="row">
+    <div class="col-lg-4 card-insta bg-azul-branco">
+        <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></svg> -->
+
+        <img src="{{ url_for('static', filename='imgs/luisaff.jpg')}}" class="mt-5" alt="" width="140" height="140">
+
+        <h2>LuisAfF</h2>
+        <!-- <p>OLHE NOS MEUS OLHOS E DIGA QUE SOU TREVOSA !</p> -->
+        <p><a class="btn btn-lg btn-primary" href="https://www.instagram.com/oluisaff/">Instagram &raquo;</a></p>
+        </p>
+    </div><!-- /.col-lg-4 -->
+    <div class="col-lg-4 card-insta bg-azul-branco">
+        <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> -->
+        <img src="{{ url_for('static', filename='imgs/ashilleyy.jpg')}}" class="mt-5" alt="" width="140" height="140">
+
+        <h2>Ashilleyy</h2>
+        <!-- <p>OLHE NOS MEUS OLHOS E DIGA QUE SOU ANDRÓGINA !</p> -->
+        <p><a class="btn btn-lg btn-primary" href="https://www.instagram.com/eusou_extravaganzza/">Instagram
+                &raquo;</a>
+    </div><!-- /.col-lg-4 -->
+    <div class="col-lg-4 card-insta bg-azul-branco">
+        <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> -->
+        <img src="{{ url_for('static', filename='imgs/vikky.jpg')}}" class="mt-5" alt="" width="140" height="140">
+
+        <h2>Vikky</h2>
+        <!-- <p>OLHE NOS MEUS OLHOS E DIGA QUE SOU BELÍSSIMA !</p> -->
+        <p><a class="btn btn-lg btn-primary" href="https://www.instagram.com/vikky_a_princesinha/">Instagram
+                &raquo;</a>
+        </p>
+    </div><!-- /.col-lg-4 -->
+</div>
+	<!-- /END THE FEATURETTES -->
+
+</div>
 
 <!-- Marketing messaging and featurettes
   ================================================== -->
 <!-- Wrap the rest of the page in another container to center all the content. -->
 
-<div class="container marketing">
-
-	<!-- CARDS DE NOÍCIAS -->
-	<hr class="featurette-divider">
-	<div id="carrosseldasduas" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
-		<div class="carousel-inner">
-		  <div class="carousel-item active">
-			<div class="row mb-2 ">
-				<div class="col-md-6" >
-				<div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-					<div class="col p-4 flex-column position-static bloconoticia">
-							<strong class="d-inline-block mb-2 text-black">Projetos</strong>
-							<h3 class="mb-0">Início de projeto com parceria da prefeitura</h3>
-							<div class="mb-1 text-muted">30 de Julho</div>
-							<p class="card-text mb-auto">Texto da notícia aqui blablablablabalba</p>
-							<a href="#" class="stretched-link">Acesse</a>
-					</div>
-					<div class="col-auto d-none d-lg-block">
-					<!-- <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Capa da Notícia</text></svg> -->
-					<img src="{{ url_for('static', filename='imgs/luisaff.jpg')}}" alt="" width="200" height="250">
-					</div>
-				</div>
-				</div>
-				<div class="col-md-6">
-				<div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-					<div class="col p-4 d-flex flex-column position-static bloconoticia">
-					<strong class="d-inline-block mb-2 text-black">Design</strong>
-					<h3 class="mb-0">Post title</h3>
-					<div class="mb-1 text-muted">Nov 11</div>
-					<p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-					<a href="#" class="stretched-link">Continue reading</a>
-					</div>
-					<div class="col-auto d-none d-lg-block">
-					<svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-			
-					</div>
-				</div>
-				</div>
-			</div>
-		  </div>
-		  <div class="carousel-item">
-			<div class="row mb-2">
-				<div class="col-md-6" >
-				<div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-					<div class="col p-4 flex-column position-static bloconoticia">
-					<strong class="d-inline-block mb-2 text-white">Projetos</strong>
-					<h3 class="mb-0">Início de projeto com parceria da prefeitura</h3>
-					<div class="mb-1 text-muted">30 de Julho</div>
-					<p class="card-text mb-auto">Texto da notícia aqui blablablablabalba</p>
-					<a href="#" class="stretched-link">Continue lendo...</a>
-					</div>
-					<div class="col-auto d-none d-lg-block">
-					<!-- <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Capa da Notícia</text></svg> -->
-					<img src="{{ url_for('static', filename='imgs/luisaff.jpg')}}" alt="" width="200" height="250">
-					</div>
-				</div>
-				</div>
-				<div class="col-md-6">
-				<div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-					<div class="col p-4 d-flex flex-column position-static bloconoticia">
-					<strong class="d-inline-block mb-2 text-white">Design</strong>
-					<h3 class="mb-0">Post title</h3>
-					<div class="mb-1 text-muted">Nov 11</div>
-					<p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-					<a href="#" class="stretched-link">Continue reading</a>
-					</div>
-					<div class="col-auto d-none d-lg-block">
-					<svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-			
-					</div>
-				</div>
-				</div>
-			</div>
-		  </div>
-		 
-		<button class="carousel-control-prev" type="button" data-bs-target="#carrosseldasduas" data-bs-slide="prev">
-		  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-		  <span class="visually-hidden">Previous</span>
-		</button>
-		<button class="carousel-control-next" type="button" data-bs-target="#carrosseldasduas" data-bs-slide="next">
-		  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-		  <span class="visually-hidden">Next</span>
-		</button>
-	  </div>
-	
-	</div>
-		
-	<!-- /.row -->
-
-
-	<!-- START THE FEATURETTES -->
-
-	
-
-	<!-- /END THE FEATURETTES -->
-
-</div><!-- /.container -->
 {% endblock main %}

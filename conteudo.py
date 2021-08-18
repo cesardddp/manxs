@@ -10,19 +10,19 @@ historia = {
                 "alt":""}
             },
         "parte2": {
-                "titulo": "Missão:",
-                "subtitulo": "Fazer do fervo, um ato politico",
+                "titulo": "MISSÃO",
+                "subtitulo": "FAZER DO FERVO, UM ATO POLÍTICO",
                 "conteudo": "",
                 "img":{
-                    "src":"historia2.jpg",#imagem de 500x500
+                    "src":"MISSÃO.jpeg",#imagem de 500x500
                     "alt":""}
             },
         "parte3": {
-                "titulo": "Objetivo do grupo:",
+                "titulo": "Objetivo do grupo",
                 "subtitulo": "",
                 "conteudo": "Fazer da música e da dança, um o ponto de partida e ferramenta para visibilidade e empoderamento da comunidade LGBT.",
                 "img":{
-                       "src":"historia3.jpg",#imagem de 500x500
+                       "src":"OBJETIVO.jpeg",#imagem de 500x500
                     "alt":""}
             }
 }
@@ -76,37 +76,40 @@ oficinas = [
 
 cursos = [
         {
-            "tema": "canto",
-            "titulo": "titulo curso",
-            "subtitulo": "subtitulo",
-            "conteudo": "oque é o curso curso curso",
-            "link": "https://www.instagram.com/keima.kengaral/",
+            "tema": "Comunicação",
+            "titulo": "EXPRESSÃO E LINGUAGEM CORPORAL",
+            "subtitulo": "Valor R$ 00,00",
+            "conteudo": "Desenvolver a habilidade social de comunicação (verbal e não verbal) e ampliar o repertório expressivo artístico do participante. Inscrição: 00/00/2022 à 00/00/2022",
+            "duracao": "*Carga Horária: X X horas. *",
             "imagem": {
                 # "src": url_for("static", filename="imgs/aula_exmp_pedre.jpg"),
                 "src": "aula_exmp_pedre.jpg",
                 "alt": "alt descrição",
             },
         },
-
+# Tema: Comunicação
+# Título: 
+# Subtítulo: Valor R$ 00,00
+# Conteúdo: Desenvolver a habilidade social de comunicação (verbal e não verbal) e ampliar o repertório expressivo artístico do participante. Inscrição: 00/00/2022 à 00/00/2022
+# Duração: *Carga Horária: X X horas. *
 ]
 
 aulas = [
         {
             "tema": "maquiagem",
-            "titulo": "cesar",
-            "subtitulo": "asdsdf",
-            "conteudo": "sem conteudo conteudo conteudo conteudo conteudo ",
+            "titulo": "EDIÇÃO",
+            "conteudo": "Edição e mixagem de som e legenda para audiovisual com o produtor Chassi",
             "link": "https://www.instagram.com/sirius___72/",
             "imagem": {
-                "src": "aula_exmp_cesar.jpg",
+                "src": "",
                 "alt": "alt descrição",
             },
         },
         {
             "tema": "maquiagem", 
-            "titulo": "deva",
+            "titulo": "PERCUSSÃO",
             "subtitulo": "subtitulo",
-            "conteudo": "conteudo conteudo conteudo conteudo conteudo conteudo ",
+            "conteudo": "Aulas do iniciante ao avançado com a professora Deva",
             "link": "https://www.instagram.com/deva.gouveia/",
             "imagem": {
                 "src": "aula_exmp_deva.jpg",
@@ -115,9 +118,9 @@ aulas = [
         },
         {
             "tema": "maquiagem",
-            "titulo": "vini",
+            "titulo": "VIOLÃO E BAIXO",
             "subtitulo": "subtitulo",
-            "conteudo": "conteudo conteudo conteudo conteudo conteudo conteudo ",
+            "conteudo": "Aulas do iniciante ao avançado com o professor Vinícius Marques",
             "link": "https://www.instagram.com/vini.marqs_/",
             "imagem": {
                 "src": "aula_exmp_vini.jpg",
@@ -129,9 +132,9 @@ aulas2 = [
 
         {
             # "tema": "canto",
-            "titulo": "pedre",
+            "titulo": "CANTO",
             # "subtitulo": "subtitulo",
-            "conteudo": "conteudo conteudo conteudo conteudo conteudo conteudo ",
+            "conteudo": "Aulas do iniciante ao avançado com a professore Pedry Marques",
             "link": "https://www.instagram.com/keima.kengaral/",
             "imagem": {
                 # "src": url_for("static", filename="imgs/aula_exmp_pedre.jpg"),
@@ -141,9 +144,9 @@ aulas2 = [
         },
         {
             # "tema": "dança",
-            "titulo": "luisaff",
+            "titulo": "FLEXIBILIDADE",
             #"subtitulo": "subtitulo",
-            "conteudo": "conteudo conteudo conteudo conteudo conteudo conteudo ",
+            "conteudo": "Treinos para postura, qualidade de movimentos e autoconhecimento, com foco em saúde ou alta performance (atletas/artistas) com professor LuisAfF",
             "link": "https://www.instagram.com/oluisaff/",
             "imagem": {
                 "src": "aula_exmp_luis.jpg",
@@ -153,9 +156,9 @@ aulas2 = [
         },
         {
             #"tema": "maquiagem",
-            "titulo": "viccky",
+            "titulo": "LIBRAS",
             #"subtitulo": "subtitulo",
-            "conteudo": "conteudo conteudo conteudo conteudo conteudo conteudo ",
+            "conteudo": "Intérprete de LIBRAS para eventos e orientador para interpretes iniciantes",
             "link": "https://www.instagram.com/poxaleo_eu/",
             "imagem": {
                 "src": "aula_exmp_leo.jpg",
