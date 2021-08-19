@@ -101,7 +101,7 @@ aulas = [
             "conteudo": "Edição e mixagem de som e legenda para audiovisual com o produtor Chassi",
             "link": "https://www.instagram.com/sirius___72/",
             "imagem": {
-                "src": "",
+                "src": "aula_exmp_chassi.jpg",
                 "alt": "alt descrição",
             },
         },

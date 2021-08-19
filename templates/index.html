@@ -15,8 +15,8 @@
 		<div class="carousel-item center-cropped active" style="background-image: url('{{banner1}}');">
 			<img src="{{banner1}}" class="" alt="...">
 		</div>
-		<div class="carousel-item ">
-			<iframe width="560" height="315" src="{{iframe_do_carrosel}}" title="YouTube video player" frameborder="0"
+		<div class="carousel-item container-flex">
+			<iframe width="90%" height="100%" src="{{iframe_do_carrosel}}" title="YouTube video player" frameborder="0"
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 				allowfullscreen></iframe>
 		</div>
@@ -199,20 +199,40 @@
             </a>                 
         </div>
     </div>
-</br></br>
+<br/><br/>
 </div>
-<div class="row">
-    <div class="col-lg-4 card-insta bg-azul-branco">
-        <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></svg> -->
+<div class="row gx-2 justify-content-evenly">
 
-        <img src="{{ url_for('static', filename='imgs/luisaff.jpg')}}" class="mt-5" alt="" width="140" height="140">
+<div class="card bg-azul-branco" style="width: 18rem;">
+  <img src="{{ url_for('static', filename='imgs/vikky.jpg')}}" class="card-img" alt="..."  width="140" height="140">
+  <div class="card-body">
+ <h2>Vikky</h2>
+ </div>
+  <div class="card-footer">
+    <a class="btn btn-lg btn-primary" href="https://www.instagram.com/oluisaff/">Instagram &raquo;</a>
+  </div>
+</div> 
 
-        <h2>LuisAfF</h2>
-        <!-- <p>OLHE NOS MEUS OLHOS E DIGA QUE SOU TREVOSA !</p> -->
-        <p><a class="btn btn-lg btn-primary" href="https://www.instagram.com/oluisaff/">Instagram &raquo;</a></p>
-        </p>
-    </div><!-- /.col-lg-4 -->
-    <div class="col-lg-4 card-insta bg-azul-branco">
+<div class="card bg-azul-branco" style="width: 18rem;">
+  <img src="{{ url_for('static', filename='imgs/ashilleyy.jpg')}}" class="card-img" alt="..."  width="140" height="140">
+  <div class="card-body">
+ <h2>Ashilleyy</h2>
+ </div>
+  <div class="card-footer">
+    <a class="btn btn-lg btn-primary" href="https://www.instagram.com/oluisaff/">Instagram &raquo;</a>
+  </div>
+</div>
+<div class="card bg-azul-branco" style="width: 18rem;">
+  <img src="{{ url_for('static', filename='imgs/luisaff.jpg')}}" class="card-img" alt="..."  width="140" height="140">
+  <div class="card-body">
+ <h2>LuisAfF</h2>
+ </div>
+  <div class="card-footer">
+    <a class="btn btn-lg btn-primary" href="https://www.instagram.com/oluisaff/">Instagram &raquo;</a>
+  </div>
+</div>
+
+    {# <div class="col-md-4 card-insta bg-azul-branco">
         <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> -->
         <img src="{{ url_for('static', filename='imgs/ashilleyy.jpg')}}" class="mt-5" alt="" width="140" height="140">
 
@@ -221,7 +241,7 @@
         <p><a class="btn btn-lg btn-primary" href="https://www.instagram.com/eusou_extravaganzza/">Instagram
                 &raquo;</a>
     </div><!-- /.col-lg-4 -->
-    <div class="col-lg-4 card-insta bg-azul-branco">
+    <div class="col-md-4 card-insta bg-azul-branco">
         <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> -->
         <img src="{{ url_for('static', filename='imgs/vikky.jpg')}}" class="mt-5" alt="" width="140" height="140">
 
@@ -230,7 +250,7 @@
         <p><a class="btn btn-lg btn-primary" href="https://www.instagram.com/vikky_a_princesinha/">Instagram
                 &raquo;</a>
         </p>
-    </div><!-- /.col-lg-4 -->
+    </div><!-- /.col-lg-4 --> #}
 </div>
 	<!-- /END THE FEATURETTES -->
 
@@ -239,5 +259,31 @@
 <!-- Marketing messaging and featurettes
   ================================================== -->
 <!-- Wrap the rest of the page in another container to center all the content. -->
+
+<script>
+function onPlayerStateChange(event) // triggered everytime ANY iframe video player among the "players" list is played, paused, ended, etc.
+{
+    // Check if any iframe video is being played (or is currently buffering to be played)
+    // Reference: https://developers.google.com/youtube/iframe_api_reference#Events
+    if (event.data == YT.PlayerState.PLAYING || event.data == YT.PlayerState.BUFFERING)
+    {
+        // If any player has been detected to be currently playing or buffering, pause the carousel from sliding
+        // .carousel('pause') - Stops the carousel from cycling through items.
+        // Reference: https://getbootstrap.com/docs/4.4/components/carousel/#methods
+        $('#carrosseldastres').carousel('pause');
+    }
+    else
+    {
+        // If there are no currently playing nor buffering videos, resume the sliding of the carousel.
+        // This means that once the current video is in a state that is not playing (aside from buffering), either it was:
+        //     1. paused intentionally
+        //     2. paused as an effect of a slide
+        //     3. video has ended
+        //     4. wasn't totally played from the start
+        //     5. and literally any form where the video timer isn't running ;)
+        //     - then the carousel would now resume sliding.
+        $('#carrosseldastres').carousel();
+    }
+</script>
 
 {% endblock main %}

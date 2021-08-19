@@ -12,6 +12,7 @@ body {
     font-family: 'Roboto', sans-serif;
     /* background-color: black; */
     background-image: url(../imgs/uncompressed/PCVV9206.jpg);
+    /* background-image: url(../imgs/uncompressed/PCVV9140.jpg); */
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -52,7 +53,7 @@ body {
 
 .card-insta {
     /*background-image: linear-gradient(to top right, #ff00bb3f, #53008646);*/
-    margin: -2px;
+    /* margin: -2px; */
     border-radius: 10px;
 }
 
@@ -248,4 +249,18 @@ body {
     border-top: 1px solid #6e008a;
     border-bottom: 1px solid #ad007f;
 }*/
-
+.card{
+    background-color: transparent;
+    border: transparent;
+}
+.card-img {
+    margin-left: calc(4.25rem - 1px);
+    margin-top: calc(1.25rem - 1px);
+    width: max-content;
+}
+.card-body > h2 {
+    text-align: center;
+}
+.card-footer > a {
+    margin-left: calc(3rem + 4px);
+}
