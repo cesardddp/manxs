@@ -12,57 +12,38 @@
     <meta name="og:url" content="https://www.grupomanxs.com">
 
     <title>Manxs</title>
+    
+    <link rel="shortcut icon" href="/static/favicon.ico">
 
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;900&display=swap" >
     <!-- Bootstrap core CSS -->
 
-    <link href="/static/css/bootstrap.min.css" rel="stylesheet">  
-    <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
-        
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-        
-        {
-            % block style %
-        }
-        
-        {
-            % endblock style %
-        }
-    </style>
-    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css" >
+    
 
-    <link rel="shortcut icon" href="/static/favicon.ico">
     <!-- Custom styles for this template -->
-    <link href="/static/css/carousel.css" rel="stylesheet">
-    <link href="/static/css/headers.css" rel="stylesheet">
-    <script src="/static/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/headers.css" >
+    
+<link href="/static/css/carousel.css" rel="stylesheet">
+
+    
 
 </head>
 
-<header class="d-flex flex-wrap align-items-center justify-content-center  py-3 mb-4 bg-manxs">
+<header class="d-flex flex-wrap justify-content-center mb-3 bg-manxs">
 
-    <a href="/" class="navbar-brand d-flex align-items-center col-1 mb-1 mb-0 text-dark text-decoration-none">
-        <!-- <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg> -->
-        <img src="/static/imgs/Logo Manxs.png" alt="" width="60" class="d-inline-block align-text-center">
+    <a href="/" class="navbar-brand mb-1">
+        
+        <img src="/static/imgs/Logo Manxs.png" alt="" width="60" class="d-inline-block">
 
+    <b class="fs-3 link-light align-middle">MANXS</b>
     </a>
-    <b class="fs-3 link-light">MANXS</b>
 
-    <ul class="nav col-12 col-auto mb-2 justify-content-center mb-0">
+    <ul class="nav col-12 mb-2 justify-content-center">
         <li><a href="/                        " class="nav-link px-2 link-light">HOME</a></li>
         <li><a href="/servicos/" class="nav-link px-2 link-light">SERVIÇOS</a></li>
         <li><a href="/galeria/ " class="nav-link px-2 link-light">GALERIA</a></li>
@@ -70,20 +51,15 @@
         <li><a href="/shows/" class="nav-link px-2 link-light">SHOWS</a></li>
         <li><a href="                         " class="nav-link px-2 link-light disabled">MUSICAS</a></li>
         <li><a href="/contato/" class="nav-link px-2 link-light">CONTATO</a></li>
-        <!-- <li><a href="/about/" class="nav-link px-2 link-light">SOBRE NÓS</a></li> -->
-
-        <!--REMOVER DEPOIS-->
-        <!-- <li><a href="/teste/" class="nav-link px-2 link-light">TESTE</a></li> -->
+        
     </ul>
-
-
 </header>
 
 
 
-<body class="d-flex flex-column h-100">
+<main class="d-flex flex-column h-100">
     
-<div id="carrosseldastres" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+<div id="carrosseldastres" class="carousel slide d-none d-lg-block" data-bs-ride="carousel" data-bs-interval="3000">
 	<div class="carousel-indicators">
 		<button type="button" data-bs-target="#carrosseldastres" data-bs-slide-to="0" class="active" aria-current="true"
 			aria-label="Slide 1"></button>
@@ -95,8 +71,8 @@
 		<div class="carousel-item center-cropped active" style="background-image: url('/static/imgs/banner1.jpg');">
 			<img src="/static/imgs/banner1.jpg" class="" alt="...">
 		</div>
-		<div class="carousel-item ">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/hlP-lESKS44" title="YouTube video player" frameborder="0"
+		<div class="carousel-item container-flex">
+			<iframe width="90%" height="100%" src="https://www.youtube.com/embed/hlP-lESKS44" title="YouTube video player" frameborder="0"
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 				allowfullscreen></iframe>
 		</div>
@@ -118,9 +94,9 @@
 	</button>
 </div>
 
-<div class="container marketing">
+<div class="container-md marketing">
 	
-	<hr class="featurette-divider">
+	<hr class="featurette-divider d-none d-lg-block">
 	<!-- /.row -->
     <!-- START THE FEATURETTES -->
 	<h2 class="about">BIOGRAFIA</h2>
@@ -133,14 +109,8 @@
 		</div> -->
 		<div class="col">
 			<img src="/static/imgs/WhatsApp%20Image%202021-08-04%20at%2009.37.51.jpeg" alt="" srcset=""
-			class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="h-100" height="h-100">
-			<!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-				height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
-				preserveAspectRatio="xMidYMid slice" focusable="false">
-				<title>Placeholder</title>
-				<rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa"
-					dy=".3em">500x500</text>
-			</svg> -->
+			class="my-5 bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="h-100" height="h-100">
+			
 
 		</div>
 	</div>
@@ -196,10 +166,11 @@
 </div>
 	
 	<hr class="featurette-divider">
+	
 
-	<div class="row featurette bg-azul-branco">
+	<div class="row bg-azul-branco">
 		<div class="col-md-7 order-md-2">
-			<h2 class="featurette-heading" style="margin-top: 3rem;text-align: center;font-size: 40px;">MISSÃO</h2>
+			<h2 class="featurette-heading" >MISSÃO</h2>
 				<h2 class="featurette-heading" style="margin-top: 3rem;">
 					<!-- TODO ASPAS GIGANTES -->
 					<p style="text-align: center;"><span >"FAZER DO FERVO</span></p>
@@ -207,17 +178,10 @@
 				</h2>
 			<p class="lead"></p>
 		</div>
-		<div class="col-md-5 order-md-1">
-			<!--  -->
+		<div class="flex col-md-5 order-md-1">
 			<img src="/static/imgs/MISS%C3%83O.jpeg" alt="" srcset=""
-			class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500">
-			<!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-				height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
-				preserveAspectRatio="xMidYMid slice" focusable="false">
-				<title>Placeholder</title>
-				<rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa"
-					dy=".3em">500x500</text>
-			</svg> -->
+			class="mt-5 bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500">
+			
 
 		</div>
 	</div>
@@ -235,14 +199,8 @@
 		</div>
 		<div class="col-md-5">
 			<img src="/static/imgs/OBJETIVO.jpeg" alt="" srcset=""
-			class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500">
-			<!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-				height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
-				preserveAspectRatio="xMidYMid slice" focusable="false">
-				<title>Placeholder</title>
-				<rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa"
-					dy=".3em">500x500</text>
-			</svg> -->
+			class="mt-5 bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500">
+			
 
 		</div>
 	</div>
@@ -279,38 +237,40 @@
             </a>                 
         </div>
     </div>
-</br></br>
+<br/><br/>
 </div>
-<div class="row">
-    <div class="col-lg-4 card-insta bg-azul-branco">
-        <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></svg> -->
+<div class="row gx-2 justify-content-evenly">
 
-        <img src="/static/imgs/luisaff.jpg" alt="" width="140" height="140">
+<div class="card bg-azul-branco" style="width: 18rem;">
+  <img src="/static/imgs/vikky.jpg" class="card-img" alt="..."  width="140" height="140">
+  <div class="card-body">
+ <h2>Vikky</h2>
+ </div>
+  <div class="card-footer">
+    <a class="btn btn-lg btn-primary" href="https://www.instagram.com/oluisaff/">Instagram &raquo;</a>
+  </div>
+</div> 
 
-        <h2>LuisAfF</h2>
-        <!-- <p>OLHE NOS MEUS OLHOS E DIGA QUE SOU TREVOSA !</p> -->
-        <p><a class="btn btn-lg btn-primary" href="https://www.instagram.com/oluisaff/">Instagram &raquo;</a></p>
-        </p>
-    </div><!-- /.col-lg-4 -->
-    <div class="col-lg-4 card-insta bg-azul-branco">
-        <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> -->
-        <img src="/static/imgs/ashilleyy.jpg" alt="" width="140" height="140">
+<div class="card bg-azul-branco" style="width: 18rem;">
+  <img src="/static/imgs/ashilleyy.jpg" class="card-img" alt="..."  width="140" height="140">
+  <div class="card-body">
+ <h2>Ashilleyy</h2>
+ </div>
+  <div class="card-footer">
+    <a class="btn btn-lg btn-primary" href="https://www.instagram.com/oluisaff/">Instagram &raquo;</a>
+  </div>
+</div>
+<div class="card bg-azul-branco" style="width: 18rem;">
+  <img src="/static/imgs/luisaff.jpg" class="card-img" alt="..."  width="140" height="140">
+  <div class="card-body">
+ <h2>LuisAfF</h2>
+ </div>
+  <div class="card-footer">
+    <a class="btn btn-lg btn-primary" href="https://www.instagram.com/oluisaff/">Instagram &raquo;</a>
+  </div>
+</div>
 
-        <h2>Ashilleyy</h2>
-        <!-- <p>OLHE NOS MEUS OLHOS E DIGA QUE SOU ANDRÓGINA !</p> -->
-        <p><a class="btn btn-lg btn-primary" href="https://www.instagram.com/eusou_extravaganzza/">Instagram
-                &raquo;</a>
-    </div><!-- /.col-lg-4 -->
-    <div class="col-lg-4 card-insta bg-azul-branco">
-        <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> -->
-        <img src="/static/imgs/vikky.jpg" alt="" width="140" height="140">
-
-        <h2>Vikky</h2>
-        <!-- <p>OLHE NOS MEUS OLHOS E DIGA QUE SOU BELÍSSIMA !</p> -->
-        <p><a class="btn btn-lg btn-primary" href="https://www.instagram.com/vikky_a_princesinha/">Instagram
-                &raquo;</a>
-        </p>
-    </div><!-- /.col-lg-4 -->
+    
 </div>
 	<!-- /END THE FEATURETTES -->
 
@@ -320,15 +280,42 @@
   ================================================== -->
 <!-- Wrap the rest of the page in another container to center all the content. -->
 
+<script>
+function onPlayerStateChange(event) // triggered everytime ANY iframe video player among the "players" list is played, paused, ended, etc.
+{
+    // Check if any iframe video is being played (or is currently buffering to be played)
+    // Reference: https://developers.google.com/youtube/iframe_api_reference#Events
+    if (event.data == YT.PlayerState.PLAYING || event.data == YT.PlayerState.BUFFERING)
+    {
+        // If any player has been detected to be currently playing or buffering, pause the carousel from sliding
+        // .carousel('pause') - Stops the carousel from cycling through items.
+        // Reference: https://getbootstrap.com/docs/4.4/components/carousel/#methods
+        $('#carrosseldastres').carousel('pause');
+    }
+    else
+    {
+        // If there are no currently playing nor buffering videos, resume the sliding of the carousel.
+        // This means that once the current video is in a state that is not playing (aside from buffering), either it was:
+        //     1. paused intentionally
+        //     2. paused as an effect of a slide
+        //     3. video has ended
+        //     4. wasn't totally played from the start
+        //     5. and literally any form where the video timer isn't running ;)
+        //     - then the carousel would now resume sliding.
+        $('#carrosseldastres').carousel();
+    }
+</script>
 
-    <!-- FOOTER -->
-    <footer class="footer mt-auto bg-transparent mt-auto py-3">
-        <p class="float-end"><a style="color: white;" href="#">Voltar lá em cima!</a></p>
-        <p style="color: white;">
-            &copy;2021 Mantido por
-            <a style="color: white;" href="https://github.com/cesardddp" target="_blank">cesardddp</a> &middot; 
-            <a style="color: white;" href="https://github.com/bzoliveira" target="_blank">bzoliveira</a> &middot; 
-            <a style="color: white;" href="#">Privacy</a> &middot;
-            <a style="color: white;" href="#">Terms</a></p>
-        </footer>
-    </body>
+
+</main>
+<footer class="footer mt-auto bg-transparent mt-auto py-3">
+    <p class="float-end"><a style="color: white;" href="#">Voltar lá em cima!</a></p>
+    <p style="color: white;">
+        &copy;2021 Mantido por
+        <a style="color: white;" href="https://github.com/cesardddp" target="_blank">cesardddp</a> &middot; 
+        <a style="color: white;" href="https://github.com/bzoliveira" target="_blank">bzoliveira</a> &middot; 
+        <a style="color: white;" href="#">Privacy</a> &middot;
+        <a style="color: white;" href="#">Terms</a></p>
+</footer>
+
+<script src="/static/js/bootstrap.bundle.js"></script>

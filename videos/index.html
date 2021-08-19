@@ -12,57 +12,36 @@
     <meta name="og:url" content="https://www.grupomanxs.com">
 
     <title>Manxs</title>
+    
+    <link rel="shortcut icon" href="/static/favicon.ico">
 
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;900&display=swap" >
     <!-- Bootstrap core CSS -->
 
-    <link href="/static/css/bootstrap.min.css" rel="stylesheet">  
-    <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
-        
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-        
-        {
-            % block style %
-        }
-        
-        {
-            % endblock style %
-        }
-    </style>
-    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css" >
+    
 
-    <link rel="shortcut icon" href="/static/favicon.ico">
     <!-- Custom styles for this template -->
-    <link href="/static/css/carousel.css" rel="stylesheet">
-    <link href="/static/css/headers.css" rel="stylesheet">
-    <script src="/static/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/headers.css" >
+     
+    
 
 </head>
 
-<header class="d-flex flex-wrap align-items-center justify-content-center  py-3 mb-4 bg-manxs">
+<header class="d-flex flex-wrap justify-content-center mb-3 bg-manxs">
 
-    <a href="/" class="navbar-brand d-flex align-items-center col-1 mb-1 mb-0 text-dark text-decoration-none">
-        <!-- <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg> -->
-        <img src="/static/imgs/Logo Manxs.png" alt="" width="60" class="d-inline-block align-text-center">
+    <a href="/" class="navbar-brand mb-1">
+        
+        <img src="/static/imgs/Logo Manxs.png" alt="" width="60" class="d-inline-block">
 
+    <b class="fs-3 link-light align-middle">MANXS</b>
     </a>
-    <b class="fs-3 link-light">MANXS</b>
 
-    <ul class="nav col-12 col-auto mb-2 justify-content-center mb-0">
+    <ul class="nav col-12 mb-2 justify-content-center">
         <li><a href="/                        " class="nav-link px-2 link-light">HOME</a></li>
         <li><a href="/servicos/" class="nav-link px-2 link-light">SERVIÇOS</a></li>
         <li><a href="/galeria/ " class="nav-link px-2 link-light">GALERIA</a></li>
@@ -70,18 +49,13 @@
         <li><a href="/shows/" class="nav-link px-2 link-light">SHOWS</a></li>
         <li><a href="                         " class="nav-link px-2 link-light disabled">MUSICAS</a></li>
         <li><a href="/contato/" class="nav-link px-2 link-light">CONTATO</a></li>
-        <!-- <li><a href="/about/" class="nav-link px-2 link-light">SOBRE NÓS</a></li> -->
-
-        <!--REMOVER DEPOIS-->
-        <!-- <li><a href="/teste/" class="nav-link px-2 link-light">TESTE</a></li> -->
+        
     </ul>
-
-
 </header>
 
 
 
-<body class="d-flex flex-column h-100">
+<main class="d-flex flex-column h-100">
     
     
 <div class="container">
@@ -141,14 +115,15 @@
 </div>
 
 
-    <!-- FOOTER -->
-    <footer class="footer mt-auto bg-transparent mt-auto py-3">
-        <p class="float-end"><a style="color: white;" href="#">Voltar lá em cima!</a></p>
-        <p style="color: white;">
-            &copy;2021 Mantido por
-            <a style="color: white;" href="https://github.com/cesardddp" target="_blank">cesardddp</a> &middot; 
-            <a style="color: white;" href="https://github.com/bzoliveira" target="_blank">bzoliveira</a> &middot; 
-            <a style="color: white;" href="#">Privacy</a> &middot;
-            <a style="color: white;" href="#">Terms</a></p>
-        </footer>
-    </body>
+</main>
+<footer class="footer mt-auto bg-transparent mt-auto py-3">
+    <p class="float-end"><a style="color: white;" href="#">Voltar lá em cima!</a></p>
+    <p style="color: white;">
+        &copy;2021 Mantido por
+        <a style="color: white;" href="https://github.com/cesardddp" target="_blank">cesardddp</a> &middot; 
+        <a style="color: white;" href="https://github.com/bzoliveira" target="_blank">bzoliveira</a> &middot; 
+        <a style="color: white;" href="#">Privacy</a> &middot;
+        <a style="color: white;" href="#">Terms</a></p>
+</footer>
+
+<script src="/static/js/bootstrap.bundle.js"></script>
