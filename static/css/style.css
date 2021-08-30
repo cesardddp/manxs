@@ -224,10 +224,6 @@ body {
 }
 /* personalização página shows -> google agenda */
 
-.card{
-    display: inline-grid;
-}
-
 .calendar-container{
     text-align: left;
     border-width:10px;
