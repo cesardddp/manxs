@@ -96,72 +96,56 @@ cursos = [
 
 aulas = [
         {
-            "tema": "maquiagem",
             "titulo": "EDIÇÃO",
             "conteudo": "Edição e mixagem de som e legenda para audiovisual com o produtor Chassi",
-            "link": "https://www.instagram.com/sirius___72/",
+            "link": "https://www.instagram.com/ADCINSTAGRAM/",
             "imagem": {
-                "src": "",
+                "src": "aula_chassi.jpg",
                 "alt": "alt descrição",
             },
         },
         {
-            "tema": "maquiagem", 
             "titulo": "PERCUSSÃO",
-            "subtitulo": "subtitulo",
             "conteudo": "Aulas do iniciante ao avançado com a professora Deva",
             "link": "https://www.instagram.com/deva.gouveia/",
             "imagem": {
-                "src": "aula_exmp_deva.jpg",
+                "src": "aula_deva.jpg",
                 "alt": "alt descrição",
             },
         },
         {
-            "tema": "maquiagem",
             "titulo": "VIOLÃO E BAIXO",
-            "subtitulo": "subtitulo",
             "conteudo": "Aulas do iniciante ao avançado com o professor Vinícius Marques",
             "link": "https://www.instagram.com/vini.marqs_/",
             "imagem": {
-                "src": "aula_exmp_vini.jpg",
+                "src": "aula_vini.jpg",
                 "alt": "alt descrição",
             },
         },
-    ]
-aulas2 = [
-
         {
-            # "tema": "canto",
             "titulo": "CANTO",
-            # "subtitulo": "subtitulo",
             "conteudo": "Aulas do iniciante ao avançado com a professore Pedry Marques",
             "link": "https://www.instagram.com/keima.kengaral/",
             "imagem": {
-                # "src": url_for("static", filename="imgs/aula_exmp_pedre.jpg"),
-                "src": "aula_exmp_pedre.jpg",
+                "src": "aula_pedre.jpg",
                 "alt": "alt descrição",
             },
         },
         {
-            # "tema": "dança",
             "titulo": "FLEXIBILIDADE",
-            #"subtitulo": "subtitulo",
-            "conteudo": "Treinos para postura, qualidade de movimentos e autoconhecimento, com foco em saúde ou alta performance (atletas/artistas) com professor LuisAfF",
+            "conteudo": "Treinos para postura, qualidade de movimentos e autoconhecimento com professor LuisAfF", #, com foco em saúde ou alta performance (atletas/artistas)*/
             "link": "https://www.instagram.com/oluisaff/",
             "imagem": {
-                "src": "aula_exmp_luis.jpg",
-                # "src": url_for("static", filename="imgs/aula_exmp_luis.jpg"),
+                "src": "aula_luis.jpg",
                 "alt": "alt descrição",
             },
         },
         {
-            #"tema": "maquiagem",
             "titulo": "LIBRAS",
-            #"subtitulo": "subtitulo",
             "conteudo": "Intérprete de LIBRAS para eventos e orientador para interpretes iniciantes",
             "link": "https://www.instagram.com/poxaleo_eu/",
             "imagem": {
-                "src": "aula_exmp_leo.jpg",
+                "src": "aula_leo.jpg",
                 "alt": "alt descrição",
             },
         },
