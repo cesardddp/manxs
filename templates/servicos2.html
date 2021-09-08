@@ -124,38 +124,26 @@ main %}
 
     <div class="container">
         <h2 class="about">CONTRATE</h2>
-        <div class="row row-cols-1 row-cols-md-3 g-6">
-            {% for aula in aulas %}
-            <div class="col">
-                <div class="card style-aulas bg-azul-branco h-100">
-                </br>
-                <!-- <div class="card-title">asdf</div> -->
-                <img src="{{ url_for('static', filename='imgs/'+aula['imagem']['src']) }}" class="card-img-top" alt="['imagem']['alt']">
-                    <div class="card-body">
-                        <h5 class="card-title">{{aula['titulo']}}</h5>
-                        <p class="card-text">{{aula['conteudo']}}</p>
-                        <a href="{{aula['link']}}" class="btn btn-primary">Entre em contato</a>
-                    </div>
+        <div class="row row-cols-2 row-cols-md-2 g-6">
+            {% for aula in aulas %}    
+            <div class="card">
+              <div class="row">
+                <div class="col-md-4">
+                  <img src="{{ url_for('static', filename='imgs/'+aula['imagem']['src']) }}" class="img-fluid rounded-start" alt="['imagem']['alt']">
                 </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">{{aula['titulo']}}</h5>
+                    <p class="card-text">{{aula['conteudo']}}</p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <a href="{{aula['link']}}" class="btn btn-primary d-grid d-md-flex justify-content-md-end">Entre em contato</a>
+                      </div>
+                    
+                  </div>
+                </div>
+              </div>
             </div>
             {% endfor %}
-        </div>
-        </br>
-        
-        <div class="row row-cols-1 row-cols-md-3 g-6">
-            {% for aula in aulas2 %}
-            <div class="col">
-                <div class="card style-aulas bg-azul-branco h-100">
-                </br>
-                <img src="{{ url_for('static', filename='imgs/'+aula['imagem']['src']) }}" class="card-img-top" alt="['imagem']['alt']">
-                    <div class="card-body">
-                        <h5 class="card-title">{{aula['titulo']}}</h5>
-                        <p class="card-text">{{aula['conteudo']}}</p>
-                        <a href="{{aula['link']}}" class="btn btn-primary">Entre em contato</a>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
+
+      </div>
     {% endblock main %}

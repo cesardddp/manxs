@@ -3,7 +3,6 @@ import itertools
 from conteudo import (
     historia,
     aulas,
-    aulas2,
     oficinas,
     videos_lista,
     cursos
@@ -39,7 +38,7 @@ def servicos():
 
     # import pdb; pdb.set_trace()
 
-    return render_template("servicos2.html",aulas=aulas,aulas2=aulas2,cards=cards,cursos=cursos)
+    return render_template("servicos2.html",aulas=aulas,cards=cards,cursos=cursos)
 
 
 @app.route("/galeria/")
@@ -69,6 +68,10 @@ def contato():
 @app.route("/shows/")
 def shows():
     return render_template("shows.html")
+
+@app.route("/musicas/")
+def musicas():
+    return render_template("musicas.html")
 
 @app.route("/about/")
 def about():      
