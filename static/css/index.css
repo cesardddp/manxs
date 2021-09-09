@@ -1,65 +1,24 @@
-/* GLOBAL STYLES
--------------------------------------------------- */
-
-
-/* Padding below the footer and lighter body text */
-
-
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
-
-
-/* Carousel base class */
-
-.carousel {
-    margin-bottom: 4rem;
-}
-
-
-/* Since positioning the image, we need to help out the caption */
-
-.carousel-caption {
-    bottom: 3rem;
-    z-index: 10;
-}
-
-
 /* Declare heights because of positioning of img element */
 
 .carousel-item {
+    width: 80%;
     height: 32rem;
-    width: 100%;
     /* float: none;
   display: contents; */
 }
-
-.carousel-item>img {
-    position: relative;
-    top: 0;
-    left: 0;
-    /* min-width: 100%; */
-    height: 100%;
-    margin: 0 auto;
+.w-100 {
+    width: 100% !important;
+    margin-left: 13%;
 }
-
-.carousel-item>iframe {
-    position: relative;
-    display: block;
-    top: 0;
-    left: 0;
-    /*min-width tamanho ajustado com as fotos*/
-    min-width: 53%;
-    height: 100%;
-    margin: 0 auto;
-}
-
 
 /* MARKETING CONTENT
 -------------------------------------------------- */
-
-
 /* Center align the text within the three columns below the carousel */
-
+.bio-text {
+    text-align: justify;
+} 
 .marketing .col-lg-4 {
     margin-bottom: 1.5rem;
     text-align: center;
