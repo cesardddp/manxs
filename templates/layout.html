@@ -18,7 +18,7 @@
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;900&display=swap" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;600;900&display=swap" >
     <!-- Bootstrap core CSS -->
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" >
@@ -29,7 +29,6 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/headers.css') }}" >
     {% block link_style %} {% endblock link_style %}
     
-
 </head>
 
 <header class="d-flex flex-wrap justify-content-center mb-3 bg-manxs">
@@ -46,13 +45,11 @@
         <li><a href="{{ url_for('servicos') }}" class="nav-link px-2 link-light">SERVIÇOS</a></li>
         <li><a href="{{ url_for('galeria') }} " class="nav-link px-2 link-light">GALERIA</a></li>
         <li><a href="{{ url_for('videos') }} " class="nav-link px-2 link-light ">VIDEOS</a></li>
-        <li><a href="{{ url_for('shows') }}" class="nav-link px-2 link-light">SHOWS</a></li>
-        <li><a href="{{ url_for('musicas') }}" class="nav-link px-2 link-light">MUSICAS</a></li>
+        <li><a href="{{ url_for('shows') }}" class="nav-link px-2 link-light disabled">SHOWS</a></li>
+        <li><a href="{{ url_for('musicas') }}" class="nav-link px-2 link-light disabled">MUSICAS</a></li>
         <li><a href="{{ url_for('contato') }}" class="nav-link px-2 link-light">CONTATO</a></li>
-        {# <!-- <li><a href="{{ url_for('about') }}" class="nav-link px-2 link-light">SOBRE NÓS</a></li> -->
 
-        <!--REMOVER DEPOIS-->
-        <!-- <li><a href="{{ url_for('teste') }}" class="nav-link px-2 link-light">TESTE</a></li> --> #}
+        
     </ul>
 </header>
 
@@ -61,6 +58,9 @@
 <main class="d-flex flex-column h-100">
     {% block main %} {% endblock main %}
 </main>
+
+
+
 <footer class="footer mt-auto bg-transparent mt-auto py-3">
     <p class="float-end"><a style="color: white;" href="#">Voltar lá em cima!</a></p>
     <p style="color: white;">

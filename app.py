@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, redirect
 import itertools
 from conteudo import (
     historia,
@@ -11,12 +11,21 @@ from conteudo import (
 app = Flask(__name__)
 
 
+@app.get("/teste/")
+def teste():
+    return render_template("teste.html")
+
 @app.route("/")
 def index():
     iframe_do_carrosel = "https://www.youtube.com/embed/hlP-lESKS44"
     banner2 = url_for("static", filename="imgs/banner2.jpg")
     banner1 = url_for("static", filename="imgs/banner1.jpg")
     banner3 = url_for("static", filename="imgs/banner3.jpg")
+    
+    m_banner2 = url_for("static", filename="imgs/m_banner2.jpeg")
+    m_banner1 = url_for("static", filename="imgs/m_banner1.jpeg")
+    m_banner3 = url_for("static", filename="imgs/m_banner3.jpeg")
+
     # import pdb;pdb.set_trace()
     return render_template(
         "index.html",
@@ -24,6 +33,9 @@ def index():
         banner2=banner2,
         banner1=banner1,
         banner3=banner3,
+        m_banner2=m_banner2,
+        m_banner1=m_banner1,
+        m_banner3=m_banner3,
         historia=historia,
 
     )
@@ -38,7 +50,7 @@ def servicos():
 
     # import pdb; pdb.set_trace()
 
-    return render_template("servicos2.html",aulas=aulas,cards=cards,cursos=cursos)
+    return render_template("servicos.html",aulas=aulas,cards=cards,cursos=cursos)
 
 
 @app.route("/galeria/")
@@ -67,21 +79,14 @@ def contato():
 
 @app.route("/shows/")
 def shows():
+
+    return redirect("/")
     return render_template("shows.html")
 
 @app.route("/musicas/")
 def musicas():
+    return redirect("/")
     return render_template("musicas.html")
 
-@app.route("/about/")
-def about():      
-    return render_template(
-        "about.html",
-        historia=historia,
-        # banner=url_for("static", filename="imgs/WhatsApp Image 2021-08-04 at 09.37.51.jpeg")
 
-    )
 
-@app.route("/teste/")
-def teste():
-    return render_template("teste_aulas-servicos.html", aulas=aulas, aulas2=aulas2)
