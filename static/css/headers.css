@@ -1,0 +1,11 @@
+.bi {
+  vertical-align: -.125em;
+  fill: currentColor;
+}
+
+.bg-manxs {
+  background-image: linear-gradient(to top right, var(--rosa-manxs), var(--roxo-tr-manxs)), url("../imgs/holofortes.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: unset;
+}
