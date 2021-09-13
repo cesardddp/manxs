@@ -82,8 +82,7 @@ cursos = [
             "conteudo": "Desenvolver a habilidade social de comunicação (verbal e não verbal) e ampliar o repertório expressivo artístico do participante. Inscrição: 00/00/2022 à 00/00/2022",
             "duracao": "*Carga Horária: X X horas. *",
             "imagem": {
-                # "src": url_for("static", filename="imgs/aula_exmp_pedre.jpg"),
-                "src": "aula_exmp_pedre.jpg",
+                "src": "curso_image.png",
                 "alt": "alt descrição",
             },
         },
@@ -98,7 +97,7 @@ aulas = [
         {
             "titulo": "EDIÇÃO",
             "conteudo": "Edição e mixagem de som e legenda para audiovisual com o produtor Chassi",
-            "link": "https://www.instagram.com/ADCINSTAGRAM/",
+            "link": "https://www.instagram.com/music.hassi/",
             "imagem": {
                 "src": "aula_chassi.jpg",
                 "alt": "alt descrição",

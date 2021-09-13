@@ -4,6 +4,11 @@
     
     <div class="container">
         <!--ADICIONAR VÍDEO COM MONTAGEM DE CELULAR POR CIMA-->
-        <iframe src="https://open.spotify.com/embed/playlist/7iVGEeSIMmDrNY062PTwTb?theme=0" width="100%" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        <!-- <iframe src="https://open.spotify.com/embed/playlist/7iVGEeSIMmDrNY062PTwTb?theme=0" width="100%" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe> -->
+        <div class="d-flex">
+
+            <iframe src="https://open.spotify.com/embed/artist/1epV2T86NMh4KfXC4ry9wh" width="50%" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            <img class="m-1" src="{{ url_for('static', filename='imgs/spotify.jpg') }}" alt="" width="50%">
+        </div>
     </div>
 {% endblock main %}
