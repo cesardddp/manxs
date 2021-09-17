@@ -27,7 +27,18 @@
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" href="/static/css/headers.css" >
-     
+    
+<style>
+    .bg-azul-branco2 {
+        background-image: linear-gradient(to bottom right, #1f12acf1, #804673);
+        border-radius: 6px;
+    }
+
+    .texto-descricao {
+        text-align: justify;
+    }
+</style>
+
     
 </head>
 
@@ -45,7 +56,7 @@
         <li><a href="/servicos/" class="nav-link px-2 link-light">SERVIÇOS</a></li>
         <li><a href="/galeria/ " class="nav-link px-2 link-light">GALERIA</a></li>
         <li><a href="/videos/ " class="nav-link px-2 link-light ">VIDEOS</a></li>
-        <li><a href="/shows/" class="nav-link px-2 link-light disabled">SHOWS</a></li>
+        <li><a href="/shows/" class="nav-link px-2 link-light">SHOWS</a></li>
         <li><a href="/musicas/" class="nav-link px-2 link-light disabled">MUSICAS</a></li>
         <li><a href="/contato/" class="nav-link px-2 link-light">CONTATO</a></li>
 
@@ -57,7 +68,7 @@
 
 <main class="d-flex flex-column h-100">
     
-    
+
 <!-- modify this form HTML and place wherever you want your form -->
 
 <div class="container text-white">
@@ -70,35 +81,62 @@ demonstração de interesse
 (porque eu gostaria! de fazer esse curso) -->
     <h3>Curso: EXPRESSÃO E LINGUAGEM CORPORAL</h3>
     <h4>Descrição do curso</h4>
-    <p>
->
-    </p>
-    <p>
->
-    </p>
-    <p>
->
-    </p>
-    <p>
->
-    </p>
-    <p>
-DESCRIÇÃO DO CURSO
-    </p>
-    <p>
->
-    </p>
-    <p>
->
-    </p>
-    <p>
->
-    </p>
-    <p>
-        Após o preenchimento correto das informações abaixo, você receberá por email os detalhes do curso escolhido seguido da folha de pagamento do mesmo. Responsa o email com o comprovante de pagamento e então recebera sua confirmação de inscrição. 
+    <div class="bg-azul-branco2 texto-descricao fs-6">
+        O Curso de Expressão e Linguagem Corporal pretende desenvolver a capacidade de comunicação e ampliar o
+        repertório expressivo dos alunos. As aulas são estruturadas com o intuito de tirar os envolvidos de suas “zonas
+        de conforto” – desde situações práticas (físicas e corporais) como também teóricas e reflexivas.
+
+        Cada aluno é colocado à prova de resoluções de conflitos e atividades com exposição interpessoal e intrapessoal,
+        visando uma formação pessoal, social, cultural e artística pautada em valores particulares dos envolvidos,
+        buscando a capacidade de reflexão crítica e autônoma, assim como o domínio de interpretação e comunicação, que
+        será fundamental para aplicar em suas atividades profissionais, educacionais, artísticas e/ou sociais.
+    </div>
+    <table class="table bg-white w-50 ">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="bg-azul-branco2 texto-descricao">
+        O curso se desenvolve em formato online com cada aula contendo aproximadamente 2 horas de duração. As aulas se
+        dispõem em 2 vezes por semana, acordadas com a disponibilidade entre aluno e professor no processo de
+        contratação do curso.
+    </div>
+    <div class="bg-azul-branco2 texto-descricao">
+
+        Após o preenchimento correto das informações abaixo, você receberá por email os detalhes do curso escolhido
+        seguido da folha de pagamento do mesmo na qual poderá escolher aderir a um modulo ou mais da sua preferencia ou
+        comprando o pacote completo com desconto.
+        Deseja se inscrever?
+    </div>
+
+
     </p>
 
-    <form class="row g-3" action="https://formspree.io/f/mqkwykwn" method="POST">
+    <form class="row g-3 bg-azul-branco2" action="https://formspree.io/f/xknkybjj" method="POST">
         <div class="col-md-6">
             <label for="nome" class="form-label">Nome Social Completo</label>
             <input name="nome" type="text" class="form-control" id="">
@@ -123,38 +161,41 @@ DESCRIÇÃO DO CURSO
             <label for="telefone" class="form-label">Telefone</label>
             <input name="telefone" type="tel" class="form-control" id="">
         </div>
-        
-        <div class="col-12">
-        <label for="endereco" class="form-label">Endereço</label>
-        <input name="endereco" type="text" class="form-control" id="" placeholder="Av. Pra Elas, nº00 - Jardim do Vale">
-    </div>
-    
-    <div class="col-md-6">
-        <label for="cidade" class="form-label">Cidade</label>
-        <input name="cidade" type="text" class="form-control" id="">
-    </div>
-    <div class="col-md-4">
-        <label for="estado" class="form-label">Estado</label>
-        <select id="" class="form-select" name="estado">
-            <option selected>São Paulo</option>
-            
-        </select>
-    </div>
-    <div class="col-md-2">
-        <label for="CEP" class="form-label">CEP</label>
-        <input name="CEP" type="text" class="form-control" id="">
-    </div>
-    
 
-    <div class="mb-3">
-        <label for="porque_interesse" class="form-label">Demonstração de interesse</label>
-        <textarea name="porque_interesse" class="form-control" id="Textarea" rows="3" placeholder="Eu gostaria de fazer esse curso porque..."></textarea>
-    </div>
-    <div class="col-12">
-        <button type="submit" class="btn btn-primary">Se inscrever</button>
-    </div>
-    <h7 class="text-alert">VOCÊ SERÁ REDIRECIONADO PARA <B>https://formspree.io/</B> ANTES DO ENVIO DO SEU DEMONSTRATIVO DE INTERESSE</h6>
-</form>
+        <div class="col-12">
+            <label for="endereco" class="form-label">Endereço</label>
+            <input name="endereco" type="text" class="form-control" id=""
+                placeholder="Av. Pra Elas, nº00 - Jardim do Vale">
+        </div>
+
+        <div class="col-md-6">
+            <label for="cidade" class="form-label">Cidade</label>
+            <input name="cidade" type="text" class="form-control" id="">
+        </div>
+        <div class="col-md-4">
+            <label for="estado" class="form-label">Estado</label>
+            <select id="" class="form-select" name="estado">
+                <option selected>São Paulo</option>
+                
+            </select>
+        </div>
+        <div class="col-md-2">
+            <label for="CEP" class="form-label">CEP</label>
+            <input name="CEP" type="text" class="form-control" id="">
+        </div>
+
+
+        <div class="mb-3">
+            <label for="porque_interesse" class="form-label">Demonstração de interesse</label>
+            <textarea name="porque_interesse" class="form-control" id="Textarea" rows="3"
+                placeholder="Eu gostaria de fazer esse curso porque..."></textarea>
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">Se inscrever</button>
+        </div>
+        <h7 class="text-alert">VOCÊ SERÁ REDIRECIONADO PARA <B>https://formspree.io/</B> ANTES DO ENVIO DO SEU
+            DEMONSTRATIVO DE INTERESSE</h6>
+    </form>
 </div>
 
 </main>
