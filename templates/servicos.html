@@ -70,18 +70,20 @@ main %}
     <h2 class="about">CURSOS</h2>
     <div class="row mb-2 text-white">
         <div class="col-md-6 ">
+            
             <div
                 class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-azul-branco">
-                <div class="col p-4 d-flex flex-column position-static">
+                <div class="col-auto order-lg-2 d-lg-block">
+                    <img src="{{ url_for('static', filename='imgs/'+cursos[0]['imagem']['src']) }}" width="250"
+                        height="250" alt="" srcset="">
+                </div>
+                <div class="col order-lg-1 p-4 d-flex flex-column position-static">
                     <strong class="d-inline-block mb-2 text-danger">{{cursos[0]['tema']}}</strong>
                     <h3 class="mb-0">{{cursos[0]['titulo']}}</h3>
                     <div class="mb-1 text-dark">{{cursos[0]['subtitulo']}}</div>
                     <p class="card-text mb-auto">{{cursos[0]['conteudo']}}</p>
                     <p class="card-text mb-auto">{{cursos[0]['duracao']}}</p>
                     <a href="{{ url_for('form_curso_example') }}" class="btn btn-primary ">Se inscreva</a>
-                </div>
-                <div class="col-auto d-none d-lg-block">
-                   <img src="{{ url_for('static', filename='imgs/'+cursos[0]['imagem']['src']) }}" width="250" height="250" alt="" srcset="" >
                 </div>
             </div>
         </div>
@@ -115,10 +117,10 @@ main %}
     <h2 class="about">CONTRATE</h2>
     <div class="row row-cols-2 row-cols-md-2 justify-content-around">
         {% for aula in aulas %}
-        <div class="card col-md-5 m-md-1">
+        <div class="card col-md-5 m-md-1 bg-dark text-white">
             <div class="row">
                 <div class="col-md-4">
-                    <img src="{{ url_for('static', filename='imgs/'+aula['imagem']['src']) }}"
+                    <img src="{{ url_for('static', filename='imgs/contrate/'+aula['imagem']['src']) }}"
                         class="img-fluid rounded-start" alt="['imagem']['alt']">
                 </div>
                 <div class="col-md-8">
@@ -126,7 +128,7 @@ main %}
                         <h5 class="card-title">{{aula['titulo']}}</h5>
                         <p class="card-text">{{aula['conteudo']}}</p>
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                            <a href="{{aula['link']}}"
+                            <a href="mailto:{{aula['link']}}?subject=Equipe Grupo Manxs - Contratação"
                                 class="btn btn-primary d-grid d-md-flex justify-content-md-end">Entre em contato</a>
                         </div>
 

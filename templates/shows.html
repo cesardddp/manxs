@@ -1,14 +1,69 @@
-{% extends 'layout.html' %} {% block style %} .bi { vertical-align: -.125em; fill: currentColor; } .bg-azul-branco { background-image: linear-gradient(to bottom right, #3d2ee194, #ecc8e4); } .feature{ text-align: center; } {% endblock style %} {% block
-    main %}
-    
-    
-    <div class="container">
-        <!-- PERSONALIZAR GOOGLE AGENDA https://developers.google.com/calendar/api/v3/reference/colors/get-->
-        <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%239E69AF&ctz=America%2FSao_Paulo&src=aXRzemlydGhAZ21haWwuY29t&src=YnRzcGFyYWJhcm15c0BnbWFpbC5jb20&color=%23039BE5&color=%238E24AA&showTitle=0&showNav=0&showPrint=0&showTabs=0&showCalendars=1&showTz=0&showDate=0" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-        
-    </div>
-    
-       
-    
-      
+{% extends 'layout.html' %}
+{% block link_style %}
+<style>
+    .bi {
+        vertical-align: -.122em;
+        fill: currentColor;
+    }
+
+    .bg-azul-branco2 {
+        background-image: linear-gradient(to bottom right, #3d2ee1be, #ecc8e4);
+    }
+
+    .feature {
+        text-align: center;
+    }
+</style>
+{% endblock link_style %}
+{% block main %}
+<div class="container text-white">
+    <h2 class="text-center bg-azul-branco2">AGENDA</h2>
+    <ul class="list-group-flush bg-azul-branco">
+        <hr style="margin: 2rem 0;">
+        <li class="row">
+            <div class="row">
+                <span class="col-6 fs-5 text-start">
+                    SHOW: BEM ME QUER, MAL NÃO QUERO
+                </span>
+                <span class="col-6 fs-3 text-end">
+                    19 de Novembro
+                </span>
+            </div>
+            <div class="row fs-6 text-start">
+                <span>Rio Claro-SP: Av. 24 (Esquina rua 14) as 15 horas</span>
+            </div>
+        </li>
+        <hr style="margin: 2rem 0;">
+        <li class="row">
+            <div class="row">
+                <span class="col-6 fs-5 text-start">
+                    LANÇAMENTO DO ÁLBUM
+                </span>
+                <span class="col-6 fs-3 text-end">
+                    EM BREVE!!
+                </span>
+            </div>
+            <div class="row fs-6 text-start">
+                <span>...</span>
+            </div>
+        </li>
+        <hr style="margin: 2rem 0;">
+        <li class="row">
+            <div class="row">
+                <span class="col-6 fs-5 text-start">
+                    SHOW DE LANÇAMENTO DO ÁLBUM
+                </span>
+                <span class="col-6 fs-3 text-end">
+                    EM BREVE!!
+                </span>
+            </div>
+            <div class="row fs-6 text-start">
+                <span>...</span>
+            </div>
+        </li>
+        <hr style="margin: 2rem 0;">
+
+    </ul>
+</div>
+
 {% endblock main %}

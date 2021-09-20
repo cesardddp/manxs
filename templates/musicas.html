@@ -1,14 +1,94 @@
-{% extends 'layout.html' %} {% block style %} .bi { vertical-align: -.125em; fill: currentColor; } .bg-azul-branco { background-image: linear-gradient(to bottom right, #3d2ee194, #ecc8e4); } .feature{ text-align: center; } {% endblock style %} {% block
-    main %}
-    
-    
-    <div class="container">
-        <!--ADICIONAR VÍDEO COM MONTAGEM DE CELULAR POR CIMA-->
-        <!-- <iframe src="https://open.spotify.com/embed/playlist/7iVGEeSIMmDrNY062PTwTb?theme=0" width="100%" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe> -->
-        <div class="d-flex">
+{% extends 'layout.html' %}
+{% block link_style %}
+<style>
+    .bi {
+        vertical-align: -.122em;
+        fill: currentColor;
+    }
 
-            <iframe src="https://open.spotify.com/embed/artist/1epV2T86NMh4KfXC4ry9wh" width="50%" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-            <img class="m-1" src="{{ url_for('static', filename='imgs/spotify.jpg') }}" alt="" width="50%">
+    .bg-azul-branco2 {
+        background-image: linear-gradient(to bottom right, #3d2ee1d8, #ecc8e4);
+        border-radius: 10px;
+    }
+
+    .feature {
+        text-align: center;
+    }
+
+    @media (min-width: 992px) {
+        .row {
+            margin-bottom: -4rem;
+        }
+    }
+    @media (max-width: 576px) {
+        .row {
+            margin-bottom: 0;
+        }
+    }
+
+
+    .btn-youtube2 {
+        text-align: center;
+        text-decoration: none;
+        vertical-align: middle;
+        cursor: pointer;
+        font-size: 145%;
+        align-items: center;
+        display: inline-block;
+        transition-duration: 0.4s;
+        color: #fff;
+        /* background-color: var(--primary); */
+        background-image: linear-gradient(to top right, var(--rosa-tr-manxs), var(--roxo-tr-manxs));
+        border-color: var(--rosa-manxs);
+    }
+
+    .btn-youtube2:hover {
+        color: white;
+        background-color: red;
+        border-color: red;
+    }
+</style>
+{% endblock link_style %} {% block
+main %}
+
+
+<div class="container text-white mb-5">
+    <!--ADICIONAR VÍDEO COM MONTAGEM DE CELULAR POR CIMA-->
+    <div class="row align-items-center justify-content-center">
+        <img class="d-none d-lg-block col-3 img-fluid" src="{{url_for('static',filename='imgs/musicas/close.jpeg')}}"
+            alt="" srcset="">
+        <div class="order-md-1 col-md-5 col-12">
+            <iframe class="" src="https://open.spotify.com/embed/album/2Jp7uBsHDBDiFJNUBBhfIG" width="100%" height="80"
+                frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
         </div>
     </div>
-{% endblock main %}
+    <div class="row align-items-center justify-content-center">
+        <img class="d-none d-lg-block order-md-2 col-3 img-fluid"
+            src="{{url_for('static',filename='imgs/musicas/goy.jpeg')}}" alt="" srcset="">
+        <div class="order-md-1 col-md-5 col-12">
+            <iframe class="" src="https://open.spotify.com/embed/album/1k0YkQpuw9jqAEWs6cMnS2" width="100%" height="80"
+                frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+    </div>
+    <div class="row align-items-center justify-content-center">
+        <img class="d-none d-lg-block col-3 img-fluid"
+            src="{{url_for('static',filename='imgs/musicas/velha_amiga.jpeg')}}" alt="" srcset="">
+        <div class="order-md-1 col-md-5 col-12">
+            <iframe class="" src="https://open.spotify.com/embed/album/1FulmG7yDU6CVN6q2gVbst" width="100%" height="80"
+                frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            <a href="https://youtu.be/hlP-lESKS44"
+                class="btn btn-youtube2 col-4 d-none d-lg-block align-self-end">CLIPE</a>
+        </div>
+    </div>
+    <div class="row align-items-center justify-content-center">
+        <img class="d-none d-lg-block col-3 order-md-2 img-fluid"
+            src="{{url_for('static',filename='imgs/musicas/to_plena.jpeg')}}" alt="" srcset="">
+        <div class="order-md-1 col-md-5 col-12">
+            <iframe class="" src="https://open.spotify.com/embed/album/5PNy9o8MmsNuoNSYRS5khB" width="100%" height="80"
+                frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+    </div>
+    <!-- </div> -->
+
+
+    {% endblock main %}

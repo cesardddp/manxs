@@ -39,9 +39,6 @@ def index():
 def servicos():
     cards = list(itertools.zip_longest(*[iter(oficinas)] * 3, fillvalue=""))
     # cards é uma lista de listas [ [card1,card2,card3],[card4,card5,card6],... ]
-
-    # import pdb; pdb.set_trace()
-
     return render_template("servicos.html", aulas=aulas, cards=cards, cursos=cursos)
 
 
@@ -73,12 +70,9 @@ def contato():
 
 @app.route("/shows/")
 def shows():
-
-    return redirect("/")
     return render_template("shows.html")
 
 
 @app.route("/musicas/")
 def musicas():
-    # return redirect("/")
     return render_template("musicas.html")
