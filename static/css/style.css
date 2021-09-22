@@ -53,7 +53,8 @@ body {
 
 
 .bg-azul-branco {
-    background-image: linear-gradient(to bottom right, #3d2ee194, #ecc8e4);
+    /* background-image: linear-gradient(to bottom right, #3d2ee194, #ecc8e4); */
+    background-image: linear-gradient(to bottom right, #0d0317, #974083);
     border-radius: 10px;
 }
 
