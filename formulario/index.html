@@ -629,7 +629,7 @@
                         response => {
 
                             if (!response.data) {
-                                alert("Não foi possivel buscar endereço pelo CEP")
+                                alert("Não foi possivel buscar endereço pelo CEP (vz)")
                             }
                             this.uf = response.data.uf
                             this.cidade = response.data.cidade
@@ -641,7 +641,7 @@
                     )
                     .catch(
                         error => {
-                            alert("Não foi possivel buscar endereço pelo CEP")
+                            alert("Não foi possivel buscar endereço pelo CEP"+error)
                         }
                     )
             }
