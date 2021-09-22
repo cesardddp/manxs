@@ -633,8 +633,9 @@
                                 alert("Não foi possivel buscar endereço pelo CEP (vz)")
                                 this.loading = false
                             }
+                            
                             this.uf = response.data.uf
-                            this.cidade = response.data.cidade
+                            this.cidade = response.data.localidade
                             this.bairro = response.data.bairro
                             this.rua = response.data.logradouro
                             this.$refs.numero_ref.focus()
