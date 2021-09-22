@@ -458,8 +458,8 @@
 
     </p>
 
-    <!-- <form id="form" class="row g-3 bg-azul-branco " action="https://formspree.io/f/xknkybjj" method="POST"> -->
-    <form id="form" class="row g-3 bg-azul-branco mt-3" action="https://formspree.io/f/mqkwykwn" method="POST">
+        <!-- <form id="form" class="row g-3 bg-azul-branco mt-3" action="https://formspree.io/f/mqkwykwn" method="POST"> -->
+    <form id="form" class="row g-3 bg-azul-branco mt-3" action="https://formspree.io/f/xknkybjj" method="POST">
         <div class="col-md-6 col-lg-12">
             <label for="nome" class="form-label">Nome Social Completo</label>
             <input name="nome" type="text" class="form-control" id="" required>
@@ -470,7 +470,8 @@
         </div>
         <div class="col-md-6 col-6 col-lg-4 ">
             <label for="cpf" class="form-label">CPF</label>
-            <input name="cpf" type="text" class="form-control" v-maska="{mask:'###.###.###-##'}" required>
+            <input name="cpf" type="text" class="form-control" v-maska="{mask:'###.###.###-##'}" required
+            placeholder="999.999.999-99">
         </div>
         <div class="col-md-6 col-6 col-lg-4">
             <label for="data_nascimento" class="form-label">Data Nascimento</label>
@@ -478,16 +479,19 @@
         </div>
         <div class="col-md-6 col-6">
             <label for="telefone" class="form-label">Telefone</label>
-            <input v-maska="{mask:'(##) # ####-####'}" name="telefone" type="tel" class="form-control" id="" required>
+            <input v-maska="{mask:'(##) # ####-####'}" name="telefone" type="tel" class="form-control" id="" required
+            placeholder="(99) 9 9999-9999">
         </div>
         <div class="col-md-6">
             <label for="email" class="form-label">Email</label>
-            <input name="email" type="email" class="form-control" id="" required>
+            <input name="email" type="email" class="form-control" id="" required
+            placeholder="meu-email-lidinhe@bol.com">
         </div>
 
         <div class="col-6">
             <label for="CEP" class="form-label">CEP</label>
-            <input name="CEP" type="text" class="form-control" v-model="cep" v-maska="{mask:'#####-###'}" required>
+            <input name="CEP" type="text" class="form-control" v-model="cep" v-maska="{mask:'#####-###'}" required
+            placeholder="19199-999">
             <a class="btn btn-primary mt-1 btn-sm" @click.prevent="preenche_endereco">Pesquisar</a>
         </div>
         <div class="col-6 d-flex align-items-center text-center">
