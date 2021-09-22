@@ -4,7 +4,7 @@
 }
 
 .bg-manxs {
-  background-image: linear-gradient(to top right, var(--rosa-manxs), var(--roxo-tr-manxs)), url("../imgs/holofortes.jpg");
+  background-image: linear-gradient(to top right, var(--rosa-manxs), rgba(0, 0, 0, 0.699)), url("../imgs/holofortes.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: unset;
