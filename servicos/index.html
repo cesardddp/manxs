@@ -27,7 +27,11 @@
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" href="/static/css/headers.css" >
-     
+     <style>
+    .text-justify{
+        text-align: justify;
+    }
+</style> 
     
 </head>
 
@@ -40,14 +44,14 @@
     <b class="fs-3 link-light align-middle">MANXS</b>
     </a>
 
-    <ul class="nav col-12 mb-2 justify-content-center">
-        <li><a href="/                        " class="nav-link px-2 link-light">HOME</a></li>
-        <li><a href="/servicos/" class="nav-link px-2 link-light">SERVIÇOS</a></li>
-        <li><a href="/galeria/ " class="nav-link px-2 link-light">GALERIA</a></li>
-        <li><a href="/videos/ " class="nav-link px-2 link-light">VIDEOS</a></li>
-        <li><a href="/shows/" class="nav-link px-2 link-light">SHOWS</a></li>
-        <li><a href="/musicas/" class="nav-link px-2 link-light">MUSICAS</a></li>
-        <li><a href="/contato/" class="nav-link px-2 link-light">CONTATO</a></li>
+    <ul class="nav col-12 mb-2 justify-content-center menu1">
+        <li class=""><a href="/                        " class="nav-link px-2 link-light">HOME</a></li>
+        <li class="active_menu"><a href="/servicos/" class="nav-link px-2 link-light">SERVIÇOS</a></li>
+        <li class=""><a href="/galeria/ " class="nav-link px-2 link-light">GALERIA</a></li>
+        <li class=""><a href="/videos/ "  class="nav-link px-2 link-light">VIDEOS</a></li>
+        <li class=""><a href="/shows/"    class="nav-link px-2 link-light">SHOWS</a></li>
+        <li class=""><a href="/musicas/"  class="nav-link px-2 link-light">MUSICAS</a></li>
+        <li class=""><a href="/contato/"  class="nav-link px-2 link-light">CONTATO</a></li>
 
         
     </ul>
@@ -125,17 +129,17 @@
     <h2 class="about">CURSOS</h2>
     <div class="row mb-2 text-white">
         <div class="col-md-6 ">
-            
+
             <div
                 class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-azul-branco">
-                <div class="col-auto order-lg-2 d-lg-block">
-                    <img src="/static/imgs/curso_image.png" width="250"
-                        height="250" alt="" srcset="">
+                <div class="col-4 order-lg-2 d-lg-block align-self-center">
+                    <img class="img-fluid" src="/static/imgs/curso_image.png"
+                        width="250" height="" alt="" srcset="">
                 </div>
                 <div class="col order-lg-1 p-4 d-flex flex-column position-static">
-                    <strong class="d-inline-block mb-2 text-danger">Comunicação</strong>
-                    <h3 class="mb-0">EXPRESSÃO E LINGUAGEM CORPORAL</h3>
-                    <div class="mb-1 text-dark">Valor R$ 600,00</div>
+                    <strong class="d-inline-block mb-2 text-danger fs-5">Comunicação</strong>
+                    <h3 class="mb-0 text-center">EXPRESSÃO E LINGUAGEM CORPORAL</h3>
+                    <div class="mb-1 text-info">Valor R$ 600,00</div>
                     <p class="card-text mb-auto">Desenvolver a habilidade social de comunicação (verbal e não verbal) e ampliar o repertório expressivo artístico do participante. Inscrição: EM BREVE</p>
                     <p class="card-text mb-auto">*Carga Horária: 60 horas. *</p>
                     <a href="/formulario/" class="btn btn-primary ">Se inscreva</a>

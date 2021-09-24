@@ -48,14 +48,14 @@
     <b class="fs-3 link-light align-middle">MANXS</b>
     </a>
 
-    <ul class="nav col-12 mb-2 justify-content-center">
-        <li><a href="/                        " class="nav-link px-2 link-light">HOME</a></li>
-        <li><a href="/servicos/" class="nav-link px-2 link-light">SERVIÇOS</a></li>
-        <li><a href="/galeria/ " class="nav-link px-2 link-light">GALERIA</a></li>
-        <li><a href="/videos/ " class="nav-link px-2 link-light">VIDEOS</a></li>
-        <li><a href="/shows/" class="nav-link px-2 link-light">SHOWS</a></li>
-        <li><a href="/musicas/" class="nav-link px-2 link-light">MUSICAS</a></li>
-        <li><a href="/contato/" class="nav-link px-2 link-light">CONTATO</a></li>
+    <ul class="nav col-12 mb-2 justify-content-center menu1">
+        <li class=""><a href="/                        " class="nav-link px-2 link-light">HOME</a></li>
+        <li class="active_menu"><a href="/servicos/" class="nav-link px-2 link-light">SERVIÇOS</a></li>
+        <li class=""><a href="/galeria/ " class="nav-link px-2 link-light">GALERIA</a></li>
+        <li class=""><a href="/videos/ "  class="nav-link px-2 link-light">VIDEOS</a></li>
+        <li class=""><a href="/shows/"    class="nav-link px-2 link-light">SHOWS</a></li>
+        <li class=""><a href="/musicas/"  class="nav-link px-2 link-light">MUSICAS</a></li>
+        <li class=""><a href="/contato/"  class="nav-link px-2 link-light">CONTATO</a></li>
 
         
     </ul>
@@ -433,7 +433,7 @@
     </table>
 
 
-    <div class="bg-azul-branco texto-descricao p-1">
+    <div class="bg-azul-branco texto-descricao p-1 mb-1">
         O curso se desenvolve em formato online com cada aula contendo aproximadamente 2 horas de duração.
         As aulas
         se
@@ -442,7 +442,6 @@
         contratação do curso.
     </div>
     <div class="bg-azul-branco texto-descricao p-1">
-
         Após o preenchimento correto das informações abaixo, você receberá por email os detalhes do curso
         escolhido
         seguido da folha de pagamento do mesmo na qual poderá escolher aderir a um modulo ou mais da sua
@@ -629,12 +628,10 @@
                     })
                     .then(
                         response => {
-
                             if (!response.data) {
                                 alert("Não foi possivel buscar endereço pelo CEP (vz)")
                                 this.loading = false
                             }
-
                             this.uf = response.data.uf
                             this.cidade = response.data.localidade
                             this.bairro = response.data.bairro
@@ -647,7 +644,6 @@
                         error => {
                             alert("Não foi possivel buscar endereço pelo CEP" + error)
                             this.loading = false
-
                         }
                     )
             }
