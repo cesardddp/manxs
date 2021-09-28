@@ -40,14 +40,14 @@
     <b class="fs-3 link-light align-middle">MANXS</b>
     </a>
 
-    <ul class="nav col-12 mb-2 justify-content-center">
-        <li><a href="/                        " class="nav-link px-2 link-light">HOME</a></li>
-        <li><a href="{{ url_for('servicos') }}" class="nav-link px-2 link-light">SERVIÇOS</a></li>
-        <li><a href="{{ url_for('galeria') }} " class="nav-link px-2 link-light">GALERIA</a></li>
-        <li><a href="{{ url_for('videos') }} " class="nav-link px-2 link-light">VIDEOS</a></li>
-        <li><a href="{{ url_for('shows') }}" class="nav-link px-2 link-light">SHOWS</a></li>
-        <li><a href="{{ url_for('musicas') }}" class="nav-link px-2 link-light">MUSICAS</a></li>
-        <li><a href="{{ url_for('contato') }}" class="nav-link px-2 link-light">CONTATO</a></li>
+    <ul class="nav col-12 mb-2 justify-content-center menu1">
+        <li class="{%block index_active%}{%endblock%}"><a href="/                        " class="nav-link px-2 link-light">HOME</a></li>
+        <li class="{%block servicos_active%}{%endblock%}"><a href="{{ url_for('servicos') }}" class="nav-link px-2 link-light">SERVIÇOS</a></li>
+        <li class="{%block galeria_active%}{%endblock%}"><a href="{{ url_for('galeria') }} " class="nav-link px-2 link-light">GALERIA</a></li>
+        <li class="{%block videos_active%}{%endblock%}"><a href="{{ url_for('videos') }} "  class="nav-link px-2 link-light">VIDEOS</a></li>
+        <li class="{%block shows_active%}{%endblock%}"><a href="{{ url_for('shows') }}"    class="nav-link px-2 link-light">SHOWS</a></li>
+        <li class="{%block musicas_active%}{%endblock%}"><a href="{{ url_for('musicas') }}"  class="nav-link px-2 link-light">MUSICAS</a></li>
+        <li class="{%block contato_active%}{%endblock%}"><a href="{{ url_for('contato') }}"  class="nav-link px-2 link-light">CONTATO</a></li>
 
         
     </ul>

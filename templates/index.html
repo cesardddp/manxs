@@ -1,4 +1,6 @@
 {% extends 'layout.html' %}
+{%block index_active%}active_menu{%endblock%}
+
 {% block link_style %}
 <style>
 	.carousel-item {
@@ -94,7 +96,7 @@
 		</div>
 	</div>
 	<div class="row featurette bg-azul-branco">
-		<div class="col order-md-2 text-white bio-text fs-6">
+		<div class="text-white bio-text fs-6 py-1 ">
 			<p class="">Desde 2016 o grupo Manxs vem despertando alegria e reflexão em seu público através da arte
 				Drag Queen, disseminando cultura, informação e arte com profissionalismo. O grupo é composto pelas drags
 				Ashilleyy Extravaganzza, Vikky e LuisAfF que são conhecidas por seus shows, sempre performáticos,
@@ -205,12 +207,12 @@
 
 	<!-- REDES SOCIAIS -->
 	<hr class="featurette-divider">
-	<div class="container bg-azul-branco flex text-white text-center mb-4">
-		</br>
+	<div class="container bg-azul-branco flex text-white text-center py-4 mb-2">
+		
 		<div class="row">
 			<h2>ACESSE NOSSAS REDES SOCIAIS</h2>
 		</div>
-		</br>
+		
 		<div class="row">
 			<div class="col-sm-12 col-md-5">
 				<a class="btn btn-face" href="https://www.facebook.com/grupomanxs/" target="_blank" role="button">
@@ -246,12 +248,11 @@
 			</div>
 
 		</div>
-		<br /><br />
 	</div>
 
 	<!--ADICIONAR ESPAÇO AQUI-->
-	<div class="row text-center">
-		<div class="col-lg-4 card-insta bg-azul-branco">
+	<div class="row text-center bg-azul-branco mx-1">
+		<div class="col-lg-4 rounded my-1 bg-azul-branco">
 			<img src="{{ url_for('static', filename='imgs/luisaff.jpg')}}" class="mt-5" alt="" width="140" height="140">
 			<h2>LuisAfF</h2>
 			<a class="btn btn-insta" href="https://www.instagram.com/oluisaff/" target="_blank" role="button">
@@ -262,7 +263,7 @@
 				</svg>
 			</a>
 		</div>
-		<div class="col-lg-4 card-insta bg-azul-branco">
+		<div class="col-lg-4 rounded my-1 bg-azul-branco">
 			<img src="{{ url_for('static', filename='imgs/ashilleyy.jpg')}}" class="mt-5" alt="" width="140"
 				height="140">
 			<h2>Ashilleyy</h2>
@@ -275,7 +276,7 @@
 				</svg>
 			</a>
 		</div>
-		<div class="col-lg-4 card-insta bg-azul-branco">
+		<div class="col-lg-4 rounded my-1 bg-azul-branco">
 			<img src="{{ url_for('static', filename='imgs/vikky.jpg')}}" class="mt-5" alt="" width="140" height="140">
 			<h2>Vikky</h2>
 			<a class="btn btn-insta" href="https://www.instagram.com/vikky_a_princesinha/" target="_blank"

@@ -173,8 +173,8 @@ aulas = [
 
 
 videos_lista = [
-    {"titulo": "#15 | Manxs - A Caminhada | Edital Municipal", "src": "HVa7HzxF74Y"},
-    {"titulo": "#14 | Manxs - Quem eu sou | Edital Municipal", "src": "1rAAS0Pcn2Y"},
+    {"titulo": "Show: MONTA(AÇÃO) - Manxs | ProAC", "src": "wTNMsAUV-ck"},
+    {"titulo": "#14 | Manxs - Quem eu sou | Edital Municipal", "src": "tx72vkCz5zw"},
     {"titulo": "#13 | Manxs - Indestrutível | Edital Municipal", "src": "AJ0bepmCeFo"},
     {
         "titulo": "#12 | Manxs - O tempo é sua morada | Edital Municipal",

@@ -1,6 +1,7 @@
 from flask import Flask, render_template, url_for, redirect
 import itertools
 from conteudo import historia, aulas, oficinas, videos_lista, cursos
+import json
 
 app = Flask(__name__)
 
@@ -48,9 +49,9 @@ def galeria():
     import os
 
     lista_fotos = os.listdir("static/imgs/galeria")
-    lista_fotos = list(itertools.zip_longest(*[iter(lista_fotos)] * 4, fillvalue=""))
-
-    return render_template("galeria.html", fotos=lista_fotos)
+    lista_fotos = list(itertools.zip_longest(*[iter(lista_fotos)] * 3, fillvalue=""))
+    # import pdb;pdb.set_trace()
+    return render_template("galeria.html", fotos=set(lista_fotos))
 
 
 @app.route("/formulario/")
@@ -89,7 +90,9 @@ def form_curso_example():
 
 @app.route("/videos/")
 def videos():
-    return render_template("videos.html", videos=videos_lista)
+    json.load(open("videos.json"))
+    return render_template("videos.html", videos=json.load(open("videos.json"))
+)
 
 
 @app.route("/contato/")

@@ -1,4 +1,5 @@
 {% extends 'layout.html' %}
+{%block servicos_active%}active_menu{%endblock%}
 {% block link_style %}
 <script src="https://unpkg.com/vue@next"></script>
 <script src="https://kit.fontawesome.com/3db21c2fa2.js" crossorigin="anonymous"></script>
@@ -377,7 +378,7 @@
     </table>
 
 
-    <div class="bg-azul-branco texto-descricao p-1">
+    <div class="bg-azul-branco texto-descricao p-1 mb-1">
         O curso se desenvolve em formato online com cada aula contendo aproximadamente 2 horas de duração.
         As aulas
         se
@@ -386,7 +387,6 @@
         contratação do curso.
     </div>
     <div class="bg-azul-branco texto-descricao p-1">
-
         Após o preenchimento correto das informações abaixo, você receberá por email os detalhes do curso
         escolhido
         seguido da folha de pagamento do mesmo na qual poderá escolher aderir a um modulo ou mais da sua
@@ -521,12 +521,10 @@
                     })
                     .then(
                         response => {
-
                             if (!response.data) {
                                 alert("Não foi possivel buscar endereço pelo CEP (vz)")
                                 this.loading = false
                             }
-
                             this.uf = response.data.uf
                             this.cidade = response.data.localidade
                             this.bairro = response.data.bairro
@@ -539,12 +537,10 @@
                         error => {
                             alert("Não foi possivel buscar endereço pelo CEP" + error)
                             this.loading = false
-
                         }
                     )
             }
         },
-
     }
     const app = Vue.createApp(DynaForm)
     app.use(Maska)
