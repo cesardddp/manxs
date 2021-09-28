@@ -28,7 +28,8 @@
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" href="/static/css/headers.css" >
     
-<script src="https://unpkg.com/vue@next"></script>
+<!-- <script src="https://unpkg.com/vue@next"></script> -->
+<script src="https://unpkg.com/petite-vue"></script>
 <script src="https://kit.fontawesome.com/3db21c2fa2.js" crossorigin="anonymous"></script>
 <style>
     .texto-descricao {
@@ -116,84 +117,6 @@
                             01
                         </td>
                         <td colspan="1" rowspan="1">
-                            O que somos? </td>
-                    </tr>
-                    <tr>
-                        <td colspan="1" rowspan="1">
-                            02
-                        </td>
-                        <td colspan="1" rowspan="1">
-                            Símbolos e Sinais
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="1" rowspan="1">
-                            03
-                        </td>
-                        <td colspan="1" rowspan="1">
-                            Linguagem das Emoções (Micro Expressões)
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="1" rowspan="1">
-                            04
-                        </td>
-                        <td colspan="1" rowspan="1">
-                            Linguagem Corporal (Micro e Macro Expressões)
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="1" rowspan="1">
-                            05
-                        </td>
-                        <td colspan="1" rowspan="1">
-                            Autonomia, Heteronomia e Anômina
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="1" rowspan="1">
-                            06
-                        </td>
-                        <td colspan="1" rowspan="1">
-                            Privacidade e Liberdade de Expressão
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="col-md-6 col-12">
-            <table class="table text-white table-sm bg-azul-branco align-middle text-center">
-                <tbody>
-                    <tr>
-                        <thead>
-                            <td colspan="1" rowspan="1">
-                            </td>
-                            <td colspan="2" rowspan="1">
-                                M&oacute;dulo 02 - </span>Comunica&ccedil;&atilde;o
-                                (Sentir, Experimentar e Reagir)
-                            </td>
-                    </tr>
-                    <tr>
-                        <td colspan="1" rowspan="1">
-                            VALOR
-                        </td>
-                        <td colspan="1" rowspan="1">
-                            AULA
-                        </td>
-                        <td colspan="1" rowspan="1">
-                            TEMA EM PAUTA
-                        </td>
-                    </tr>
-                    </thead>
-                <tbody>
-                    <tr>
-                        <td colspan="1" rowspan="6">
-                            R$ 180,00
-                        </td>
-                        <td colspan="1" rowspan="1">
-                            01
-                        </td>
-                        <td colspan="1" rowspan="1">
                             Valores Moral e &Eacute;tica
                         </td>
                     </tr>
@@ -238,6 +161,85 @@
                         </td>
                     </tr>
                 </tbody>
+                
+            </table>
+        </div>
+        <div class="col-md-6 col-12">
+            <table class="table text-white table-sm bg-azul-branco align-middle text-center">
+                <tbody>
+                    <tr>
+                        <thead>
+                            <td colspan="1" rowspan="1">
+                            </td>
+                            <td colspan="2" rowspan="1">
+                                M&oacute;dulo 02 - </span>Comunica&ccedil;&atilde;o
+                                (Sentir, Experimentar e Reagir)
+                            </td>
+                    </tr>
+                    <tr>
+                        <td colspan="1" rowspan="1">
+                            VALOR
+                        </td>
+                        <td colspan="1" rowspan="1">
+                            AULA
+                        </td>
+                        <td colspan="1" rowspan="1">
+                            TEMA EM PAUTA
+                        </td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="1" rowspan="6">
+                                R$ 180,00
+                            </td>
+                            <td colspan="1" rowspan="1">
+                                01
+                            </td>
+                            <td colspan="1" rowspan="1">
+                                O que somos? </td>
+                        </tr>
+                        <tr>
+                            <td colspan="1" rowspan="1">
+                                02
+                            </td>
+                            <td colspan="1" rowspan="1">
+                                Símbolos e Sinais
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="1" rowspan="1">
+                                03
+                            </td>
+                            <td colspan="1" rowspan="1">
+                                Linguagem das Emoções (Micro Expressões)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="1" rowspan="1">
+                                04
+                            </td>
+                            <td colspan="1" rowspan="1">
+                                Linguagem Corporal (Micro e Macro Expressões)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="1" rowspan="1">
+                                05
+                            </td>
+                            <td colspan="1" rowspan="1">
+                                Autonomia, Heteronomia e Anômina
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="1" rowspan="1">
+                                06
+                            </td>
+                            <td colspan="1" rowspan="1">
+                                Privacidade e Liberdade de Expressão
+                            </td>
+                        </tr>
+                    </tbody>
             </table>
         </div>
     </div>
@@ -599,11 +601,12 @@
 
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/maska@latest/dist/maska.js"></script>
-<script>
+
+<script type="module">
+    import { createApp } from "https://unpkg.com/petite-vue"
+
     const DynaForm = {
-        compilerOptions: {
-            delimiters: ['@{', '}']
-        },
+        $delimiters: ['${', '}'],
         data() {
             return {
                 cep: "",
@@ -649,7 +652,7 @@
             }
         },
     }
-    const app = Vue.createApp(DynaForm)
+    const app = createApp(DynaForm)
     app.use(Maska)
     app.mount("#form")
 </script>
