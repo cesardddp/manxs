@@ -48,9 +48,10 @@ def galeria():
 
     import os
 
-    lista_fotos = os.listdir("static/imgs/galeria")
+    lista_fotos = sorted(os.listdir("static/imgs/galeria"))
+
     lista_fotos = list(itertools.zip_longest(*[iter(lista_fotos)] * 3, fillvalue=""))
-    # import pdb;pdb.set_trace()
+    # import ipdb;ipdb.set_trace()
     return render_template("galeria.html", fotos=set(lista_fotos))
 
 

@@ -35,7 +35,7 @@
 
     <a href="/" class="navbar-brand mb-1">
         {# <!-- <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg> --> #}
-        <img src="/static/imgs/Logo Manxs.png" alt="" width="60" class="d-inline-block">
+        <img src="{{ url_for('static', filename='imgs/logo_manxs.png') }}" alt="" width="60" class="d-inline-block">
 
     <b class="fs-3 link-light align-middle">MANXS</b>
     </a>
@@ -48,8 +48,6 @@
         <li class="{%block shows_active%}{%endblock%}"><a href="{{ url_for('shows') }}"    class="nav-link px-2 link-light">SHOWS</a></li>
         <li class="{%block musicas_active%}{%endblock%}"><a href="{{ url_for('musicas') }}"  class="nav-link px-2 link-light">MUSICAS</a></li>
         <li class="{%block contato_active%}{%endblock%}"><a href="{{ url_for('contato') }}"  class="nav-link px-2 link-light">CONTATO</a></li>
-
-        
     </ul>
 </header>
 
@@ -67,8 +65,8 @@
         &copy;2021 Mantido por
         <a style="color: white;" href="https://github.com/cesardddp" target="_blank">cesardddp</a> &middot; 
         <a style="color: white;" href="https://github.com/bzoliveira" target="_blank">bzoliveira</a> &middot; 
-        <a style="color: white;" href="#">Privacy</a> &middot;
-        <a style="color: white;" href="#">Terms</a></p>
+        <!-- <a style="color: white;" href="#">Privacy</a> &middot;
+        <a style="color: white;" href="#">Terms</a></p> -->
 </footer>
 
 <script src="{{ url_for('static', filename='js/bootstrap.bundle.js')}}"></script>

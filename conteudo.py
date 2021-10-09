@@ -77,7 +77,7 @@ cursos = [
         "duracao": "*Carga Horária: 60 horas. *",
         "imagem": {
             "src": "curso_image.png",
-            "alt": "alt descrição",
+            "alt": "desenho de uma pessoa segurando a propria face arrancada da cabeça. A face olha contemplativa o vazio de onde estava.",
         },
     },
     # Tema: Comunicação
@@ -94,7 +94,7 @@ aulas = [
         "link": "pedromarques.flute@gmail.com",
         "imagem": {
             "src": "aula_pedre.jpg",
-            "alt": "alt descrição",
+            "alt": "foto em preto e branco de Pedry Marques",
         },
     },
     {
@@ -103,25 +103,25 @@ aulas = [
         "link": "leonardofonsecapos01@gmail.com",
         "imagem": {
             "src": "aula_leo.jpg",
-            "alt": "alt descrição",
+            "alt": "Foto em preto e branco de Leonardo",
         },
     },
     {
         "titulo": "FLEXIBILIDADE",
-        "conteudo": "Treinos para postura, qualidade de movimentos e autoconhecimento com professor LuisAfF",  # , com foco em saúde ou alta performance (atletas/artistas)*/
+        "conteudo": "Treinos para postura, qualidade de movimentos e autoconhecimento com professor LuisAfF",
         "link": "luis.123aff@gmail.com",
         "imagem": {
             "src": "aula_luis.jpg",
-            "alt": "alt descrição",
+            "alt": "Foto em preto e branco de LuisAfF",
         },
     },
     {
-        "titulo": "EDIÇÃO",
-        "conteudo": "Edição e mixagem de som e legenda para audiovisual com o produtor Chassi",
+        "titulo": "PRODUTOR MUSICAL",
+        "conteudo": "Edição, mixagem, masterização de som e legenda para audiovisuais com o produtor Chassi",
         "link": "chassi.bio7@gmail.com",
         "imagem": {
             "src": "aula_chassi.jpg",
-            "alt": "alt descrição",
+            "alt": "Foto em preto e branco de Chassi",
         },
     },
     {
@@ -130,7 +130,7 @@ aulas = [
         "link": "deva.gouveia@gmail.com",
         "imagem": {
             "src": "aula_deva.jpg",
-            "alt": "alt descrição",
+            "alt": "Foto em preto e branco de Deva",
         },
     },
     {
@@ -139,7 +139,7 @@ aulas = [
         "link": "vinnyvmsilva@gmail.com",
         "imagem": {
             "src": "aula_vini.jpg",
-            "alt": "alt descrição",
+            "alt": "Foto em preto e branco de Vinícius Marques",
         },
     },
     {
@@ -148,16 +148,25 @@ aulas = [
         "link": "poolcaldas@gmail.com",
         "imagem": {
             "src": "aula_paula.jpeg",
-            "alt": "alt descrição",
+            "alt": "Foto em preto e branco de Paula Caldas",
         },
     },
     {
         "titulo": "MAQUIAGEM",
-        "conteudo": "Trabalhos de maquiagem artística e social com o maquiador Caio.",
+        "conteudo": "Trabalhos de maquiagem artística e social com o maquiador Caio",
         "link": "caio.almeida11@hotmail.com",
         "imagem": {
             "src": "aula_caio.jpeg",
-            "alt": "alt descrição",
+            "alt": "Foto em preto e branco de Caio",
+        },
+    },
+    {
+        "titulo": "DESENVOLVEDOR WEB",
+        "conteudo": "Soluções simples p/ problemas irritantes. Do desenvolvimento de sites à simples apps acessíveis via internet! Falar com César",
+        "link": "cesardddp@hotmail.com",
+        "imagem": {
+            "src": "aula_cesar.jpeg",
+            "alt": "Foto em preto e branco de César",
         },
     },
     {
@@ -166,7 +175,7 @@ aulas = [
         "link": "wangoralins@gmail.com",
         "imagem": {
             "src": "aula_wangora.jpeg",
-            "alt": "alt descrição",
+            "alt": "Foto em preto e branco de com Wangora",
         },
     },
 ]
