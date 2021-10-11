@@ -1,0 +1,179 @@
+:root {
+    --rosa-manxs: #bd008a;
+    --roxo-manxs: #6e008a;
+    --rosa-tr-manxs: #e100a5ad;
+    --roxo-tr-manxs: #530086ad;
+    --primary2: #ad007f;
+}
+
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    /* background-color: black; */
+    /*tirei o 'uncompressed/'pq tava dando errado*/
+    background-image: url(../imgs/PCVV9206.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+
+
+}
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+
+/* font Otomanopee One */
+
+.btn-primary {
+    color: #fff;
+    /* background-color: var(--primary); */
+    background-image: linear-gradient(to top right, var(--rosa-tr-manxs), var(--roxo-tr-manxs));
+    border-color: var(--rosa-manxs);
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #0d6efd;
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+
+.bg-azul-branco {
+    /* background-image: linear-gradient(to bottom right, #3d2ee194, #ecc8e4); */
+    background-image: linear-gradient(to bottom right, #0d0317, #974083);
+    border-radius: 10px;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    background-color: #6e008a;
+}
+
+/* página serviços */
+
+.container_aulas {
+    text-align: center;
+    color: white;
+}
+
+/* personalização títulos da página serviços */
+
+.about {
+    color: white;
+    text-shadow: 2px 2px black;
+    border-bottom: 1px solid white;
+}
+
+
+/* personalização área de redes sociais e contato */
+
+.contato {
+    color: white;
+}
+
+.contato h2 {
+    text-align: center;
+}
+
+.btn-redes {
+    color: white;
+    /* border-color: white; */
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    font-size: 145%;
+    align-items: center;
+    display: inline-block;
+    transition-duration: 0.4s;
+}
+
+.btn-redes:hover {
+    color: white;
+}
+
+.btn-youtube:hover {
+    background-color: #FF0000;
+    border-color: #FF0000;
+}
+
+.btn-face:hover {
+    background-color: #385898;
+    border-color: #385898;
+}
+.btn-spotify:hover {
+    background-color: #1DB954;
+    border-color: #1DB954;
+}
+
+.btn-insta:hover {
+    background: #f09433;
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+
+    /* background-image: linear-gradient(
+        to right, #6e008a, #bd008a);
+    border-color: #6e008a; */
+}
+
+#bottom-oficina {
+    padding-top: 300px;
+}
+
+.style-aulas {
+    width: 250px;
+    height: 100px;
+    text-align: center;
+}
+
+.style-aulas>img {
+    border-radius: 50% !important;
+    vertical-align: middle;
+    width: 150px;
+    align-self: center;
+}
+
+/* personalização página shows -> google agenda */
+
+.calendar-container {
+    text-align: left;
+    border-width: 10px;
+    width: 800px;
+    height: 600px;
+    background-color: #6e008a;
+}
+
+.calendar-container .view-cap .view-container-border .mv-daynames-table {
+    overflow: hidden;
+    position: absolute;
+    top: 14px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: none;
+    border-top: 1px solid #6e008a;
+    border-bottom: 1px solid #ad007f;
+}
+
+.mv-event-container {
+    background: none;
+    border-top: 1px solid #6e008a;
+    border-bottom: 1px solid #ad007f;
+}
