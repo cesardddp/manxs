@@ -175,10 +175,20 @@ aulas = [
         "link": "wangoralins@gmail.com",
         "imagem": {
             "src": "aula_wangora.jpeg",
-            "alt": "Foto em preto e branco de com Wangora",
+            "alt": "Foto em preto e branco de Wangora",
+        },
+    },
+    {
+        "titulo": "PRODUÇÃO CULTURAL",
+        "conteudo": "Escrita, criação, desenvolvimento e prestação de contas de projetos culturais. Falar com Erika Layher",
+        "link": "liri.layher@gmail.com",
+        "imagem": {
+            "src": "aula_erika.jpeg",
+            "alt": "Foto em preto e branco de Erika",
         },
     },
 ]
+
 
 
 videos_lista = [

@@ -6,13 +6,16 @@ import json
 app = Flask(__name__)
 
 
-@app.get("/teste/")
-def teste():
-    return render_template("teste.html")
+@app.route("/teste/")
+def index():
+    return render_template(
+        "index.html"
+    )
 
 
 @app.route("/")
-def index():
+# @app.route("/biografia/")
+def biografia():
     iframe_do_carrosel = "https://www.youtube.com/embed/hlP-lESKS44"
     banner2 = url_for("static", filename="imgs/banner2.jpg")
     banner1 = url_for("static", filename="imgs/banner1.jpg")
@@ -24,7 +27,7 @@ def index():
 
     # import pdb;pdb.set_trace()
     return render_template(
-        "index.html",
+        "biografia.html",
         iframe_do_carrosel=iframe_do_carrosel,
         banner2=banner2,
         banner1=banner1,
@@ -32,7 +35,7 @@ def index():
         m_banner2=m_banner2,
         m_banner1=m_banner1,
         m_banner3=m_banner3,
-        historia=historia,
+        historia=historia
     )
 
 
@@ -86,14 +89,13 @@ def form_curso_example():
         "SE": "Sergipe",
         "TO": "Tocantins",
     }
-    return render_template("forms/curso.html",estados=estados)
+    return render_template("forms/curso.html", estados=estados)
 
 
 @app.route("/videos/")
 def videos():
     json.load(open("videos.json"))
-    return render_template("videos.html", videos=json.load(open("videos.json"))
-)
+    return render_template("videos.html", videos=json.load(open("videos.json")))
 
 
 @app.route("/contato/")

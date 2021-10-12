@@ -17,9 +17,10 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
 
-    
-    
+
+
 }
+
 .bd-placeholder-img {
     font-size: 1.125rem;
     text-anchor: middle;
@@ -65,14 +66,14 @@ body {
 
 /* página serviços */
 
-.container_aulas{
+.container_aulas {
     text-align: center;
     color: white;
 }
 
 /* personalização títulos da página serviços */
 
-.about{
+.about {
     color: white;
     text-shadow: 2px 2px black;
     border-bottom: 1px solid white;
@@ -89,9 +90,9 @@ body {
     text-align: center;
 }
 
-.btn-youtube{
+.btn-redes {
     color: white;
-    border-color: white;
+    /* border-color: white; */
     text-align: center;
     text-decoration: none;
     vertical-align: middle;
@@ -102,75 +103,64 @@ body {
     transition-duration: 0.4s;
 }
 
-.btn-youtube:hover{
+.btn-redes:hover {
     color: white;
-    background-color: red;
-    border-color: red;
 }
 
-.btn-face{
-    color: white;
-    border-color: white;
-    text-align: center;
-    text-decoration: none;
-    vertical-align: middle;
-    cursor: pointer;
-    font-size: 145%;
-    align-items: center;
-    display: inline-block;
-    transition-duration: 0.4s;
+.btn-youtube:hover {
+    background-color: #FF0000;
+    border-color: #FF0000;
 }
 
-.btn-face:hover{
-    color: white;
-    background-color: #0d6efd;
-    border-color: #0d6efd;
+.btn-face:hover {
+    background-color: #385898;
+    border-color: #385898;
+}
+.btn-spotify:hover {
+    background-color: #1DB954;
+    border-color: #1DB954;
 }
 
-.btn-insta{
-    color: white;
-    border-color: white;
-    text-align: center;
-    text-decoration: none;
-    vertical-align: middle;
-    cursor: pointer;
-    font-size: 145%;
-    display: inline-block;
+.btn-insta:hover {
+    background: #f09433;
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+
+    /* background-image: linear-gradient(
+        to right, #6e008a, #bd008a);
+    border-color: #6e008a; */
 }
 
-.btn-insta:hover{
-    color: white;
-    background-image: linear-gradient(to right, #6e008a , #bd008a);
-    border-color: #6e008a;
+#bottom-oficina {
+    padding-top: 300px;
 }
 
-#bottom-oficina{
-    padding-top:300px;
-}
-
-.style-aulas{
+.style-aulas {
     width: 250px;
     height: 100px;
     text-align: center;
 }
 
-.style-aulas > img{
-    border-radius: 50%!important;
+.style-aulas>img {
+    border-radius: 50% !important;
     vertical-align: middle;
     width: 150px;
     align-self: center;
 }
+
 /* personalização página shows -> google agenda */
 
-.calendar-container{
+.calendar-container {
     text-align: left;
-    border-width:10px;
+    border-width: 10px;
     width: 800px;
     height: 600px;
     background-color: #6e008a;
 }
 
-.calendar-container  .view-cap .view-container-border .mv-daynames-table {
+.calendar-container .view-cap .view-container-border .mv-daynames-table {
     overflow: hidden;
     position: absolute;
     top: 14px;
@@ -182,9 +172,8 @@ body {
     border-bottom: 1px solid #ad007f;
 }
 
-.mv-event-container{
+.mv-event-container {
     background: none;
     border-top: 1px solid #6e008a;
     border-bottom: 1px solid #ad007f;
 }
-
