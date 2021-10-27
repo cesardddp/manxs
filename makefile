@@ -20,7 +20,12 @@ flask:
 	# cd src;\
 	export FLASK_APP=app.py;\
 	export FLASK_ENV=development;\
-	flask run
+	flask run -p 5001
 
 teste:
-	cd build;python -m http.server
+	cd src/build;python -m http.server
+
+purge:
+	purgecss --css ./static/css/*.css\
+	--content build/*/*.html\
+	--out ./purged

@@ -12,23 +12,24 @@
     <meta name="og:url" content="https://www.grupomanxs.com">
 
     <title>Manxs</title>
-    
+
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;600;900&display=swap" >
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;600;900&display=swap">
     <!-- Bootstrap core CSS -->
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" >
-    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+
 
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/headers.css') }}" >
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/headers.css') }}">
     {% block link_style %} {% endblock link_style %}
-    
+
 </head>
 
 <header class="d-flex flex-wrap justify-content-center mb-3 bg-manxs">
@@ -37,18 +38,25 @@
         {# <!-- <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg> --> #}
         <img src="{{ url_for('static', filename='imgs/logo_manxs.png') }}" alt="" width="60" class="d-inline-block">
 
-    <b class="fs-3 link-light align-middle">MANXS</b>
+        <b class="fs-3 link-light align-middle">MANXS</b>
     </a>
 
     <ul class="nav col-12 mb-2 justify-content-center menu1">
-        <li class="{%block index_active%}   {%endblock%}"><a href="/                        " class="nav-link px-2 link-light">HOME</a></li>
+        <li class="{%block index_active%}   {%endblock%}"><a href="/                        "
+                class="nav-link px-2 link-light">HOME</a></li>
         <!-- <li class="{%block bio_active%}     {%endblock%}"><a href="{{ url_for('biografia') }}"class="nav-link px-2 link-light">BIOGRAFIA</a></li> -->
-        <li class="{%block servicos_active%}{%endblock%}"><a href="{{ url_for('servicos') }}" class="nav-link px-2 link-light">SERVIÇOS</a></li>
-        <li class="{%block galeria_active%} {%endblock%}"><a href="{{ url_for('galeria') }} " class="nav-link px-2 link-light">GALERIA</a></li>
-        <li class="{%block videos_active%}  {%endblock%}"><a href="{{ url_for('videos') }} "  class="nav-link px-2 link-light">VIDEOS</a></li>
-        <li class="{%block shows_active%}   {%endblock%}"><a href="{{ url_for('shows') }}"    class="nav-link px-2 link-light">SHOWS</a></li>
-        <li class="{%block musicas_active%} {%endblock%}"><a href="{{ url_for('musicas') }}"  class="nav-link px-2 link-light">MUSICAS</a></li>
-        <li class="{%block contato_active%} {%endblock%}"><a href="{{ url_for('contato') }}"  class="nav-link px-2 link-light">CONTATO</a></li>
+        <li class="{%block servicos_active%}{%endblock%}"><a href="{{ url_for('servicos') }}"
+                class="nav-link px-2 link-light">SERVIÇOS</a></li>
+        <li class="{%block galeria_active%} {%endblock%}"><a href="{{ url_for('galeria') }} "
+                class="nav-link px-2 link-light">GALERIA</a></li>
+        <li class="{%block videos_active%}  {%endblock%}"><a href="{{ url_for('videos') }} "
+                class="nav-link px-2 link-light">VIDEOS</a></li>
+        <li class="{%block shows_active%}   {%endblock%}"><a href="{{ url_for('shows') }}"
+                class="nav-link px-2 link-light">SHOWS</a></li>
+        <li class="{%block musicas_active%} {%endblock%}"><a href="{{ url_for('musicas') }}"
+                class="nav-link px-2 link-light">MUSICAS</a></li>
+        <li class="{%block contato_active%} {%endblock%}"><a href="{{ url_for('contato') }}"
+                class="nav-link px-2 link-light">CONTATO</a></li>
     </ul>
 </header>
 
@@ -64,8 +72,8 @@
     <p class="float-end"><a style="color: white;" href="#">Voltar lá em cima!</a></p>
     <p style="color: white;">
         &copy;2021 Mantido por
-        <a style="color: white;" href="https://github.com/cesardddp" target="_blank">cesardddp</a> &middot; 
-        <a style="color: white;" href="https://github.com/bzoliveira" target="_blank">bzoliveira</a> &middot; 
+        <a style="color: white;" href="https://github.com/cesardddp" target="_blank">cesardddp</a> &middot;
+        <a style="color: white;" href="https://github.com/bzoliveira" target="_blank">bzoliveira</a> &middot;
         <!-- <a style="color: white;" href="#">Privacy</a> &middot;
         <a style="color: white;" href="#">Terms</a></p> -->
 </footer>
