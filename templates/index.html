@@ -108,12 +108,12 @@
 	<div class="d-flex flex-wrap justify-content-center position-relative ">
 
 		<video class="d-none d-lg-block" muted="" loop="" playsinline="" autoplay
-			poster="{{ url_for('static', filename='imgs/CAPA_PC.jpg') }}" style="width: 100%;">
+			poster="{{ url_for('static', filename='imgs/capa_wide.jpg') }}" style="width: 100%;">
 			<source src="{{ url_for('static', filename='vids/index_hd_desk.mp4') }}" type="video/mp4">
 			<!-- <source src="{{ url_for('static', filename='vids/index_hd_mobile.mp4') }}" type="video/mp4"> -->
 		</video>
 		<video class="d-block d-lg-none" muted="" loop="" playsinline="" autoplay
-			poster="{{ url_for('static', filename='imgs/CAPA_PC.jpg') }}" style="width: 100%;">
+			poster="{{ url_for('static', filename='imgs/capa_mobile.jpg') }}" style="width: 100%;">
 			<!-- <source src="{{ url_for('static', filename='vids/index_hd_desk.mp4') }}" type="video/mp4"> -->
 			<source src="{{ url_for('static', filename='vids/index_hd_mobile.mp4') }}" type="video/mp4">
 		</video>
@@ -149,7 +149,7 @@
 	<div class="container-md marketing mt-4">
 		<!-- REDES SOCIAIS -->
 		<hr class="m-5 d-none d-lg-block">
-		{{ redes_macro.redes_macro() }}
+		{{ redes_macro.redes_macro(redes_sociais_componente) }}
 
 
 		<!--ADICIONAR ESPAÇO AQUI-->

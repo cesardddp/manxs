@@ -190,7 +190,6 @@ aulas = [
 ]
 
 
-
 videos_lista = [
     {"titulo": "Show: MONTA(AÇÃO) - Manxs | ProAC", "src": "wTNMsAUV-ck"},
     {"titulo": "#14 | Manxs - Quem eu sou | Edital Municipal", "src": "tx72vkCz5zw"},

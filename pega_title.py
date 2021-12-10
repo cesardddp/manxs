@@ -16,10 +16,15 @@ urls = [
 videos = []
 for video in urls:
     videos.append(
-        {"titulo": bs(r.get(video).content, "html.parser").find("title").text, "src": video.split("/")[-1]}
+        {
+            "titulo": bs(r.get(video).content, "html.parser").find("title").text,
+            "src": video.split("/")[-1],
+        }
     )
     # import pdb;pdb.set_trace()
-    
 
-print("json dumped",json.dump(videos,open("videos.json",'w')))
-from pprint import pprint;pprint(videos)
+
+print("json dumped", json.dump(videos, open("videos.json", "w")))
+from pprint import pprint
+
+pprint(videos)

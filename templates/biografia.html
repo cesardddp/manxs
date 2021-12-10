@@ -1,6 +1,6 @@
 {% extends 'layout.html' %}
 {% import 'redes_macro.html.jinja' as redes_macro %}
-{%block bio_active%}active_menu{%endblock%}
+{%block biografia_active%}active_menu{%endblock%}
 
 {% block link_style %}
 <style>
@@ -51,141 +51,40 @@
 <div class="container-md marketing mt-4">
 
 	<!-- START THE FEATURETTES -->
-	<h2 class="about">BIOGRAFIA</h2>
+	<h2 class="about">{{biografia.titulo}}</h2>
 
 	<div class="row featurette">
 		<div class="col">
-			<img src="{{url_for('static', filename='imgs/bio_foto.jpeg')}}" alt="{{historia['parte1']['img']['alt']}}"
+			<img src="{{url_for('static', filename='imgs/'+biografia.banner.foto)}}" alt="{{biografia.banner.alt}}"
 				srcset="" class="my-5 bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
 				width="h-100" height="h-100">
 		</div>
 	</div>
 	<div class="row featurette bg-azul-branco">
 		<div class="text-white bio-text fs-6 py-1 ">
-			<p class="">Desde 2016 o grupo Manxs vem despertando alegria e reflexão em seu público através da arte
-				Drag Queen, disseminando cultura, informação e arte com profissionalismo. O grupo é composto pelas
-				artistas Drags Queens
-				Ashilleyy Extravaganzza, Vikky e LuisAfF que são conhecidas por seus shows, sempre performáticos,
-				repletos de humor, dança, música e reflexões sociais. Iniciou seu trabalho cultural na cidade de Rio
-				Claro (interior do Estado de São Paulo) e hoje galga fronteiras compartilhando seu discurso artístico.
-				Já realizou apresentações em programas e atividades da Secretaria Municipal de Cultura de Rio Claro-SP,
-				UNESP campus de Rio Claro-SP, Sistema de Ensino COC e ETEC Armando Bayeux da Silva (Centro Paula Souza),
-				tendo como suas realizações mais simbólicas a abertura do show da Lia Clark em Rio Claro-SP no ano de
-				2018,
-				apresentação na posse de Iris Nogueira, coordenadora da Secretaria da Juventude de São Paulo no ano de
-				2018, o show principal de uma das noites do Festival Nacional INTERBio em 2019 e o Show (DVD Comentado)
-				intitulado Monta(Ação) em 2021. Recentemente, o grupo
-				Manxs vem investindo em seu trabalho autoral transpassando pelo gênero musical do Rock, lançando músicas
-				nas principais plataformas online de streaming e estão produzindo o seu primeiro álbum musical autoral.
-				Possui realizações notórias por meio de
-				editais contemplados, sendo elas: </p>
+			<p class="">{{biografia.texto_principal}} </p>
 			<ul>
+				{% for feito in biografia.feitos %}
 				<li class="list_triang">
 					<p class="">
-						POIESIS (Programa de Qualificação em Arte - Dança) em 2019, que resultou no primeiro espetáculo
-						de teatro musical LGBTQIA+ Drag Queen da cidade de Rio Claro-SP intitulado “O FIM”;
-
+						{{feito}}
 					</p>
 				</li>
-				<li class="list_triang">
-					<p class="">
-						Edital Nº1/2019 “Apoio a Projetos de Circulação de Espetáculos e Realização de Eventos Culturais
-						no Município de Rio Claro - SP” em 2019, que resultou na elaboração do primeiro documento de
-						registro histórico cultural da comunidade LGBTQIA+ de Rio Claro-SP;
-
-					</p>
-
-				</li>
-				<li class="list_triang">
-					<p class="">
-						Edital ProAC Nº14/2019 “Incentivo ao Desenvolvimento da Cultura Popular, Tradicional, Urbana,
-						Negra, Indígena e Plural no Estado de São Paulo” em 2019, que resultou na circulação online e
-						gratuito de oficinas de aprimoramento artístico de nível iniciante e do show (DVD) comentado
-						intitulado "Monta(Ação)" ;
-
-					</p>
-
-				</li>
-				<li class="list_triang">
-					<p class="">
-						POIESIS (Programa de Qualificação em Arte - Dança) em 2020, que resultou no espetáculo em
-						videodança intitulado “Bem vindo ao Bailim” apresentado em evento online transmitido pelo
-						Oficinas Culturais de São Paulo;
-
-					</p>
-				</li>
-				<li class="list_triang">
-					<p class="">
-						Edital ProAC Nº 04/2020 "Registro e licenciamento de espetáculos inéditos de Dança para difusão
-						online - #CulturaEmCasa" em 2020. (NÃO REALIZADO DEVIDO ADVERSIDADES DA PANDEMIA);
-
-					</p>
-				</li>
-				<li class="list_triang">
-					<p class="">
-						Lei Aldir Blanc em 2020, que possibilitou a apresentação parcial do repertório musical
-						Monta(Ação) para a cidade de Rio Claro-SP, compondo o cronograma de atividades da Secretaria
-						Municipal de Cultura;
-
-					</p>
-				</li>
-				<li class="list_triang">
-					<p class="">
-						Edital Cultural da Secretaria Municipal de Cultura de Rio Claro-SP intitulado "Semana Cultural -
-						Tributo à Saúde", que resultou no show intitulado
-						"Bem Me Quer, Mal Não Quero" em paralelo e apoio a campanha #SetembroAmarelo (Prevenção ao
-						Suicídio) em 2021.
-
-					</p>
-				</li>
+				{% endfor %}
 			</ul>
-			<p class="">HISTÓRICO: Manxs nasce de dentro do grupo de artes A'morasDance em Rio Claro-SP em 2016,
-				idealizado por Luis Henrique (LuisAfF) e a
-				Nina Rodrigues (Nina Poulain), sendo essa a primeira formação do grupo que até então performavam com
-				Dança e Lip Sync. Em 2017, com a chegada de Pedro Marques (Ashilleyy Extravaganzza) em Rio Claro-SP,
-				as Manxs decidem compor então um trio, passando a incluir o Canto como mais uma
-				linguagem artística ao grupo, que seguiu com tal formação até março de 2018. Nina Poulain anuncia seu
-				desligamento do grupo Manxs no final de 2017 e por meio de um acordo mutuo amigável, convida Leonardo
-				Fonseca (Vikky)
-				para ser a nova integrante. Vikky aceita o convite, decide deixar toda sua rotina e emprego em
-				Valinhos-SP, se muda para Rio Claro-SP e dessa forma
-				desde 2018, o trio oficial que compõe o título de Manxs é formado por: LuisAfF, Ashilleyy Extravaganzza
-				e
-				Vikky.
-				À partir de 2019 o grupo Manxs passa a produzir um material musical autoral, visando a total
-				independencia artística, para trabalhar com um conteúdo 100% original, condizendo assim com o discurso
-				atrelado a missão do grupo. Como resultado desse empenho, hoje as Manxs possuem 4 músicas autorais e
-				originais em todas as plataformas de streaming, sendo elas:</p>
-			<ul>
-				<li class="list_triang"><a href="https://youtu.be/hlP-lESKS44" style="color:#f69df1" target="_blank">
-						VELHA AMIGA</a> - Interprete: Manxs | Compositor: LuisAfF | Co-compositor: Davi Selingardi |
-					Produção:
-					Movie Mint. (2019) ONErpm Studios </li>
-				<li class="list_triang"><a href="https://youtu.be/5T0qEn23HYE" style="color:#f69df1" target="_blank">
-						TÔ PLENA</a> - Interprete: Manxs | Compositor: Vikky e LuisAfF | Co-compositor: Chassi |
-					Produção:
-					Chassi. (2019) ONErpm Studios</li>
-				<li class="list_triang"><a href="https://youtu.be/OLs93xT5FEU" style="color:#f69df1" target="_blank">
-						GOY</a> - Interprete: Manxs | Compositor: Vinicius Marques da Silva | Co-compositor: Nina
-					Poulain e
-					LuisAfF | Produção: Movie Mint. (2019) ONErpm Studios</li>
-				<li class="list_triang"><a href="https://youtu.be/b-_m3nnaESs" style="color:#f69df1" target="_blank">
-						VISTA O CLOSE</a> - Interprete: Manxs | Compositor: LuisAfF | Co-compositor: Vikky e Ashilleyy
-					Extravaganzza | Produção: Movie Mint. (2020) ONErpm Studios</li>
-			</ul>
+				<p class="">{{biografia.texto_historico}}</p>
+				<ul>
+					{% for musica in biografia.musicas %}
+					<li class="list_triang">
+						<a href="{{musica.link}}" style="color:#f69df1" target="_blank">
+							{{musica.nome}}
+						</a> 
+						{{musica.texto}} </li>
+					{% endfor %}
+				</ul>
 
 
-			<p>O que era apenas um trio composto por três artistas Drag Queens, hoje é uma empresa independente,
-				consistente e resistente, que vai além das ações das três integrantes que são porta vozes e a identidade
-				visual do grupo.
-				O grupo Manxs hoje conta com uma <a class="text-info" href="{{ url_for('servicos') }}">equipe
-					qualificada</a> e
-				compromissada com o objetivo e
-				missão da empresa.
-
-
-
-			</p>
+				<p>{{biografia.texto_final|safe}}</p>
 
 
 		</div>
@@ -196,16 +95,16 @@
 	<div style="border: 5px;
 	border-radius: 0px 40px 0px 30px;" class="row bg-azul-branco py-2">
 		<div class="col-md-7 order-md-2 text-white ">
-			<span class="d-block mx-auto text-center missao-titulo fs-3 mt-3">MISSÃO </span>
+			<span class="d-block mx-auto text-center missao-titulo fs-3 mt-3">{{biografia.card_missao.nome}} </span>
 			<span class="d-block mt-5 mx-auto col-9 missao-conteudo fs-1">
 				<!-- TODO ASPAS GIGANTES -->
 
-				<p class="text-start">"FAZER DO FERVO</p>
-				<p class="text-end">UM ATO POLÍTICO"</p>
+				<p class="text-start">{{biografia.card_missao.parte1}}</p>
+				<p class="text-end">{{biografia.card_missao.parte1}}</p>
 			</span>
 		</div>
 		<div class="col-md-5 order-md-1">
-			<img src="{{url_for ('static', filename='imgs/MISSÃO.jpeg')}}" alt="" srcset=""
+			<img src="{{url_for ('static', filename='imgs/'+biografia.card_missao.img_link)}}" alt="" srcset=""
 				class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
 				height="500">
 		</div>
@@ -216,23 +115,21 @@
 	<div class="row featurette bg-azul-branco py-2">
 		<div class="col-md-7 text-white">
 			<span class="d-block mx-auto text-center missao-titulo fs-3 mt-3">
-				OBJETIVO DO GRUPO</span>
+				{{biografia.card_objetivo.nome}}</span>
 			<span class="d-block mt-5 mx-auto col-9 missao-conteudo fs-1">
+				
 				<!-- TODO ASPAS GIGANTES -->
-
-				<!-- <h2 class="featurette-heading" style="margin-top: 1rem;font-size: 46px;"> -->
-				<!-- TODO ASPAS GIGANTES -->
-				<!-- <p style="text-align: center;"><span> -->
+				
 				<p class="text-center">
-					"FAZER DA ARTE UMA FERRAMENTA PARA VISIBILIDADE E O EMPODERAMENTO
-					DA COMUNIDADE LGBTQIA+"
+					{{biografia.card_objetivo.parte1}}
+					
 				</p>
 				<!-- <p class="text-end">UM ATO POLÍTICO"</p> -->
 			</span>
 		</div>
 		<div class="col-md-5">
-			<img src="{{url_for ('static', filename='imgs/'+historia['parte3']['img']['src'])}}"
-				alt="{{historia['parte3']['img']['alt']}}" srcset=""
+			<img src="{{url_for ('static', filename='imgs/'+biografia.card_objetivo.img_link)}}"
+				alt="{{biografia.card_objetivo.alt}}" srcset=""
 				class="mt-5 bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
 				height="500">
 		</div>
@@ -240,14 +137,15 @@
 
 	<!-- REDES SOCIAIS -->
 	<hr class="m-5">
-	{{ redes_macro.redes_macro() }}
+	{{ redes_macro.redes_macro(redes_sociais_componente) }}
+
 
 	<!--ADICIONAR ESPAÇO AQUI-->
 	<div class="row text-center text-light">
 		<div class="d-flex-block col-sm-3 col-9 mb-1 rounded bg-azul-branco px-1 mx-auto py-3">
-			<img src="{{ url_for('static', filename='imgs/luisaff.jpg')}}" class="" alt="" width="140" height="140">
+			<img src="{{ url_for('static', filename='imgs/'+instagrams.luisaff.img)}}" class="" alt="" width="140" height="140">
 			<h2>LuisAfF</h2>
-			<a class="btn btn-redes btn-insta fs-5" href="https://www.instagram.com/oluisaff/" target="_blank"
+			<a class="btn btn-redes btn-insta fs-5" href="{{instagrams.luisaff.link}}" target="_blank"
 				role="button">
 				<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class=""
 					viewBox="0 0 16 16">
@@ -257,9 +155,9 @@
 			</a>
 		</div>
 		<div class="d-flex-block col-sm-3 col-9 mb-1 rounded bg-azul-branco px-1 mx-auto py-3">
-			<img src="{{ url_for('static', filename='imgs/ashilleyy.jpg')}}" class="" alt="" width="140" height="140">
+			<img src="{{ url_for('static', filename='imgs/'+instagrams.ashilleyy.img)}}" class="" alt="" width="140" height="140">
 			<h2>Ashilleyy</h2>
-			<a class="btn btn-redes btn-insta fs-5" href="https://www.instagram.com/ash.extrava/" target="_blank"
+			<a class="btn btn-redes btn-insta fs-5" href="{{instagrams.ashilleyy.link}}" target="_blank"
 				role="button"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
 					class="" viewBox="0 0 16 16">
 					<path
@@ -267,9 +165,9 @@
 				</svg></a>
 		</div>
 		<div class="d-flex-block col-sm-3 col-9 mb-1 rounded bg-azul-branco px-1 mx-auto py-3">
-			<img src="{{ url_for('static', filename='imgs/vikky.jpg')}}" class="" alt="" width="140" height="140">
+			<img src="{{ url_for('static', filename='imgs/'+instagrams.vikky.img)}}" class="" alt="" width="140" height="140">
 			<h2>Vikky</h2>
-			<a class="btn btn-redes btn-insta fs-5" href="https://www.instagram.com/vikky_a_princesinha/"
+			<a class="btn btn-redes btn-insta fs-5" href="{{instagrams.vikky.link}}"
 				target="_blank" role="button">
 				<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class=""
 					viewBox="0 0 16 16">
@@ -279,7 +177,6 @@
 			</a>
 		</div>
 	</div>
-	<!-- /END THE FEATURETTES -->
 
 </div>
 
