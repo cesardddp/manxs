@@ -8,7 +8,7 @@
             <div class="card style-aulas bg-azul-branco h-100">
                 </br>
                 <div class="card-title">asdf</div>
-                <img src="{{ url_for('static', filename='imgs/'+aula['imagem']['src']) }}" class="card-img-top"
+                <img loading='lazy'src="{{ url_for('static', filename='imgs/'+aula['imagem']['src']) }}" class="card-img-top"
                     alt="['imagem']['alt']">
                 <div class="card-body">
                     <h5 class="card-title">{{aula['titulo']}}</h5>
@@ -26,7 +26,7 @@
         <div class="col">
             <div class="card style-aulas bg-azul-branco h-100">
                 </br>
-                <img src="{{ url_for('static', filename='imgs/'+aula['imagem']['src']) }}" class="card-img-top"
+                <img loading='lazy'src="{{ url_for('static', filename='imgs/'+aula['imagem']['src']) }}" class="card-img-top"
                     alt="['imagem']['alt']">
                 <div class="card-body">
                     <h5 class="card-title">{{aula['titulo']}}</h5>

@@ -80,11 +80,6 @@ cursos = [
             "alt": "desenho de uma pessoa segurando a propria face arrancada da cabeça. A face olha contemplativa o vazio de onde estava.",
         },
     },
-    # Tema: Comunicação
-    # Título:
-    # Subtítulo: Valor R$ 00,00
-    # Conteúdo: Desenvolver a habilidade social de comunicação (verbal e não verbal) e ampliar o repertório expressivo artístico do participante. Inscrição: 00/00/2022 à 00/00/2022
-    # Duração: *Carga Horária: X X horas. *
 ]
 
 aulas = [
@@ -99,7 +94,7 @@ aulas = [
     },
     {
         "titulo": "LIBRAS",
-        "conteudo": "Intérprete de LIBRAS para eventos e orientador para interpretes iniciantes com o interprete Leonardo",
+        "conteudo": "Intérprete de LIBRAS para eventos e orientador para intérpretes iniciantes com o interprete Leonardo",
         "link": "leonardofonsecapos01@gmail.com",
         "imagem": {
             "src": "aula_leo.jpg",
@@ -209,3 +204,19 @@ videos_lista = [
         "src": "P6Mi55-fCw4",
     },
 ]
+
+
+redes_sociais_componente = {
+    "titulo": "ACESSE NOSSAS REDES SOCIAIS",
+    "facebook": {
+        "link": "https://www.facebook.com/grupomanxs/",
+        "username": "/grupomanxs",
+    },
+    "youtube": {"link": "https://www.youtube.com/Manxs", "username": "/Manxs"},
+    "instagram": {
+        "link": "https://www.instagram.com/grupomanxs/",
+        "username": "/grupomanxs",
+    },
+    "tiktok": {"link": "https://www.tiktok.com/@grupomanxs", "username": "@grupomanxs"},
+    "twitter": {"link": "https://twitter.com/grupomanxs", "username": "@grupomanxs"},
+}
