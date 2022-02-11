@@ -32,39 +32,42 @@
 		list-style: disclosure-open;
 	}
 </style>
-<!-- ul {
+<!--
+ul {
 	list-style: disclosure-open;
-  }
-  
-  ul li::before {
+}
+
+ul li::before {
 	content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
 	color: red; /* Change the color */
 	font-weight: bold; /* If you want it to be bold */
 	display: inline-block; /* Needed to add space between the bullet and the text */
 	width: 1em; /* Also needed for space (tweak if needed) */
 	margin-left: -1em; /* Also needed for space (tweak if needed) */
-  } -->
+}
+-->
 {% endblock link_style %}
+
+
+
+{# --------------- MAIN --------------- #}
 {% block main %}
-
-
 <div class="container-md marketing mt-4">
 
-	<!-- START THE FEATURETTES -->
-	{{biografia_titulo(titulo_data)}}
+	{{biografia_titulo(biografia_data.titulo)}}
 
-	{{banner(banner_data)}}
+	{{banner(biografia_data.banner)}}
 
-
-	{{texto_principal(texto_principal_data)}}
+	{{texto_principal(biografia_data.texto_principal)}}
 
 
 	<hr class="m-5">
-	<!-- missão objetivo -->
-	{{card_missao(card_missao_data)}}
-
+	<!-- card missão  -->
+	{{card_missao(biografia_data.card_missao)}}
+	
+	<!-- card objetivo -->
 	<hr class="m-5">
-	{{card_objetivo(card_objetivo_data)}}
+	{{card_objetivo(biografia_data.card_objetivo)}}
 
 
 	<!-- REDES SOCIAIS -->
@@ -73,54 +76,55 @@
 
 
 	<!--Instagrams-->
-	{{ instagrams(instagrams_data) }}
+	{{ instagrams(biografia_data.instagrams) }}
 
 </div>
-
 {% endblock main %}
 
+{# ------------------------------ MACROS ------------------------------ #}
+
 {% macro biografia_titulo(titulo_data) %}
-<h2 class="about" {% if render_id %}id="{{titulo_data.id}}" {% endif %}>{{titulo_data.texto}}</h2>
+	<h2 class="about" {% if render_id %}id="{{titulo_data.id}}" {% endif %}>{{titulo_data.texto}}</h2>
 {% endmacro %}
 
 {% macro banner(banner_data) %}
-<div class="row featurette">
-	<div class="col">
-		<img loading='lazy' src="{{url_for('static', filename='imgs/'+banner_data.foto)}}"
-			{% if render_id %}id="{{banner_data.id}}" {% endif %} alt="{{banner_data.alt}}" srcset=""
-			class="my-5 bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="h-100"
-			height="h-100">
+	<div class="row featurette">
+		<div class="col">
+			<img loading='lazy' src="{{url_for('static', filename='imgs/'+banner_data.foto)}}"
+				{% if render_id %}id="{{banner_data.id}}" {% endif %} alt="{{banner_data.alt}}" srcset=""
+				class="my-5 bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="h-100"
+				height="h-100">
+		</div>
 	</div>
-</div>
 {% endmacro %}
 
 {% macro feitos(feitos_data) %}
-{% for feito in feitos_data.lista %}
-<li class="list_triang">
-	<p class="">
-		{{feito}}
-	</p>
-</li>
-{% endfor %}
+	{% for feito in feitos_data.lista %}
+	<li class="list_triang">
+		<p class="">
+			{{feito}}
+		</p>
+	</li>
+	{% endfor %}
 {% endmacro %}
 
 {% macro texto_historico(texto_historico_data) %}
-<p class="">{{texto_historico_data.texto}}</p>
+	<p class="">{{texto_historico_data.texto}}</p>
 {% endmacro %}
 
 {% macro musicas(musicas_data) %}
-{% for musica in musicas.lista %}
-<li class="list_triang">
-	<a href="{{musica.link}}" style="color:#f69df1" target="_blank">
-		{{musica.nome}}
-	</a>
-	{{musica.texto}}
-</li>
-{% endfor %}
+	{% for musica in musicas_data.lista %}
+	<li class="list_triang">
+		<a href="{{musica.link}}" style="color:#f69df1" target="_blank">
+			{{musica.nome}}
+		</a>
+		{{musica.texto}}
+	</li>
+	{% endfor %}
 {% endmacro %}
 
 {% macro texto_final(texto_final_data) %}
-<p>texto_final_data.texto|safe</p>
+	<p>{{texto_final_data.texto|safe}}</p>
 {% endmacro %}
 
 {% macro texto_principal(texto_principal_data) %}
@@ -128,19 +132,18 @@
 	<div class="text-white bio-text fs-6 py-1 ">
 		<p class="">{{texto_principal_data.texto}} </p>
 		<ul>
-			{{feitos(feitos_data)}}
+			{{feitos(biografia_data.feitos)}}
 		</ul>
-		{{texto_historico(texto_historico_data)}}
+		{{texto_historico(biografia_data.texto_historico)}}
 		<ul>
-			{{musicas(musicas_data)}}
+			{{musicas(biografia_data.musicas)}}
 		</ul>
-		{{texto_final(texto_final_data)}}
+		{{texto_final(biografia_data.texto_final)}}
 	</div>
 </div>
 {% endmacro %}
 
 {% macro card_missao(card_missao_data) %}
-
 <div class="row bg-azul-branco py-2" style="border: 5px;border-radius: 0px 40px 0px 30px;">
 	<div class="col-md-7 order-md-2 text-white ">
 		<span class="d-block mx-auto text-center missao-titulo fs-3 mt-3">{{card_missao_data.nome}} </span>
@@ -157,21 +160,16 @@
 			height="500">
 	</div>
 </div>
-
 {% endmacro %}
 
 {% macro card_objetivo(card_objetivo_data) %}
-
 <div class="row featurette bg-azul-branco py-2">
 	<div class="col-md-7 text-white">
 		<span class="d-block mx-auto text-center missao-titulo fs-3 mt-3">
 			{{card_objetivo_data.nome}}</span>
 		<span class="d-block mt-5 mx-auto col-9 missao-conteudo fs-1">
-
-
 			<p class="text-center">
 				{{card_objetivo_data.parte1}}
-
 			</p>
 		</span>
 	</div>
