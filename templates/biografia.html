@@ -51,158 +51,175 @@
 <div class="container-md marketing mt-4">
 
 	<!-- START THE FEATURETTES -->
-	<h2 class="about">{{biografia.titulo}}</h2>
+	{{biografia_titulo(titulo_data)}}
 
-	<div class="row featurette">
-		<div class="col">
-			<img src="{{url_for('static', filename='imgs/'+biografia.banner.foto)}}" alt="{{biografia.banner.alt}}"
-				srcset="" class="my-5 bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-				width="h-100" height="h-100">
-		</div>
-	</div>
-	<div class="row featurette bg-azul-branco">
-		<div class="text-white bio-text fs-6 py-1 ">
-			<p class="">{{biografia.texto_principal}} </p>
-			<ul>
-				{% for feito in biografia.feitos %}
-				<li class="list_triang">
-					<p class="">
-						{{feito}}
-					</p>
-				</li>
-				{% endfor %}
-			</ul>
-				<p class="">{{biografia.texto_historico}}</p>
-				<ul>
-					{% for musica in biografia.musicas %}
-					<li class="list_triang">
-						<a href="{{musica.link}}" style="color:#f69df1" target="_blank">
-							{{musica.nome}}
-						</a> 
-						{{musica.texto}} </li>
-					{% endfor %}
-				</ul>
+	{{banner(banner_data)}}
 
 
-				<p>{{biografia.texto_final|safe}}</p>
+	{{texto_principal(texto_principal_data)}}
 
-
-		</div>
-	</div>
 
 	<hr class="m-5">
 	<!-- missão objetivo -->
-	<div style="border: 5px;
-	border-radius: 0px 40px 0px 30px;" class="row bg-azul-branco py-2">
-		<div class="col-md-7 order-md-2 text-white ">
-			<span class="d-block mx-auto text-center missao-titulo fs-3 mt-3">{{biografia.card_missao.nome}} </span>
-			<span class="d-block mt-5 mx-auto col-9 missao-conteudo fs-1">
-				<!-- TODO ASPAS GIGANTES -->
-
-				<p class="text-start">{{biografia.card_missao.parte1}}</p>
-				<p class="text-end">{{biografia.card_missao.parte1}}</p>
-			</span>
-		</div>
-		<div class="col-md-5 order-md-1">
-			<img src="{{url_for ('static', filename='imgs/'+biografia.card_missao.img_link)}}" alt="" srcset=""
-				class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-				height="500">
-		</div>
-	</div>
+	{{card_missao(card_missao_data)}}
 
 	<hr class="m-5">
+	{{card_objetivo(card_objetivo_data)}}
 
-	<div class="row featurette bg-azul-branco py-2">
-		<div class="col-md-7 text-white">
-			<span class="d-block mx-auto text-center missao-titulo fs-3 mt-3">
-				{{biografia.card_objetivo.nome}}</span>
-			<span class="d-block mt-5 mx-auto col-9 missao-conteudo fs-1">
-				
-				<!-- TODO ASPAS GIGANTES -->
-				
-				<p class="text-center">
-					{{biografia.card_objetivo.parte1}}
-					
-				</p>
-				<!-- <p class="text-end">UM ATO POLÍTICO"</p> -->
-			</span>
-		</div>
-		<div class="col-md-5">
-			<img src="{{url_for ('static', filename='imgs/'+biografia.card_objetivo.img_link)}}"
-				alt="{{biografia.card_objetivo.alt}}" srcset=""
-				class="mt-5 bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-				height="500">
-		</div>
-	</div>
 
 	<!-- REDES SOCIAIS -->
 	<hr class="m-5">
 	{{ redes_macro.redes_macro(redes_sociais_componente) }}
 
 
-	<!--ADICIONAR ESPAÇO AQUI-->
-	<div class="row text-center text-light">
-		<div class="d-flex-block col-sm-3 col-9 mb-1 rounded bg-azul-branco px-1 mx-auto py-3">
-			<img src="{{ url_for('static', filename='imgs/'+instagrams.luisaff.img)}}" class="" alt="" width="140" height="140">
-			<h2>LuisAfF</h2>
-			<a class="btn btn-redes btn-insta fs-5" href="{{instagrams.luisaff.link}}" target="_blank"
-				role="button">
-				<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class=""
-					viewBox="0 0 16 16">
-					<path
-						d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
-				</svg>
-			</a>
-		</div>
-		<div class="d-flex-block col-sm-3 col-9 mb-1 rounded bg-azul-branco px-1 mx-auto py-3">
-			<img src="{{ url_for('static', filename='imgs/'+instagrams.ashilleyy.img)}}" class="" alt="" width="140" height="140">
-			<h2>Ashilleyy</h2>
-			<a class="btn btn-redes btn-insta fs-5" href="{{instagrams.ashilleyy.link}}" target="_blank"
-				role="button"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-					class="" viewBox="0 0 16 16">
-					<path
-						d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
-				</svg></a>
-		</div>
-		<div class="d-flex-block col-sm-3 col-9 mb-1 rounded bg-azul-branco px-1 mx-auto py-3">
-			<img src="{{ url_for('static', filename='imgs/'+instagrams.vikky.img)}}" class="" alt="" width="140" height="140">
-			<h2>Vikky</h2>
-			<a class="btn btn-redes btn-insta fs-5" href="{{instagrams.vikky.link}}"
-				target="_blank" role="button">
-				<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class=""
-					viewBox="0 0 16 16">
-					<path
-						d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
-				</svg>
-			</a>
-		</div>
-	</div>
+	<!--Instagrams-->
+	{{ instagrams(instagrams_data) }}
 
 </div>
 
-
-<!-- <script>
-	function onPlayerStateChange(event) // triggered everytime ANY iframe video player among the "players" list is played, paused, ended, etc.
-	{
-		// Check if any iframe video is being played (or is currently buffering to be played)
-		// Reference: https://developers.google.com/youtube/iframe_api_reference#Events
-		if (event.data == YT.PlayerState.PLAYING || event.data == YT.PlayerState.BUFFERING) {
-			// If any player has been detected to be currently playing or buffering, pause the carousel from sliding
-			// .carousel('pause') - Stops the carousel from cycling through items.
-			// Reference: https://getbootstrap.com/docs/4.4/components/carousel/#methods
-			$('#carrosseldastres').carousel('pause');
-		}
-		else {
-			// If there are no currently playing nor buffering videos, resume the sliding of the carousel.
-			// This means that once the current video is in a state that is not playing (aside from buffering), either it was:
-			//     1. paused intentionally
-			//     2. paused as an effect of a slide
-			//     3. video has ended
-			//     4. wasn't totally played from the start
-			//     5. and literally any form where the video timer isn't running ;)
-			//     - then the carousel would now resume sliding.
-			$('#carrosseldastres').carousel();
-		}
-</script> -->
-
 {% endblock main %}
+
+{% macro biografia_titulo(titulo_data) %}
+<h2 class="about" {% if render_id %}id="{{titulo_data.id}}" {% endif %}>{{titulo_data.texto}}</h2>
+{% endmacro %}
+
+{% macro banner(banner_data) %}
+<div class="row featurette">
+	<div class="col">
+		<img loading='lazy' src="{{url_for('static', filename='imgs/'+banner_data.foto)}}"
+			{% if render_id %}id="{{banner_data.id}}" {% endif %} alt="{{banner_data.alt}}" srcset=""
+			class="my-5 bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="h-100"
+			height="h-100">
+	</div>
+</div>
+{% endmacro %}
+
+{% macro feitos(feitos_data) %}
+{% for feito in feitos_data.lista %}
+<li class="list_triang">
+	<p class="">
+		{{feito}}
+	</p>
+</li>
+{% endfor %}
+{% endmacro %}
+
+{% macro texto_historico(texto_historico_data) %}
+<p class="">{{texto_historico_data.texto}}</p>
+{% endmacro %}
+
+{% macro musicas(musicas_data) %}
+{% for musica in musicas.lista %}
+<li class="list_triang">
+	<a href="{{musica.link}}" style="color:#f69df1" target="_blank">
+		{{musica.nome}}
+	</a>
+	{{musica.texto}}
+</li>
+{% endfor %}
+{% endmacro %}
+
+{% macro texto_final(texto_final_data) %}
+<p>texto_final_data.texto|safe</p>
+{% endmacro %}
+
+{% macro texto_principal(texto_principal_data) %}
+<div class="row featurette bg-azul-branco">
+	<div class="text-white bio-text fs-6 py-1 ">
+		<p class="">{{texto_principal_data.texto}} </p>
+		<ul>
+			{{feitos(feitos_data)}}
+		</ul>
+		{{texto_historico(texto_historico_data)}}
+		<ul>
+			{{musicas(musicas_data)}}
+		</ul>
+		{{texto_final(texto_final_data)}}
+	</div>
+</div>
+{% endmacro %}
+
+{% macro card_missao(card_missao_data) %}
+
+<div class="row bg-azul-branco py-2" style="border: 5px;border-radius: 0px 40px 0px 30px;">
+	<div class="col-md-7 order-md-2 text-white ">
+		<span class="d-block mx-auto text-center missao-titulo fs-3 mt-3">{{card_missao_data.nome}} </span>
+		<span class="d-block mt-5 mx-auto col-9 missao-conteudo fs-1">
+			<!-- TODO ASPAS GIGANTES -->
+
+			<p class="text-start">{{card_missao_data.parte1}}</p>
+			<p class="text-end">{{card_missao_data.parte2}}</p>
+		</span>
+	</div>
+	<div class="col-md-5 order-md-1">
+		<img loading='lazy' src="{{url_for ('static', filename='imgs/'+card_missao_data.img_link)}}" alt="" srcset=""
+			class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+			height="500">
+	</div>
+</div>
+
+{% endmacro %}
+
+{% macro card_objetivo(card_objetivo_data) %}
+
+<div class="row featurette bg-azul-branco py-2">
+	<div class="col-md-7 text-white">
+		<span class="d-block mx-auto text-center missao-titulo fs-3 mt-3">
+			{{card_objetivo_data.nome}}</span>
+		<span class="d-block mt-5 mx-auto col-9 missao-conteudo fs-1">
+
+
+			<p class="text-center">
+				{{card_objetivo_data.parte1}}
+
+			</p>
+		</span>
+	</div>
+	<div class="col-md-5">
+		<img loading='lazy' src="{{url_for ('static', filename='imgs/'+card_objetivo_data.img_link)}}"
+			alt="{{card_objetivo_data.alt}}" srcset=""
+			class="mt-5 bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+			height="500">
+	</div>
+</div>
+{% endmacro %}
+
+{% macro instagrams(instagrams_data) %}
+<div class="row text-center text-light">
+	<div class="d-flex-block col-sm-3 col-9 mb-1 rounded bg-azul-branco px-1 mx-auto py-3">
+		<img loading='lazy' src="{{ url_for('static', filename='imgs/'+instagrams_data.luisaff.img)}}" class="" alt=""
+			width="140" height="140">
+		<h2>LuisAfF</h2>
+		<a class="btn btn-redes btn-insta fs-5" href="{{instagrams_data.luisaff.link}}" target="_blank" role="button">
+			<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class=""
+				viewBox="0 0 16 16">
+				<path
+					d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+			</svg>
+		</a>
+	</div>
+	<div class="d-flex-block col-sm-3 col-9 mb-1 rounded bg-azul-branco px-1 mx-auto py-3">
+		<img loading='lazy' src="{{ url_for('static', filename='imgs/'+instagrams_data.ashilleyy.img)}}" class="" alt=""
+			width="140" height="140">
+		<h2>Ashilleyy</h2>
+		<a class="btn btn-redes btn-insta fs-5" href="{{instagrams_data.ashilleyy.link}}" target="_blank" role="button"><svg
+				xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class=""
+				viewBox="0 0 16 16">
+				<path
+					d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+			</svg></a>
+	</div>
+	<div class="d-flex-block col-sm-3 col-9 mb-1 rounded bg-azul-branco px-1 mx-auto py-3">
+		<img loading='lazy' src="{{ url_for('static', filename='imgs/'+instagrams_data.vikky.img)}}" class="" alt=""
+			width="140" height="140">
+		<h2>Vikky</h2>
+		<a class="btn btn-redes btn-insta fs-5" href="{{instagrams_data.vikky.link}}" target="_blank" role="button">
+			<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class=""
+				viewBox="0 0 16 16">
+				<path
+					d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+			</svg>
+		</a>
+	</div>
+</div>
+{% endmacro %}
