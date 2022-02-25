@@ -26,3 +26,5 @@ config-dev.py
 config.py
 data/biografia.py
 config_dev.py
+static/js/bootstrap.min.js
+static/js/bootstrap.min.js.map

@@ -42,3 +42,7 @@ def delete_all(mongo_doc_name):
     doc.delete_many({})
     _ = [_ for _ in doc.find()]
     return _ == [] or _
+
+def update(mongo_doc_name:str,pk:int,document:dict):
+    doc = pym.db[mongo_doc_name]
+    doc.update

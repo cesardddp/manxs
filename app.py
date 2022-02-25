@@ -6,17 +6,20 @@ from conteudo import ( historia, aulas, oficinas, videos_lista, cursos,
 from config_dev import MONGO_URI
 import itertools
 import json
+# from flask_frozen import Freezer
 from flask_minify import minify, decorators
 
 RENDER_ID = False
 
 app = Flask(__name__)
-app.config.pyt ["MONGO_URI"] = MONGO_URI
+app.config["MONGO_URI"] = MONGO_URI
 
 mongo_config(app)
 
 minify(app=app, passive=True)
 
+from editor import editor_bp
+app.register_blueprint(editor_bp)
 
 # @app.before_first_request
 # def first():
