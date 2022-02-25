@@ -30,13 +30,24 @@
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/headers.css') }}">
 	{% block link_style %} {% endblock link_style %}
 
+	<style>
+		.bg-manxs {
+			background-image: linear-gradient(to top right, var(--rosa-manxs), rgba(0, 0, 0, 0.699)),
+			url("{{ url_for('static', filename='imgs/holofortes.jpg' ) }} ");
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-attachment: unset;
+		}
+	</style>
+
 </head>
 
 <header class="d-flex flex-wrap justify-content-center mb-3 bg-manxs">
 
 	<a href="/" class="navbar-brand mb-1">
 		{# <!-- <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg> --> #}
-		<img loading='lazy'src="{{ url_for('static', filename='imgs/logo_manxs.png') }}" alt="" width="60" class="d-inline-block">
+		<img loading='lazy' src="{{ url_for('static', filename='imgs/logo_manxs.png') }}" alt="" width="60"
+			class="d-inline-block">
 
 		<b class="fs-3 link-light align-middle">MANXS</b>
 	</a>
@@ -88,4 +99,7 @@
 </footer>
 
 <!-- <script src="{{ url_for('static', filename='js/bootstrap.min.js')}}"></script> -->
-<script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js')}}"></script>
+<!-- <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js')}}"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+</script>

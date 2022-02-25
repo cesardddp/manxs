@@ -6,7 +6,6 @@ from conteudo import ( historia, aulas, oficinas, videos_lista, cursos,
 from config_dev import MONGO_URI
 import itertools
 import json
-# from flask_frozen import Freezer
 from flask_minify import minify, decorators
 
 RENDER_ID = False
@@ -28,6 +27,7 @@ app.register_blueprint(editor_bp)
 #     add_data()
 
 
+# @freezer.register_generator
 @app.route("/")
 @decorators.minify(html=True, js=True, cssless=True)
 def index():
@@ -56,6 +56,7 @@ def index():
     )
 
 
+# @freezer.register_generator
 @app.route("/biografia/")
 @decorators.minify(html=True, js=True, cssless=True)
 def biografia():
@@ -70,6 +71,7 @@ def biografia():
     )
 
 
+# @freezer.register_generator
 @app.route("/servicos/")
 @decorators.minify(html=True, js=True, cssless=True)
 def servicos():
@@ -79,6 +81,7 @@ def servicos():
         "servicos.html", aulas=aulas, cards=cards, cursos=cursos, render_id=RENDER_ID    )
 
 
+# @freezer.register_generator
 @app.route("/galeria/")
 @decorators.minify(html=True, js=True, cssless=True)
 def galeria():
@@ -92,6 +95,7 @@ def galeria():
     return render_template("galeria.html", fotos=set(lista_fotos), render_id=RENDER_ID)
 
 
+# @freezer.register_generator
 @app.route("/formulario/")
 @decorators.minify(html=True, js=True, cssless=True)
 def form_curso_example():
@@ -127,6 +131,7 @@ def form_curso_example():
     return render_template("forms/curso.html", estados=estados, render_id=RENDER_ID)
 
 
+# @freezer.register_generator
 @app.route("/videos/")
 @decorators.minify(html=True, js=True, cssless=True)
 def videos():
@@ -135,6 +140,7 @@ def videos():
         "videos.html", videos=json.load(open("videos.json")), render_id=RENDER_ID    )
 
 
+# @freezer.register_generator
 @app.route("/contato/")
 @decorators.minify(html=True, js=True, cssless=True)
 def contato():
@@ -145,13 +151,23 @@ def contato():
     )
 
 
+# @freezer.register_generator
 @app.route("/shows/")
 @decorators.minify(html=True, js=True, cssless=True)
 def shows():
     return render_template("shows.html", render_id=RENDER_ID)
 
 
+# @freezer.register_generator
 @app.route("/musicas/")
 @decorators.minify(html=True, js=True, cssless=True)
 def musicas():
     return render_template("musicas.html", render_id=RENDER_ID)
+
+
+# @app.route("/teste/")
+# @decorators.minify(html=True, js=True, cssless=True)
+# def teste():
+#     return render_template("teste.html",
+#     redes_sociais_componente=redes_sociais_componente,
+#     render_id=RENDER_ID)
