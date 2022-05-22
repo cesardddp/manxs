@@ -18,7 +18,7 @@ main %}
             <div class="row row-cols-1 row-cols-md-3 g-4">
                 <div class="col">
                     <div class="card h-100">
-                        <img src="{{ url_for('static', filename='imgs/'+cards[0][0]['src_imagem']) }}"
+                        <img loading='lazy'src="{{ url_for('static', filename='imgs/'+cards[0][0]['src_imagem']) }}"
                             class="card-img-top" alt="{{cards[0][0]['alt_descricao']}}">
                         <div class="card-body">
                             <h5 class="card-title">{{cards[0][0]['title']}}</h5>
@@ -29,7 +29,7 @@ main %}
                 </div>
                 <div class="col">
                     <div class="card h-100">
-                        <img src="{{ url_for('static', filename='imgs/'+cards[0][1]['src_imagem']) }}"
+                        <img loading='lazy'src="{{ url_for('static', filename='imgs/'+cards[0][1]['src_imagem']) }}"
                             class="card-img-top" alt="{{cards[0][1]['alt_descricao']}}">
                         <div class="card-body">
                             <h5 class="card-title">{{cards[0][1]['title']}}</h5>
@@ -40,7 +40,7 @@ main %}
                 </div>
                 <div class="col">
                     <div class="card h-100">
-                        <img src="{{ url_for('static', filename='imgs/'+cards[0][2]['src_imagem']) }}"
+                        <img loading='lazy'src="{{ url_for('static', filename='imgs/'+cards[0][2]['src_imagem']) }}"
                             class="card-img-top" alt="{{cards[0][2]['alt_descricao']}}">
                         <div class="card-body">
                             <h5 class="card-title">{{cards[0][2]['title']}}</h5>
@@ -79,7 +79,7 @@ main %}
             <div
                 class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-azul-branco">
                 <div class="col-4 order-lg-2 d-lg-block align-self-center">
-                    <img class="img-fluid" src="{{ url_for('static', filename='imgs/'+cursos[0]['imagem']['src']) }}"
+                    <img loading='lazy'class="img-fluid" src="{{ url_for('static', filename='imgs/'+cursos[0]['imagem']['src']) }}"
                         width="250" height="" alt="" srcset="">
                 </div>
                 <div class="col order-lg-1 p-4 d-flex flex-column position-static">
@@ -125,7 +125,7 @@ main %}
         <div class="card col-md-5 m-md-1 bg-dark text-white">
             <div class="row">
                 <div class="col-md-4">
-                    <img src="{{ url_for('static', filename='imgs/contrate/'+aula['imagem']['src']) }}"
+                    <img loading='lazy'src="{{ url_for('static', filename='imgs/contrate/'+aula['imagem']['src']) }}"
                         class="img-fluid rounded-start" alt="['imagem']['alt']">
                 </div>
                 <div class="col-md-8">
