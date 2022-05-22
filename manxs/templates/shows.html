@@ -1,0 +1,58 @@
+{% extends 'layout.html' %}
+{%block shows_active%}active_menu{%endblock%}
+
+{% block link_style %}
+<style>
+    .bi {
+        vertical-align: -.122em;
+        fill: currentColor;
+    }
+
+    .bg-azul-branco2 {
+        background-image: linear-gradient(to bottom right, #3d2ee1be, #ecc8e4);
+    }
+
+    .feature {
+        text-align: center;
+    }
+</style>
+{% endblock link_style %}
+{% block main %}
+<div class="container text-white mt-1">
+    <h2 class="text-center bg-azul-branco p-2 ">AGENDA</h2>
+    <ul class="list-group-flush bg-azul-branco">
+
+        <hr style="margin: 2rem 0;">
+        <li class="row">
+            <div class="row">
+                <span class="col-6 fs-5 text-start">
+                    LANÇAMENTO DO ÁLBUM
+                </span>
+                <span class="col-6 fs-3 text-end">
+                    EM BREVE!!
+                </span>
+            </div>
+            <div class="row fs-6 text-start">
+                <span>...</span>
+            </div>
+        </li>
+        <hr style="margin: 2rem 0;">
+        <li class="row">
+            <div class="row">
+                <span class="col-6 fs-5 text-start">
+                    SHOW DE LANÇAMENTO DO ÁLBUM
+                </span>
+                <span class="col-6 fs-3 text-end">
+                    EM BREVE!!
+                </span>
+            </div>
+            <div class="row fs-6 text-start">
+                <span>...</span>
+            </div>
+        </li>
+        <hr style="margin: 2rem 0;">
+
+    </ul>
+</div>
+
+{% endblock main %}

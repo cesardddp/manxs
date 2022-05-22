@@ -1,0 +1,90 @@
+<!doctype html>
+<html class="h-100" lang="pt-br">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Manxs - Grupo de Arte Drag Queen (BRASIL)">
+	<meta name="author" content="cesardddp@hotmail.com">
+
+	<meta name="og:title" content="GrupoManxs.com">
+	<meta name="og:image" content="https://www.grupomanxs.com/static/imgs/Logo%20Manxs.png">
+	<meta name="og:url" content="https://www.grupomanxs.com">
+
+	<title>Manxs</title>
+
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+	<!-- FONTS -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;600;900&display=swap">
+	<!-- Bootstrap core CSS -->
+
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+
+
+	<!-- Custom styles for this template -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/headers.css') }}">
+	{% block link_style %} {% endblock link_style %}
+
+</head>
+
+<header class="d-flex flex-wrap justify-content-center mb-3 bg-manxs">
+
+	<a href="/" class="navbar-brand mb-1">
+		{# <!-- <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg> --> #}
+		<img src="{{ url_for('static', filename='imgs/logo_manxs.png') }}" alt="" width="60" class="d-inline-block">
+
+		<b class="fs-3 link-light align-middle">MANXS</b>
+	</a>
+
+	<ul class="nav col-12 mb-2 justify-content-center menu1">
+		<li class="{%block index_active%}   {%endblock%}"><a href="/                        "
+				class="nav-link px-2 link-light">HOME</a></li>
+		<li class="dropdown {%block biografia_active%}{%endblock%}"> <a class="nav-link px-2 link-light dropdown-toggle"
+				id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">BIOGRAFIA</a>
+			<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+				<li><a class="dropdown-item" href="{{ url_for('biografia') }}">HISTÓRIA</a></li>
+				<li><a class="dropdown-item disabled" href="#">Ashilleyy</a></li>
+				<li><a class="dropdown-item disabled" href="#">Vikky</a></li>
+				<li><a class="dropdown-item disabled" href="#">LuisAfF</a></li>
+			</ul>
+		</li>
+
+		<li class="{%block servicos_active%}{%endblock%}"><a href="{{ url_for('servicos') }}"
+				class="nav-link px-2 link-light">SERVIÇOS</a></li>
+		<li class="{%block galeria_active%} {%endblock%}"><a href="{{ url_for('galeria') }} "
+				class="nav-link px-2 link-light">GALERIA</a></li>
+		<li class="{%block videos_active%}  {%endblock%}"><a href="{{ url_for('videos') }} "
+				class="nav-link px-2 link-light">VIDEOS</a></li>
+		<li class="{%block shows_active%}   {%endblock%}"><a href="{{ url_for('shows') }}"
+				class="nav-link px-2 link-light">SHOWS</a></li>
+		<li class="{%block musicas_active%} {%endblock%}"><a href="{{ url_for('musicas') }}"
+				class="nav-link px-2 link-light">MUSICAS</a></li>
+		<li class="{%block contato_active%} {%endblock%}"><a href="{{ url_for('contato') }}"
+				class="nav-link px-2 link-light">CONTATO</a></li>
+	</ul>
+</header>
+
+
+{% block custo_header %} {% endblock %}
+<main class="d-flex flex-column h-100 mb-auto">
+	{% block main %} {% endblock main %}
+</main>
+
+
+
+<footer class="footer mt-auto bg-transparent mt-auto py-3">
+	<p class="float-end"><a style="color: white;" href="#">Voltar lá em cima!</a></p>
+	<p style="color: white;">
+		&copy;2021 Mantido por
+		<a style="color: white;" href="https://github.com/cesardddp" target="_blank">cesardddp</a> &middot;
+		<a style="color: white;" href="https://github.com/bzoliveira" target="_blank">bzoliveira</a> &middot;
+		<!-- <a style="color: white;" href="#">Privacy</a> &middot;
+        <a style="color: white;" href="#">Terms</a></p> -->
+</footer>
+
+<script src="{{ url_for('static', filename='js/bootstrap.bundle.js')}}"></script>
