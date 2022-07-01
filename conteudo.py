@@ -119,24 +119,8 @@ aulas = [
             "alt": "Foto em preto e branco de Chassi",
         },
     },
-    {
-        "titulo": "PERCUSSÃO",
-        "conteudo": "Aulas do iniciante ao avançado com a professora Deva",
-        "link": "deva.gouveia@gmail.com",
-        "imagem": {
-            "src": "aula_deva.jpg",
-            "alt": "Foto em preto e branco de Deva",
-        },
-    },
-    {
-        "titulo": "VIOLÃO E BAIXO",
-        "conteudo": "Aulas do iniciante ao avançado com o professor Vinícius Marques",
-        "link": "vinnyvmsilva@gmail.com",
-        "imagem": {
-            "src": "aula_vini.jpg",
-            "alt": "Foto em preto e branco de Vinícius Marques",
-        },
-    },
+    
+    
     {
         "titulo": "FOTÓGRAFA",
         "conteudo": "Fotografia profissional especializada em atividades artísticas e culturais. Falar com Paula Caldas",
@@ -147,8 +131,8 @@ aulas = [
         },
     },
     {
-        "titulo": "MAQUIAGEM",
-        "conteudo": "Trabalhos de maquiagem artística e social com o maquiador Caio",
+        "titulo": "VISAGISMO E DESING",
+        "conteudo": "Profissional especialista em maquiagem, cabelo e figurino para artistas e eventos.Falar com maquiador Caio",
         "link": "caio.almeida11@hotmail.com",
         "imagem": {
             "src": "aula_caio.jpeg",
@@ -164,24 +148,8 @@ aulas = [
             "alt": "Foto em preto e branco de César",
         },
     },
-    {
-        "titulo": "VISAGISTA",
-        "conteudo": "Profissional especialista em cortes, elaboração de penteados e maquiagem artística ou social. Falar com Wangora",
-        "link": "wangoralins@gmail.com",
-        "imagem": {
-            "src": "aula_wangora.jpeg",
-            "alt": "Foto em preto e branco de Wangora",
-        },
-    },
-    {
-        "titulo": "PRODUÇÃO CULTURAL",
-        "conteudo": "Escrita, criação, desenvolvimento e prestação de contas de projetos culturais. Falar com Erika Layher",
-        "link": "liri.layher@gmail.com",
-        "imagem": {
-            "src": "aula_erika.jpeg",
-            "alt": "Foto em preto e branco de Erika",
-        },
-    },
+    
+    
 ]
 
 

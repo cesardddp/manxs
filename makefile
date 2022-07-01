@@ -2,7 +2,7 @@ SHELL := /bin/bash
 
 gera:
 	# poetry shell;\
-	source ../.venv/bin/activate;\
+	source ./.venv/bin/activate;\
 	# cd src;\
 	python freeze.py
 
