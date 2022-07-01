@@ -8,8 +8,8 @@ gera:
 
 push:
 	rm -rf deploy/*;\
-	mv src/build/* deploy/;\
-	cp src/README.md deploy/;\
+	mv build/* deploy/;\
+	cp README.md deploy/;\
 	cd deploy/;\
 	git add .;git commit -m "autoupload";\
 	git push;
