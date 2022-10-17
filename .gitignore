@@ -6,6 +6,7 @@ __pycache__/
 static/bootstrap/
 static/bootstrap/
 build/
+deploy/
 static/imgs/uncompressed/
 .vscode/
 envmanxs/
