@@ -119,12 +119,12 @@ main %}
 </div>
 
 <div class="container">
-    <h2 class="about">CONTRATE</h2>
-    <div class="row row-cols-2 row-cols-md-2 justify-content-around">
+    <h2 id="equipe" class="about">CONTRATE</h2>
+    <div class="row row-cols-2 row-cols-md-2 justify-content-around ">
         {% for aula in aulas %}
         <div class="card col-md-5 m-md-1 bg-dark text-white">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4 pt-3">
                     <img loading='lazy'src="{{ url_for('static', filename='imgs/contrate/'+aula['imagem']['src']) }}"
                         class="img-fluid rounded-start" alt="['imagem']['alt']">
                 </div>
