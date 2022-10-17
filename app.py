@@ -1,9 +1,9 @@
 from flask import Flask, render_template, url_for
-from mongo import configure_app as mongo_config, find_all, load_data
+# from mongo import configure_app as mongo_config, find_all, load_data
 from conteudo import ( historia, aulas, oficinas, videos_lista, cursos,
     redes_sociais_componente,
 )
-from config_dev import MONGO_URI
+from conteudo2 import biografia as bio
 import itertools
 import json
 from flask_minify import minify, decorators
@@ -11,9 +11,9 @@ from flask_minify import minify, decorators
 RENDER_ID = False
 
 app = Flask(__name__)
-app.config["MONGO_URI"] = MONGO_URI
+# app.config["MONGO_URI"] = MONGO_URI
 
-mongo_config(app)
+# mongo_config(app)
 
 minify(app=app, passive=True)
 
@@ -61,7 +61,8 @@ def index():
 @decorators.minify(html=True, js=True, cssless=True)
 def biografia():
 
-    biografia_data:dict = find_all("biografia")
+    # biografia_data:dict = find_all("biografia")
+    biografia_data:dict = bio
 
     return render_template(
         "biografia.html",

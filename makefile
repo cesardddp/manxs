@@ -1,8 +1,8 @@
 SHELL := /bin/bash
 
 gera:
-	# poetry shell;\
-	source ./.venv/bin/activate;\
+	poetry shell;\
+	# source ./.venv/bin/activate;\
 	# cd src;\
 	python freeze.py
 
@@ -23,7 +23,7 @@ flask:
 	flask run -p 5001
 
 teste:
-	cd src/build;python -m http.server
+	cd build;python -m http.server
 
 purge:
 	purgecss --css ./static/css/*.css\

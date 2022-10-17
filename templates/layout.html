@@ -20,14 +20,6 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="stylesheet"
 		href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;600;900&display=swap">
-	<!-- Bootstrap core CSS -->
-
-	<!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}"> -->
-
-	<!-- Custom styles for this template -->
-	<link rel="stylesheet" href="{{ url_for('static', filename='css/headers.css') }}">
-	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-	<link rel="shortcut icon" href="{{ url_for('static', filename='imgs/favicon.png') }}">
 
 	<!-- FONTS -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,8 +28,10 @@
 		href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;600;900&display=swap">
 	<!-- Bootstrap core CSS -->
 
-	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
-
+	<!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}"> -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
 	<!-- Custom styles for this template -->
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
@@ -62,7 +56,9 @@
 		{#
 		<!-- <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg> -->
 		#}
-		{# <!-- <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg> --> #}
+		{#
+		<!-- <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg> -->
+		#}
 		<img loading='lazy' src="{{ url_for('static', filename='imgs/logo_manxs.png') }}" alt="" width="60"
 			class="d-inline-block">
 
@@ -120,8 +116,6 @@
         <a style="color: white;" href="#">Terms</a></p> -->
 </footer>
 
-<!-- <script src="{{ url_for('static', filename='js/bootstrap.min.js')}}"></script> -->
-<!-- <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js')}}"></script> -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-	integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+	crossorigin="anonymous"></script>
