@@ -27,20 +27,18 @@ app.register_blueprint(editor_bp)
 #     add_data()
 
 
-# @freezer.register_generator
 @app.route("/")
 @decorators.minify(html=True, js=True, cssless=True)
 def index():
     iframe_do_carrosel = "https://www.youtube.com/embed/hlP-lESKS44"
-    banner2 = url_for("static", filename="imgs/banner2.jpg")
     banner1 = url_for("static", filename="imgs/banner1.jpg")
+    banner2 = url_for("static", filename="imgs/banner2.jpg")
     banner3 = url_for("static", filename="imgs/banner3.jpg")
 
     m_banner2 = url_for("static", filename="imgs/m_banner2.jpeg")
     m_banner1 = url_for("static", filename="imgs/m_banner1.jpeg")
     m_banner3 = url_for("static", filename="imgs/m_banner3.jpeg")
 
-    # import pdb;pdb.set_trace()
     return render_template(
         "index.html",
         iframe_do_carrosel=iframe_do_carrosel,
@@ -56,7 +54,6 @@ def index():
     )
 
 
-# @freezer.register_generator
 @app.route("/biografia/")
 @decorators.minify(html=True, js=True, cssless=True)
 def biografia():
@@ -72,7 +69,6 @@ def biografia():
     )
 
 
-# @freezer.register_generator
 @app.route("/servicos/")
 @decorators.minify(html=True, js=True, cssless=True)
 def servicos():
@@ -82,7 +78,6 @@ def servicos():
         "servicos.html", aulas=aulas, cards=cards, cursos=cursos, render_id=RENDER_ID    )
 
 
-# @freezer.register_generator
 @app.route("/galeria/")
 @decorators.minify(html=True, js=True, cssless=True)
 def galeria():
@@ -96,7 +91,6 @@ def galeria():
     return render_template("galeria.html", fotos=set(lista_fotos), render_id=RENDER_ID)
 
 
-# @freezer.register_generator
 @app.route("/formulario/")
 @decorators.minify(html=True, js=True, cssless=True)
 def form_curso_example():
@@ -132,7 +126,6 @@ def form_curso_example():
     return render_template("forms/curso.html", estados=estados, render_id=RENDER_ID)
 
 
-# @freezer.register_generator
 @app.route("/videos/")
 @decorators.minify(html=True, js=True, cssless=True)
 def videos():
@@ -141,7 +134,6 @@ def videos():
         "videos.html", videos=json.load(open("videos.json")), render_id=RENDER_ID    )
 
 
-# @freezer.register_generator
 @app.route("/contato/")
 @decorators.minify(html=True, js=True, cssless=True)
 def contato():
@@ -152,23 +144,15 @@ def contato():
     )
 
 
-# @freezer.register_generator
 @app.route("/shows/")
 @decorators.minify(html=True, js=True, cssless=True)
 def shows():
     return render_template("shows.html", render_id=RENDER_ID)
 
 
-# @freezer.register_generator
 @app.route("/musicas/")
 @decorators.minify(html=True, js=True, cssless=True)
 def musicas():
     return render_template("musicas.html", render_id=RENDER_ID)
 
 
-# @app.route("/teste/")
-# @decorators.minify(html=True, js=True, cssless=True)
-# def teste():
-#     return render_template("teste.html",
-#     redes_sociais_componente=redes_sociais_componente,
-#     render_id=RENDER_ID)
