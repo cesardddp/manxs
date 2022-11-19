@@ -94,7 +94,7 @@ aulas = [
     },
     {
         "titulo": "LIBRAS",
-        "conteudo": "Intérprete de LIBRAS para eventos e orientador para intérpretes iniciantes com o interprete Leonardo",
+        "conteudo": "Intérprete de LIBRAS para eventos e orientador para intérpretes iniciantes com o intérprete Leonardo",
         "link": "leonardofonsecapos01@gmail.com",
         "imagem": {
             "src": "aula_leo.jpg",
@@ -131,7 +131,7 @@ aulas = [
         },
     },
     {
-        "titulo": "VISAGISMO E DESING",
+        "titulo": "VISAGISMO E DESIGN",
         "conteudo": "Profissional especialista em maquiagem, cabelo e figurino para artistas e eventos.Falar com maquiador Caio",
         "link": "caio.almeida11@hotmail.com",
         "imagem": {
