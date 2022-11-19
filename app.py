@@ -1,9 +1,8 @@
 from flask import Flask, render_template, url_for
 # from mongo import configure_app as mongo_config, find_all, load_data
 from conteudo import ( historia, aulas, oficinas, videos_lista, cursos,
-    redes_sociais_componente,
+    redes_sociais_componente,biografia as bio
 )
-from conteudo2 import biografia as bio
 import itertools
 import json
 from flask_minify import minify, decorators
