@@ -1,8 +1,7 @@
 {% extends 'layout.html' %}
 {%block servicos_active%}active_menu{%endblock%}
 {% block link_style %}
-<script src="https://unpkg.com/vue@next"></script>
-<script src="https://kit.fontawesome.com/3db21c2fa2.js" crossorigin="anonymous"></script>
+
 <style>
     .texto-descricao {
         text-align: justify;
@@ -412,7 +411,7 @@
         </div>
         <div class="col-md-6 col-6 col-lg-4 ">
             <label for="cpf" class="form-label">CPF</label>
-            <input name="cpf" type="text" class="form-control" v-maska="{mask:'###.###.###-##'}" required
+            <input name="cpf" type="text" class="form-control" v-maska data-maska="###.###.###-##" required
                 placeholder="999.999.999-99">
         </div>
         <div class="col-md-6 col-6 col-lg-4">
@@ -421,7 +420,7 @@
         </div>
         <div class="col-md-6 col-6">
             <label for="telefone" class="form-label">Telefone</label>
-            <input v-maska="{mask:'(##) # ####-####'}" name="telefone" type="tel" class="form-control" id="" required
+            <input v-maska data-maska="(##) # ####-####" name="telefone" type="tel" class="form-control" id="" required
                 placeholder="(99) 9 9999-9999">
         </div>
         <div class="col-md-6">
@@ -432,11 +431,11 @@
 
         <div class="col-6">
             <label for="CEP" class="form-label">CEP</label>
-            <input name="CEP" type="text" class="form-control" v-model="cep" v-maska="{mask:'#####-###'}" required
+            <input name="CEP" type="text" class="form-control" v-model="cep" v-maska data-maska="#####-###" required
                 placeholder="19199-999">
-            <a class="btn btn-primary mt-1 btn-sm" @click.prevent="preenche_endereco">Pesquisar</a>
+            <!-- <a class="btn btn-primary mt-1 btn-sm" @click.prevent="preenche_endereco">Pesquisar</a> -->
         </div>
-        <div class="col-6 d-flex align-items-center text-center">
+        <div class="col-6 d-flex align-items-end text-center pb-1">
             Digite o CEP para preencher o endereço automaticamente
         </div>
 
@@ -454,7 +453,7 @@
         </div>
         <div class="col-4 col-lg-1">
             <label for="numero" class="form-label">Nº</label>
-            <input name="Nº" type="number" class="form-control" placeholder="nº00" ref="numero_ref">
+            <input name="Nº" type="text" class="form-control" placeholder="nº00" ref="numero_ref">
         </div>
 
         <div class="col-md-6 col-9">
@@ -490,12 +489,23 @@
             DEMONSTRATIVO DE INTERESSE</h6>
     </form>
 </div>
-
+<script src="https://unpkg.com/vue@next"></script>
+<script src="https://kit.fontawesome.com/3db21c2fa2.js" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/maska@latest/dist/maska.js"></script>
+<script type="importmap">
+    {
+      "imports": {
+        "maska": "https://cdn.jsdelivr.net/npm/maska@2/dist/maska.js"
+      }
+    }
+  </script>
+<script type="module">
+    import { Mask, MaskInput, vMaska } from 'maska'
 
-<script>
+    new MaskInput("[data-maska]") // for masked input
+    const mask = new Mask({ mask: "#-#" }) // for programmatic use
     const DynaForm = {
+        directives: { maska: vMaska },
         compilerOptions: {
             delimiters: ['@{', '}']
         },
@@ -543,9 +553,17 @@
                     )
             }
         },
+        watch: {
+            // whenever question changes, this function will run
+            cep(newQuestion) {
+                if (newQuestion.length>8) {
+                    this.preenche_endereco()
+                }
+            }
+        },
     }
     const app = Vue.createApp(DynaForm)
-    app.use(Maska)
     app.mount("#form")
 </script>
+
 {% endblock main %}
