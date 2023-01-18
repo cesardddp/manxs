@@ -1,29 +1,21 @@
 from flask import Flask, render_template, url_for
-# from mongo import configure_app as mongo_config, find_all, load_data
 from conteudo import ( historia, aulas, oficinas, videos_lista, cursos,
     redes_sociais_componente,biografia as bio
 )
-import itertools
-import json
 from flask_minify import minify, decorators
+
+import json
+import itertools
+import os
 
 RENDER_ID = False
 
 app = Flask(__name__)
-# app.config["MONGO_URI"] = MONGO_URI
-
-# mongo_config(app)
 
 minify(app=app, passive=True)
 
 from editor import editor_bp
 app.register_blueprint(editor_bp)
-
-# @app.before_first_request
-# def first():
-#     from mongo import delete_all,add_data
-#     delete_all('biografia')
-#     add_data()
 
 
 @app.route("/")
@@ -80,13 +72,7 @@ def servicos():
 @app.route("/galeria/")
 @decorators.minify(html=True, js=True, cssless=True)
 def galeria():
-
-    import os
-
     lista_fotos = sorted(os.listdir("static/imgs/galeria"))
-
-    lista_fotos = list(itertools.zip_longest(*[iter(lista_fotos)] * 3, fillvalue=""))
-    # import ipdb;ipdb.set_trace()
     return render_template("galeria.html", fotos=set(lista_fotos), render_id=RENDER_ID)
 
 

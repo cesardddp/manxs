@@ -24,59 +24,62 @@
 {% block main %}
 
 <!-- Gallery -->
-<div class="container mt-3">
-  {% for foto in fotos|sort %}
+<div class="container mt-3" id="galeria">
   <div class="row align-items-center">
-    {% for f in foto %}
-    <img loading='lazy'src="{{ url_for('static', filename='imgs/galeria/'+f) }}"
-      data-mdb-img="https://mdbootstrap.com/img/Photos/Slides/1.jpg" data-bs-toggle="modal"
-      data-bs-target="#galeriaModal" alt="" class="col-lg-4  shadow-1-strong rounded mb-4" />
-    {% endfor %}
+    <img v-for="f,index in imgs" loading='lazy' :src="'{{ url_for('static', filename='imgs/galeria/') }}'+f"
+      :key="index" @click="()=>open_modal(index)" data-mdb-img="https://mdbootstrap.com/img/Photos/Slides/1.jpg"
+      data-bs-toggle="modal" data-bs-target="#galeriaModal" alt="" class="col-lg-4  shadow-1-strong rounded mb-4" />
   </div>
-  {% endfor %}
-  <div class="modal fade" id="galeriaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
+
+  <div class="modal fade " id="galeriaModal" tabindex="-1" aria-labelledby="galeriaModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
       <div class="modal-content">
-        <div class="modal-body">
-          <!-- CARROSSEEEEU -->
-          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img loading='lazy'src="" class="d-block w-100" alt="..." id="img_active">
-              </div>
-              {% for foto in fotos %}
-              {% for f in foto %}
-              <div class="carousel-item">
-                <img loading='lazy'src="{{ url_for('static', filename='imgs/galeria/'+f) }}" class="d-block w-100" alt="...">
-              </div>
-              {% endfor %}
-              {% endfor %}
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
-          </div>
-          <!-- CARROSSEEEEU -->
+        <div
+          class="modal-body d-flex flex-lg-row flex-column justify-content-evenly justify-content-lg-between bg-dark">
+          <button ref="btn_left" @keyup.left="()=>troca_img_selecionada(-1)" @keyup.right="()=>troca_img_selecionada(1)"
+            @click="()=>troca_img_selecionada(-1)" class="float-start btn btn-primary align-self-lg-center "><i
+              class="bi bi-arrow-left"></i></button>
+          <img loading='lazy' :src="'{{ url_for('static', filename='imgs/galeria/')}}'+imgs[img_selecionada]"
+            class="mh-100 mw-100" alt="...">
+          <button ref="btn_right" @keyup.left="()=>troca_img_selecionada(-1)"
+            @keyup.right="()=>troca_img_selecionada(1)" @click="()=>troca_img_selecionada(1)"
+            class="float-end btn btn-primary align-self-lg-center"><i class="bi bi-arrow-right"></i></button>
         </div>
+
       </div>
     </div>
   </div>
-  <script>
-    var myModalEl = document.getElementById('galeriaModal')
-    myModalEl.addEventListener('shown.bs.modal', function (event) {
-      console.log(event.relatedTarget.src)
-      document.getElementById("img_active").src = event.relatedTarget.src
-      //ideia pegar os items desativados e ativa apartir do selecionado
-      //TODO ideia pegar os items desativados e ativa apartir do selecionado
-    })
-  </script>
-  {% endblock main %}
 
-  <!-- Gallery -->
+</div>
+<script src="https://unpkg.com/vue@next"></script>
+<script>
+  const Galery = {
+    compilerOptions: {
+      delimiters: ['@{', '}']
+    },
+    data() {
+      return {
+        imgs: [{% for foto in fotos | sort %}"{{foto|safe}}", {% endfor %} ],
+    img_selecionada: 0
+  }
+        },
+  methods: {
+    troca_img_selecionada(prev_next){
+      this.img_selecionada += prev_next
+      if (this.img_selecionada > this.imgs.length - 1) this.img_selecionada = 0;
+      else if (this.img_selecionada < 0) this.img_selecionada = this.imgs.length - 1;
+    },
+    open_modal(index_img){
+      this.img_selecionada = index_img;
+      setInterval(() => {
+        this.$refs.btn_right.focus()
+      }, 100);
+    }
+  }
+    }
+  const app = Vue.createApp(Galery)
+  app.mount("#galeria")
+</script>
+{% endblock main %}
+
+<!-- Gallery -->
