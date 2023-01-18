@@ -26,7 +26,7 @@
 <!-- Gallery -->
 <div class="container mt-3" id="galeria">
   <div class="row align-items-center">
-    <img v-for="f,index in imgs" loading='lazy' :src="'{{ url_for('static', filename='imgs/galeria/') }}'+f"
+    <img v-for="f,index in imgs" loading='lazy' :src="'/static/imgs/galeria/'+f"
       :key="index" @click="()=>open_modal(index)" data-mdb-img="https://mdbootstrap.com/img/Photos/Slides/1.jpg"
       data-bs-toggle="modal" data-bs-target="#galeriaModal" alt="" class="col-lg-4  shadow-1-strong rounded mb-4" />
   </div>
@@ -39,7 +39,7 @@
           <button ref="btn_left" @keyup.left="()=>troca_img_selecionada(-1)" @keyup.right="()=>troca_img_selecionada(1)"
             @click="()=>troca_img_selecionada(-1)" class="float-start btn btn-primary align-self-lg-center "><i
               class="bi bi-arrow-left"></i></button>
-          <img loading='lazy' :src="'{{ url_for('static', filename='imgs/galeria/')}}'+imgs[img_selecionada]"
+          <img loading='lazy' :src="'/static/imgs/galeria/'+imgs[img_selecionada]"
             class="mh-100 mw-100" alt="...">
           <button ref="btn_right" @keyup.left="()=>troca_img_selecionada(-1)"
             @keyup.right="()=>troca_img_selecionada(1)" @click="()=>troca_img_selecionada(1)"
