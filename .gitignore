@@ -63,7 +63,7 @@ manxs/manxs/templates/layout.html
 manxs/manxs/templates/musicas.html
 manxs/manxs/templates/redes_macro.html.jinja
 manxs/manxs/templates/servicos.html
-manxs/manxs/templates/shows.html
+manxs/manxs/templates/agenda.html
 manxs/manxs/templates/teste_aulas-servicos.html
 manxs/manxs/templates/videos.html
 manxs/manxs/templates/forms/curso.html

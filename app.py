@@ -129,10 +129,10 @@ def contato():
     )
 
 
-@app.route("/shows/")
+@app.route("/agenda/")
 @decorators.minify(html=True, js=True, cssless=True)
-def shows():
-    return render_template("shows.html", render_id=RENDER_ID)
+def agenda():
+    return render_template("agenda.html", render_id=RENDER_ID)
 
 
 @app.route("/musicas/")

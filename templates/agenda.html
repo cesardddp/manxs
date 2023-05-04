@@ -1,0 +1,94 @@
+{% extends 'layout.html' %}
+{%block agenda_active%}active_menu{%endblock%}
+
+{% block link_style %}
+<style>
+    .bi {
+        vertical-align: -.122em;
+        fill: currentColor;
+    }
+
+    .bg-azul-branco2 {
+        background-image: linear-gradient(to bottom right, #3d2ee1be, #ecc8e4);
+    }
+
+    .feature {
+        text-align: center;
+    }
+    iframe::-webkit-scrollbar {  
+    display: none;
+} 
+#lanca:hover{
+    cursor: pointer;
+    /* background-color: #3d2ee1be; */
+    transition: 0.5s;
+}
+</style>
+{% endblock link_style %}
+
+{% block main %}
+<div class="container text-white mt-1">
+    <h2 class="text-center bg-azul-branco p-2 ">AGENDA</h2>
+    <ul class="list-group-flush bg-azul-branco">
+
+        <hr style="margin: 2rem 0;">
+        <li class="row "  id="lanca"  data-bs-toggle="modal" data-bs-target="#modalId">
+            <div class="row">
+                <span class="col-6 fs-5 text-start">
+                    <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalId">
+                        LANÇAMENTO DO ÁLBUM
+    
+                    </button>
+                </span>
+                <span class="col-6 fs-3 text-end">
+                    19/05 !!!!
+                </span>
+            </div>
+            <div class="row fs-6 text-start">
+                <span>Lançamento do album AUTOFALANTE</span>
+                
+            </div>
+        </li>
+        <!-- Modal trigger button -->
+        
+        <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header" >  
+                        <a href="https://onerpm.link/802037280060" class="alert-link bi bi-box-arrow-up-right text-danger">
+                            PRÉ SAVE</a>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body overflow-y-hidden">
+                        <iframe  class="col-12 vh-100 overflow-y-hidden" src="https://onerpm.link/802037280060" frameborder="0"></iframe>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- Optional: Place to the bottom of scripts -->
+        <script>
+            const myModal = new bootstrap.Modal(document.getElementById('modalId'), options)
+        
+        </script>
+        <hr style="margin: 2rem 0;">
+        <li class="row">
+            <div class="row">
+                <span class="col-6 fs-5 text-start">
+                    SHOW DE LANÇAMENTO DO ÁLBUM
+                </span>
+                <span class="col-6 fs-3 text-end">
+                    EM BREVE!!
+                </span>
+            </div>
+            <div class="row fs-6 text-start">
+                <span>...</span>
+            </div>
+        </li>
+        <hr style="margin: 2rem 0;">
+
+    </ul>
+</div>
+
+{% endblock main %}
