@@ -15,80 +15,127 @@
     .feature {
         text-align: center;
     }
-    iframe::-webkit-scrollbar {  
-    display: none;
-} 
-#lanca:hover{
-    cursor: pointer;
-    /* background-color: #3d2ee1be; */
-    transition: 0.5s;
-}
+
+    iframe::-webkit-scrollbar {
+        display: none;
+    }
+
+    #lanca:hover {
+        cursor: pointer;
+        /* background-color: #3d2ee1be; */
+        transition: 0.5s;
+    }
+
+    #lanca {
+        position: relative;
+        /* width: 400px; */
+        max-height: 100%;
+        /* color: #fff; */
+        /* background: #151320; */
+        /* font: 700 2rem 'Montserrat'; */
+        /* line-height: 400px; */
+        /* text-align: center; */
+        /* text-transform: uppercase; */
+        border-radius: 3px;
+        /* z-index: 5; */
+    }
+
+    #lanca::before,
+    #lanca::after {
+        content: '';
+        z-index: -1;
+        position: absolute;
+        width: calc(100% + 30px);
+        height: calc(100% + 30px);
+        top: -15px;
+        left: -15px;
+        border-radius: 8px;
+        background: linear-gradient(45deg,
+                #ffff00, #00ff00, #0099ff, black, #a200ff, #ff0055, #ff0000,
+                #ff0055, #ff0000, #ffff00, #00ff00, #0099ff, #001aff, #0099ff);
+        background-size: 300%;
+        animation: border 31s linear infinite;
+    }
+
+    #lanca::after {
+        filter: blur(50px);
+    }
+
+    @keyframes border {
+
+        0%,
+        100% {
+            background-position: 0 0;
+        }
+
+        50% {
+            background-position: 300%;
+        }
+    }
 </style>
 {% endblock link_style %}
 
 {% block main %}
 <div class="container text-white mt-1">
-    <h2 class="text-center bg-azul-branco p-2 ">AGENDA</h2>
-    <ul class="list-group-flush bg-azul-branco">
+    <h2 class="text-center bg-azul-branco p-2 mb-5 ">AGENDA</h2>
+    <!-- <section class="bg-azul-branco mt-5"> -->
 
-        <hr style="margin: 2rem 0;">
-        <li class="row "  id="lanca"  data-bs-toggle="modal" data-bs-target="#modalId">
-            <div class="row">
-                <span class="col-6 fs-5 text-start">
-                    <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalId">
-                        LANÇAMENTO DO ÁLBUM
-    
-                    </button>
-                </span>
-                <span class="col-6 fs-3 text-end">
-                    19/05/2023 !!!!
-                </span>
-            </div>
-            <div class="row fs-6 text-start">
-                <span>Lançamento do album AUTOFALANTE</span>
-                
-            </div>
-        </li>
-        <!-- Modal trigger button -->
-        
-        <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header" >  
-                        <a href="https://onerpm.link/802037280060" class="alert-link bi bi-box-arrow-up-right text-danger">
-                            PRÉ SAVE</a>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body overflow-y-hidden">
-                        <iframe  class="col-12 vh-100 overflow-y-hidden" src="https://onerpm.link/802037280060" frameborder="0"></iframe>
-                    </div>
-                    
+    <!-- <hr style="margin: 2rem 0;"> -->
+    <div class="my-3 p-3 rounded-2 bg-azul-branco" id="lanca" data-bs-toggle="modal" data-bs-target="#modalId">
+
+        <div class="row">
+            <span class="col-6 fs-5 text-start">
+                <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalId">
+                    LANÇAMENTO DO ÁLBUM
+
+                </button>
+            </span>
+            <span class="col-6 fs-3 text-end">
+                19/05/2023!!!
+            </span>
+        </div>
+        <div class="row fs-6 text-start">
+            <span>Lançamento do album AUTOFALANTE</span>
+
+        </div>
+    </div>
+    <!-- Modal trigger button -->
+
+    <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog"
+        aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a href="https://onerpm.link/802037280060" class="alert-link bi bi-box-arrow-up-right text-danger">
+                        PRÉ SAVE</a>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+                <div class="modal-body overflow-y-hidden">
+                    <iframe class="col-12 vh-100 overflow-y-hidden" src="https://onerpm.link/802037280060"
+                        frameborder="0"></iframe>
+                </div>
+
             </div>
         </div>
-        
-        
-        <!-- Optional: Place to the bottom of scripts -->
-        <script>
-            const myModal = new bootstrap.Modal(document.getElementById('modalId'), options)
-        
-        </script>
-        <hr style="margin: 2rem 0;">
-        <li class="row">
-            <div class="row">
-                <span class="col-6 fs-5 text-start">
-                    SHOW DE LANÇAMENTO DO ÁLBUM
-                </span>
-                <span class="col-6 fs-3 text-end">
-                    EM BREVE!!
-                </span>
-            </div>
-            <div class="row fs-6 text-start">
-                <span>...</span>
-            </div>
-        </li>
-        <hr style="margin: 2rem 0;">
+    </div>
 
-    </ul>
+    <hr style="margin: 2rem 0;">
+    <div class="my-3 p-3 rounded-2 bg-azul-branco">
+        <div class="row">
+            <span class="col-6 fs-5 text-start">
+                SHOW DE LANÇAMENTO DO ÁLBUM
+            </span>
+            <span class="col-6 fs-3 text-end">
+                EM BREVE!!
+            </span>
+        </div>
+        <div class="row fs-6 text-start">
+            <span>...</span>
+        </div>
+    </div>
+    <!-- <hr style="margin: 2rem 0;"> -->
+
+    <!-- </section> -->
 </div>
 
 {% endblock main %}
