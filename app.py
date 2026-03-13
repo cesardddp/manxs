@@ -12,7 +12,7 @@ RENDER_ID = False
 
 app = Flask(__name__)
 
-minify(app=app, passive=True)
+#minify(app=app, passive=True)
 
 from editor import editor_bp
 app.register_blueprint(editor_bp)
